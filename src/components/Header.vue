@@ -4,10 +4,14 @@
       <div class="header__wrapper">
         <div class="header__userpanel">
           <ul class="header__userpanel-list">
-            <li class="header__userpanel-item">Sign in</li>
-            <li class="header__userpanel-item">My account</li>
-            <li class="header__userpanel-item">Order status</li>
-            <li class="header__userpanel-item">Help</li>
+            <li class="header__userpanel-item">
+              <a class="header__userpanel-link" href="#">Sign in</a></li>
+            <li class="header__userpanel-item">
+              <a class="header__userpanel-link" href="#">My account</a></li>
+            <li class="header__userpanel-item">
+              <a class="header__userpanel-link" href="#">Order status</a></li>
+            <li class="header__userpanel-item">
+              <a class="header__userpanel-link" href="#">Help</a></li>
           </ul>
         </div>
       </div>
@@ -20,10 +24,19 @@
           <form class="header__searchpanel-form">
             <input class="header__searchpanel-input" type="text">
             <button class="header__searchpanel-button">
-              <i class="header__searchpanel-icon"></i>
+              <i class="header__searchpanel-icon">&nbsp;</i>
               Search
             </button>
           </form>
+          <div class="header__cart">
+            <i class="header__cart-icon"></i>
+            <span class="header__cart-title">
+              Your cart
+              <button class="header__cart-counter">
+                (2 items)
+              </button>
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -33,6 +46,7 @@
 
 </script>
 <style lang="less">
+@import '../assets/css/style.less';
 .header {
   &__baseblock {
     background: linear-gradient(#fff,#f7f7f7);
@@ -51,6 +65,69 @@
       background-repeat: no-repeat;
       height: 140px;
       width: 136px;
+    }
+    &-form {
+      width: 457px;
+      height: 40px;
+      border-radius: 2px;
+      background-color: @bgform;
+      border: 3px solid @bgform;
+      padding: 0;
+      margin: 40px 5px;
+    }
+    &-input {
+      width: 327px;
+      height: 32px;
+      margin-top: -1px;
+      border: (40px - 32px ) / 2 solid @bgform;
+      color: @bgform;
+      font-size: 26px;
+      text-decoration: none;
+      display: inline-block;
+      .focus();
+    }
+    &-button {
+      width: 457px - 327px - 17px;
+      height: 38px;
+      margin-left: 5px;
+      padding-left: 30px;
+      display: inline-block;
+      border: 2px solid @bgform;
+      background-color: @bgform;
+      font-size: 23px;
+      color: #ffffff;
+      font-family: "Segoe";
+      position: relative;
+      .focus();
+    }
+    &-icon {
+      background-image: url('../assets/images/search.svg');
+      background-size: 100%;
+      width: 18px;
+      height: 18px;
+      stroke: white;
+      display: block;
+      position: absolute;
+      z-index: 10;
+      top: 7px;
+      left: 7px;
+    }
+  }
+  &__cart {
+    margin: 40px 5px;
+    height: 40px;
+    border-right: 1px solid #ccc;
+    &-title {
+      font-size: 23px;
+      font-family: "Segoe";
+      color: #6d6d6d;
+    }
+    &-counter {
+      font-size: 16px;
+      color: #6d6d6d;
+      border: none;
+      background-color: transparent;
+      .focus();
     }
   }
   &__topline {
@@ -76,6 +153,11 @@
       font-weight: 300;
       font-family: 'Segoe';
       text-align: center;
+    }
+    &-link {
+      color: #ffffff;
+      text-decoration: none;
+      .focus();
     }
   }
   &__wrapper {

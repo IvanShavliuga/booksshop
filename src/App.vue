@@ -5,12 +5,5 @@
 </template>
 
 <style lang="less">
-#app, body, html {
-  margin: 0;
-  padding: 0;
-}
-@font-face {
-  font-family: 'Segoe';
-  src: url('./assets/fonts/Segoe_WP.ttf');
-}
+@import './assets/css/style.less';
 </style>
