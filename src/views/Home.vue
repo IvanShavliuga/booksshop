@@ -3,6 +3,7 @@
     <Hello/>
     <Header/>
     <div class="home__wrapper">
+      <Banner/>
       <Catlist/>
     </div>
   </div>
@@ -13,13 +14,15 @@
 import Header from '@/components/Header.vue'
 import Hello from '@/components/HelloWorld.vue'
 import Catlist from '@/components/Catlist.vue'
+import Banner from '@/components/Banner.vue'
 
 export default {
   name: 'Home',
   components: {
     Header,
     Hello,
-    Catlist
+    Catlist,
+    Banner
   }
 }
 </script>
