@@ -80,7 +80,7 @@
 <script>
 
 </script>
-<style lang="less">
+<style scoped lang="less">
 @import '../assets/css/style.less';
 .header {
   &__wrapper {
