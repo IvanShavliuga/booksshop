@@ -92,7 +92,7 @@
     width: 100%;
     padding: 0;
     margin: 0;
-    border-bottom: 1px solid  #dddddd;
+    border-bottom: 1px solid  @bordercolor;
   }
   &__searchpanel {
     display: flex;
@@ -274,7 +274,7 @@
     }
   }
   &__menu {
-    border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid @bordercolor;
     height: 50px;
     margin: 0;
     padding: 0;
