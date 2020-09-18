@@ -2,6 +2,13 @@
   margin: 0;
   padding: 0;
 }
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+li {
+  list-style: none;
+}
 @font-face {
   font-family: 'Segoe';
   src: url('../fonts/Segoe_WP.ttf');
@@ -9,6 +16,7 @@
 @bodyfont: 'Segoe';
 @bgform: #79b260;
 @colform: #6d6d6d;
+@bordercolor: #dddddd;
 .focus() {
   &:focus {
     outline-color: rgba(250,250,12,0.8);
@@ -40,4 +48,26 @@ button, a, input {
 }
 ul li {
   .hover();
+}
+@keyframes runstring {
+  0% {
+    right: 0%;
+    opacity: 0.6;
+    animation-delay: 0.05;
+  }
+  30% {
+    right: 20%;
+    opacity: 1;
+    animation-delay: 0.10;
+  }
+  60% {
+    //right: -10%;
+    opacity: 1;
+    animation-delay: 0.15;
+  }
+  100% {
+    right: 90%;
+    opacity: 0;
+    animation-delay: 0.01;
+  }
 }

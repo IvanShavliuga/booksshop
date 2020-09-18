@@ -70,7 +70,7 @@
             <a class="header__menu-link" href="md">Medical</a></li>
           <li class="header__menu-item">
             <a class="header__menu-link" href="r">Reference</a></li>
-          <li class="header__menu-item">
+          <li class="header__menu-item itemactive">
             <a class="header__menu-link" href="s">Science</a></li>
         </ul>
       </div>
@@ -80,7 +80,7 @@
 <script>
 
 </script>
-<style lang="less">
+<style scoped lang="less">
 @import '../assets/css/style.less';
 .header {
   &__wrapper {
@@ -92,7 +92,7 @@
     width: 100%;
     padding: 0;
     margin: 0;
-    border-bottom: 1px solid  #dddddd;
+    border-bottom: 1px solid  @bordercolor;
   }
   &__searchpanel {
     display: flex;
@@ -274,7 +274,7 @@
     }
   }
   &__menu {
-    border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid @bordercolor;
     height: 50px;
     margin: 0;
     padding: 0;
@@ -288,6 +288,12 @@
       list-style: none;
       margin: 0;
       padding: 10px 21px;
+      &:first-child {
+        float: left;
+      }
+      &:last-child {
+        float: right;
+      }
     }
     &-link {
       font-size: 19px;
