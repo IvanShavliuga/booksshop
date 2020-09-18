@@ -45,11 +45,36 @@
           </div>
           <div class="header__wishlist">
             <i class="header__wishlist-icon"></i>
+            <span class="header__wishlist-counter">20</span>
             <span class="header__wishlist-title">Wish list</span>
           </div>
         </div>
       </div>
     </div>
+    <nav class="header__menu">
+      <div class="header__wrapper">
+        <ul class="header__menu-list">
+          <li class="header__menu-item itemactive">
+            <a class="header__menu-link" href="cm">Computers</a></li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="c">Cooking</a></li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="e">Education</a></li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="f">Fiction</a></li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="h">Health</a></li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="mt">Mathematics</a></li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="md">Medical</a></li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="r">Reference</a></li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="s">Science</a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
 </template>
 <script>
@@ -60,7 +85,6 @@
 .header {
   &__wrapper {
     .wrapper();
-    height: 140px;
   }
   &__baseblock {
     background: linear-gradient(#fff,#f7f7f7);
@@ -99,7 +123,6 @@
       font-size: 26px;
       text-decoration: none;
       display: inline-block;
-      .focus();
     }
     &-button {
       width: 457px - 327px - 17px;
@@ -113,7 +136,6 @@
       color: #ffffff;
       font-family: @bodyfont;
       position: relative;
-      .focus();
     }
     &-icon {
       background-image: url('../assets/images/search.svg');
@@ -161,7 +183,6 @@
       margin-left: -5px;
       display: inline-block;
       background-color: transparent;
-      .focus();
     }
     &-total {
       font-size: 27px;
@@ -194,6 +215,7 @@
   &__wishlist {
     margin: 5px 15px 5px -35px;
     padding: 10px;
+    position: relative;
     &-title {
       font-size: 21px;
       line-height: 26px;
@@ -209,6 +231,22 @@
       background-image: url('../assets/images/star.svg');
       background-size: 100%;
       display: block;
+    }
+    &-counter {
+      font-size: 13px;
+      line-height: 16px;
+      color: #ffffff;
+      font-family: @bodyfont;
+      width: 27px;
+      height: 16px;
+      border-radius: 8px;
+      padding: 3px;
+      display: block;
+      position: absolute;
+      text-align: center;
+      top: 35px;
+      left: 65px;
+      background-color: @bgform;
     }
   }
   &__userpanel {
@@ -233,7 +271,31 @@
     &-link {
       color: #ffffff;
       text-decoration: none;
-      .focus();
+    }
+  }
+  &__menu {
+    border-bottom: 1px solid #bbb;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    &-list {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      height: 50px;
+    }
+    &-item {
+      list-style: none;
+      margin: 0;
+      padding: 10px 21px;
+    }
+    &-link {
+      font-size: 19px;
+      line-height: 26px;
+      color: #5b5b5b;
+      font-family: @bodyfont;
+      margin: 0;
+      text-decoration: none;
     }
   }
 }
