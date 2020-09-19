@@ -8,7 +8,7 @@
       <img class="banner__item-disk" src="/img/disk.png"/>
     </div>
     <div class="banner__item-text" :style="(seltitle.length > 13)?'top: 120px':''">
-      <h1 class="banner__item-title" :style="(seltitle.length > 13)?'font-size: 30px':''">{{seltitle}}</h1>
+      <h1 class="banner__item-title" :style="(seltitle.length > 13)?'font-size: 33px':''">{{seltitle}}</h1>
       <p class="banner__item-subtitle">{{selsubtitle}}</p>
       <p class="banner__item-author">By {{selauthor}}</p>
     </div>
@@ -22,13 +22,13 @@
 .banner {
   margin: 15px;
   &__item {
-    width: 714px;
+    width: 784px;
     height: 304px;
     padding: 0;
     margin: 0;
     position: relative;
     &-background {
-      width: 714px;
+      width: 784px;
       height: 304px;
       padding: 0;
       margin: 0;
@@ -170,7 +170,7 @@ export default {
       this.selsubtitle = this.list[this.selid].subtitle
     },
     autoplay () {
-      setTimeout(() => { this.next() }, 2000)
+      setTimeout(() => { this.next() }, 4000)
     }
   },
   created: function () {
