@@ -13,7 +13,7 @@
 </template>
 
 <script>
-// @ is an alias to /src
+// @ is an alias hto /src
 import Header from '@/components/Header.vue'
 import Hello from '@/components/HelloWorld.vue'
 import Catlist from '@/components/Catlist.vue'
