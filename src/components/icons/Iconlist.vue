@@ -55,6 +55,17 @@
       </ib>
     </a>
   </li>
+  <li class="icons__item">
+    <a class="icons__link" href="https://ivanshavliuga.github.io">
+      <ib class="icons__image"
+        icon-name="portfolio"
+        width="64"
+        height="64"
+        icon-color="#1223cb">
+        <portfolio/>
+      </ib>
+    </a>
+  </li>
 </ul>
 </template>
 <script>
@@ -64,6 +75,7 @@ import telegram from './telegram.vue'
 import github from './github.vue'
 import linkedin from './linkedin.vue'
 import vk from './vk.vue'
+import portfolio from './portfolio.vue'
 export default {
   components: {
     ib,
@@ -71,7 +83,8 @@ export default {
     vk,
     github,
     telegram,
-    linkedin
+    linkedin,
+    portfolio
   }
 }
 </script>
