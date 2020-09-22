@@ -28,9 +28,8 @@
   &__select {
     background: #fff!important;
     border-bottom: none!important;
-    &-hover {
-      color: black;
-      font-weight: bold;
+    &:hover {
+      .hover()!important;
     }
   }
   &__list {
@@ -46,6 +45,9 @@
       background: linear-gradient(#fff,#f7f7f7);
       filter: drop-shadow(0.5px 0.866px 0px #ffffff);
       border: 1px solid @bordercolor;
+      &:hover {
+        .hover();
+      }
     }
   }
 }
