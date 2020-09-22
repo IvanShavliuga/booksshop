@@ -52,6 +52,8 @@
       z-index: 20;
       top: 7px;
       left: 47px;
+      width: @wbook;
+      height: @hbook;
     }
     &-panel {
       position: absolute;
