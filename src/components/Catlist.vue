@@ -56,7 +56,7 @@ export default {
 }
 .aside {
   width: 17%;
-  margin: 15px;
+  margin: 0 15px;
   padding: 0;
   border: 1px solid @bordercolor;
   &__header {
