@@ -41,7 +41,7 @@
       line-height: 30px;
       color: #6b6969;
       font-weight: 300;
-      font-family: "Helvetica";
+      font-family: @pricefont;
       background: linear-gradient(#fff,#f7f7f7);
       filter: drop-shadow(0.5px 0.866px 0px #ffffff);
       border: 1px solid @bordercolor;
