@@ -2,15 +2,15 @@
 <section class="promo">
   <div class="promo__header">
     <h2 class="promo__header-title">Deal of the Month</h2>
-    <h3 class="promo__header-subtitle">{{seltitle}}</h3>
+    <h3 class="promo__header-subtitle">{{book.title}}</h3>
   </div>
   <div class="promo__image">
-    <img class="promo__image-book" :src="selimg"/>
+    <img class="promo__image-book" :src="book.img"/>
     <img class="promo__image-panel" src="/img/panel.png"/>
   </div>
   <div class="promo__desc">
-    <p class="promo__desc-sale">Save {{selsale}} Today</p>
-    <p class="promo__desc-price">${{selprice}}</p>
+    <p class="promo__desc-sale">Save {{book.sale}} Today</p>
+    <p class="promo__desc-price">${{book.price}}</p>
     <button class="promo__desc-button">Buy now</button>
   </div>
 </section>
@@ -52,6 +52,8 @@
       z-index: 20;
       top: 7px;
       left: 47px;
+      width: @wbook;
+      height: @hbook;
     }
     &-panel {
       position: absolute;
@@ -93,13 +95,10 @@
 </style>
 <script>
 export default {
-  data () {
-    return {
-      selauthor: 'Rick Smolan, Jennifer Erwitt',
-      seltitle: 'The Human Face of Big Data',
-      selsale: 45,
-      selprice: 27.51,
-      selimg: '/img/book_4.png'
+  props: {
+    book: {
+      type: Object,
+      required: true
     }
   }
 }

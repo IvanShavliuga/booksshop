@@ -4,11 +4,16 @@
     <Header/>
     <div class="home__wrapper home__flex">
       <Banner/>
-      <Promo/>
+      <Promo :book="promo"/>
     </div>
-    <div class="home__wrapper">
+    <div class="home__wrapper home__flex">
       <Catlist/>
+      <div class="home__block">
+        <Tabspanel/>
+        <Booklist/>
+      </div>
     </div>
+    <Footer/>
   </div>
 </template>
 
@@ -19,6 +24,9 @@ import Hello from '@/components/HelloWorld.vue'
 import Catlist from '@/components/Catlist.vue'
 import Banner from '@/components/Banner.vue'
 import Promo from '@/components/Promo.vue'
+import Tabspanel from '@/components/Tabspanel.vue'
+import Booklist from '@/components/Booklist.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'Home',
@@ -27,7 +35,21 @@ export default {
     Hello,
     Catlist,
     Banner,
-    Promo
+    Promo,
+    Tabspanel,
+    Booklist,
+    Footer
+  },
+  data () {
+    return {
+      promo: {
+        author: 'Rick Smolan, Jennifer Erwitt',
+        title: 'The Human Face of Big Data',
+        sale: 45,
+        price: 27.51,
+        img: '/img/book_4.png'
+      }
+    }
   }
 }
 </script>
@@ -40,6 +62,9 @@ export default {
   }
   &__flex {
     display: flex;
+  }
+  &__block {
+    width: 70%;
   }
 }
 </style>

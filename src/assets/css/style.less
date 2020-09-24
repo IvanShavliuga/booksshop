@@ -1,14 +1,13 @@
-#app, body, html {
-  margin: 0;
-  padding: 0;
-}
-ul {
-  list-style: none;
-  padding-left: 0px;
-}
-li {
-  list-style: none;
-}
+@bodyfont: 'Segoe';
+@pricefont: 'Helvetica';
+@bgform: #79b260;
+@colform: #6d6d6d;
+@bordercolor: #dddddd;
+@pricecolor: #f05356;
+@wbook: 84px;
+@hbook: 111px;
+@footercolor: #dddddd;
+
 @font-face {
   font-family: 'Segoe';
   src: url('../fonts/Segoe_WP.ttf');
@@ -17,10 +16,6 @@ li {
   font-family: 'Helvetica';
   src: url('../fonts/HelveticaLTStdLight.otf');
 }
-@bodyfont: 'Segoe';
-@bgform: #79b260;
-@colform: #6d6d6d;
-@bordercolor: #dddddd;
 .focus() {
   &:focus {
     outline-color: rgba(250,250,12,0.8);
@@ -31,7 +26,7 @@ li {
 .wrapper() {
   width: 80%;
   margin: 0 auto;
-  border: 1px dotted red;
+  //border: 1px dotted red;
 }
 .hover() {
   &:hover {
@@ -40,18 +35,6 @@ li {
       color: #fff;
     }
   }
-}
-.itemactive {
-  background-image: linear-gradient(0deg, #79b260 0%, #92d774 100%);
-  a {
-    color: #fff;
-  }
-}
-button, a, input {
-  .focus();
-}
-ul li {
-  .hover();
 }
 @keyframes runstring {
   0% {
@@ -74,4 +57,27 @@ ul li {
     opacity: 0;
     animation-delay: 0.01;
   }
+}
+#app, body, html {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+li {
+  list-style: none;
+}
+.itemactive {
+  background-image: linear-gradient(0deg, #79b260 0%, #92d774 100%);
+  a {
+    color: #fff;
+  }
+}
+button, a, input {
+  .focus();
+}
+ul li {
+  .hover();
 }

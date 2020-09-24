@@ -25,12 +25,12 @@
   margin: 0;
   margin-top: 15px;
   height: 30px;
+  z-index: 10;
   &__select {
     background: #fff!important;
-    border-bottom: none!important;
-    &-hover {
-      color: black;
-      font-weight: bold;
+    border-bottom: 1px solid white!important;
+    &:hover {
+      .hover()!important;
     }
   }
   &__list {
@@ -42,10 +42,13 @@
       line-height: 30px;
       color: #6b6969;
       font-weight: 300;
-      font-family: "Helvetica";
+      font-family: @pricefont;
       background: linear-gradient(#fff,#f7f7f7);
       filter: drop-shadow(0.5px 0.866px 0px #ffffff);
       border: 1px solid @bordercolor;
+      &:hover {
+        .hover();
+      }
     }
   }
 }

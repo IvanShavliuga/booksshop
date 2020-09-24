@@ -55,7 +55,7 @@ export default {
   font-weight: bold;
 }
 .aside {
-  width: 17%;
+  width: 20%;
   margin: 0 15px;
   padding: 0;
   border: 1px solid @bordercolor;
