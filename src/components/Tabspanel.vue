@@ -25,9 +25,10 @@
   margin: 0;
   margin-top: 15px;
   height: 30px;
+  z-index: 10;
   &__select {
     background: #fff!important;
-    border-bottom: none!important;
+    border-bottom: 1px solid white!important;
     &:hover {
       .hover()!important;
     }
