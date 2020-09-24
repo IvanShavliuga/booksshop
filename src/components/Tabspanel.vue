@@ -13,6 +13,9 @@
     <li class="tabnav__list-item">
       <a class="tabnav__list-link">Special Offers</a>
     </li>
+    <li class="tabnav__list-empty">
+      text
+    </li>
   </ul>
 </nav>
 </template>
@@ -21,12 +24,14 @@
 
 .tabnav {
   display: flex;
+  width: 60vw;
   padding: 0;
   margin: 0;
   margin-top: 15px;
   height: 30px;
   z-index: 10;
   &__select {
+    position: relative;
     background: #fff!important;
     border-bottom: 1px solid white!important;
     &:hover {
@@ -35,12 +40,14 @@
   }
   &__list {
     display: flex;
+    width: 60vw;
     margin: 0;
     &-item {
       padding: 2px 10px;
       font-size: 17px;
       line-height: 30px;
       color: #6b6969;
+      width: 10vw;
       font-weight: 300;
       font-family: @pricefont;
       background: linear-gradient(#fff,#f7f7f7);
@@ -48,6 +55,17 @@
       border: 1px solid @bordercolor;
       &:hover {
         .hover();
+      }
+    }
+    &-empty {
+      width: 60vw - 10vw * 4;
+      background: transparent;
+      color: transparent;
+      padding: 0 2px;
+      border-bottom: 1px solid @bordercolor;
+      &:hover {
+        background: transparent;
+        color: transparent;
       }
     }
   }
