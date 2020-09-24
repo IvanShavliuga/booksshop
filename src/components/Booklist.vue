@@ -7,7 +7,9 @@
 @import '../assets/css/style.less';
 
 .list {
-  border: 1px solid @bordercolor;
+  border-left: 1px solid @bordercolor;
+  border-right: 1px solid @bordercolor;
+  border-bottom: 1px solid @bordercolor;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
