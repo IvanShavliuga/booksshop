@@ -25,7 +25,7 @@ export default {
 .book {
   position: relative;
   width: @wbook + 10px;
-  margin: 10px;
+  margin: 10px 15px;
   padding: 10px;
   &__image {
     width: @wbook;
