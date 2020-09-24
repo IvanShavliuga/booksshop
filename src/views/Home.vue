@@ -64,7 +64,7 @@ export default {
     display: flex;
   }
   &__block {
-    width: 70%;
+    width: 70vw;
   }
 }
 </style>
