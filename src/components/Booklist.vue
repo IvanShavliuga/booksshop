@@ -10,7 +10,7 @@
   border: 1px solid @bordercolor;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 </style>
 <script>
