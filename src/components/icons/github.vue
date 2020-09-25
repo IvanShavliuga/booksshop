@@ -1,3 +1,4 @@
+
 <template>
 <g>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M32,0.8c-17.7,0-32,14.3-32,32c0,14.1,9.2,26.1,21.9,30.4
