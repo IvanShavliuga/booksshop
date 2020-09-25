@@ -14,7 +14,7 @@
       </div>
     </div>
     <Footer/>
-  </mains>
+  </main>
 </template>
 
 <script>
