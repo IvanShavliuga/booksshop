@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <main class="about">
     <Hello/>
     <Header/>
     <Pathcomp/>
@@ -74,7 +74,7 @@
       <Bookbanner/>
     </div>
     <Footer/>
-  </div>
+  </main>
 </template>
 <script>
 // @ is an alias hto /src
