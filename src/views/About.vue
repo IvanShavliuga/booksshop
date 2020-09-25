@@ -70,6 +70,7 @@
           </li>
         </ul>
       </article>
+      <Bookbanner/>
     </div>
     <Footer/>
   </div>
@@ -81,6 +82,7 @@ import Hello from '@/components/HelloWorld.vue'
 import Iconlist from '@/components/icons/Iconlist.vue'
 import Promo from '@/components/Promo.vue'
 import Footer from '@/components/Footer.vue'
+import Bookbanner from '@/components/Bookbanner.vue'
 
 export default {
   name: 'Home',
@@ -89,6 +91,7 @@ export default {
     Hello,
     Iconlist,
     Promo,
+    Bookbanner,
     Footer
   },
   data () {
