@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <main class="home">
     <Hello/>
     <Header/>
     <div class="home__wrapper home__flex">
@@ -14,7 +14,7 @@
       </div>
     </div>
     <Footer/>
-  </div>
+  </mains>
 </template>
 
 <script>
