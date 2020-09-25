@@ -2,6 +2,7 @@
   <div class="about">
     <Hello/>
     <Header/>
+    <Pathcomp/>
     <div class="about__wrapper about__flex">
       <div class="about__promo">
         <Promo :book="promo"/>
@@ -83,6 +84,7 @@ import Iconlist from '@/components/icons/Iconlist.vue'
 import Promo from '@/components/Promo.vue'
 import Footer from '@/components/Footer.vue'
 import Bookbanner from '@/components/Bookbanner.vue'
+import Pathcomp from '@/components/Path.vue'
 
 export default {
   name: 'Home',
@@ -92,7 +94,8 @@ export default {
     Iconlist,
     Promo,
     Bookbanner,
-    Footer
+    Footer,
+    Pathcomp
   },
   data () {
     return {
@@ -153,7 +156,7 @@ export default {
     width: auto;
   }
   &__promo {
-    margin-left: 20px;
+    margin-left: -100px;
   }
 }
 </style>

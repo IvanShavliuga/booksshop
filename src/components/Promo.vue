@@ -22,7 +22,7 @@
   background-image: url('../assets/images/promo.png');
   width: 230px;
   height: 284px;
-  margin: 15px 15px 15px 0;
+  margin: 15px 15px 0 0;
   color: #ffffff;
   padding: 10px;
   &__header {
