@@ -20,6 +20,7 @@
   padding: 0;
   margin: 15px;
   margin-right: 0;
+  margin-top: 55px;
   &__header {
     font-size: 18px;
     margin: 10px;
@@ -28,7 +29,7 @@
   }
   &__block {
     display: flex;
-    padding: 15px;
+    padding: 20px 15px;
     border-bottom: 1px solid @bordercolor;
     &-image {
       width: 50px;
