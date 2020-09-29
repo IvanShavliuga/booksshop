@@ -15,19 +15,21 @@
 @import '../assets/css/style.less';
 
 .bookbanner {
-  width: 16vw;
+  width: 30vw;
   border: 1px solid @bordercolor;
   padding: 0;
   margin: 15px;
+  margin-right: 0;
+  margin-top: 55px;
   &__header {
     font-size: 18px;
-    margin: 0 0 10px 0;
+    margin: 10px;
     color: #7e7e7e;
     font-family: @bodyfont;
   }
   &__block {
     display: flex;
-    padding: 15px;
+    padding: 20px 15px;
     border-bottom: 1px solid @bordercolor;
     &-image {
       width: 50px;
