@@ -37,17 +37,20 @@
         </article>
       </section>
       <section  class="product__section product__flex">
-        <article class="product__pannels">
-          <div class="product__pannels-tabs">
-            <button class="product__pannels-button product__pannels-buttonactive">Product information</button>
-            <button class="product__pannels-button product__pannels-buttonnoactive">Other details</button>
-          </div>
-          <div class="product__pannels-block">
-            <p class="product__pannels-text">
-              The Star Wars Episode I: The Phantom Menace novelization was written by Terry Brooks and published on April 21, 1999 by Del Rey. It is based on the script of the movie of the same name. Narration for the abridged audio version was performed by Michael Cumpsty. The unabridged version was performed by Alexander Adams. On January 31, 2012, a new paperback edition was
-            </p>
-          </div>
-        </article>
+        <div class="product__section-box">
+          <article class="product__pannels">
+            <div class="product__pannels-tabs">
+              <button class="product__pannels-button product__pannels-buttonactive">Product information</button>
+              <button class="product__pannels-button product__pannels-buttonnoactive">Other details</button>
+            </div>
+            <div class="product__pannels-block">
+              <p class="product__pannels-text">
+                The Star Wars Episode I: The Phantom Menace novelization was written by Terry Brooks and published on April 21, 1999 by Del Rey. It is based on the script of the movie of the same name. Narration for the abridged audio version was performed by Michael Cumpsty. The unabridged version was performed by Alexander Adams. On January 31, 2012, a new paperback edition was
+              </p>
+            </div>
+          </article>
+          <Commentbox/>
+        </div>
         <Bookbanner/>
       </section>
     </div>
@@ -62,6 +65,7 @@ import Hello from '@/components/HelloWorld.vue'
 import Footer from '@/components/Footer.vue'
 import Pathcomp from '@/components/Path.vue'
 import Bookbanner from '@/components/Bookbanner.vue'
+import Commentbox from '@/components/Commentbox.vue'
 
 export default {
   name: 'Home',
@@ -70,7 +74,8 @@ export default {
     Hello,
     Footer,
     Pathcomp,
-    Bookbanner
+    Bookbanner,
+    Commentbox
   },
   data () {
     return {
@@ -231,9 +236,9 @@ export default {
     margin-top: 15px;
     padding: 0;
     &-block {
-      width: 53vw;
+      width: 55vw;
       border: 1px solid @bordercolor;
-      padding: 18px;
+      padding: 18px 5px;
       margin-right: 0;
       margin-top: 40px;
     }
@@ -247,6 +252,7 @@ export default {
     }
     &-tabs {
       position: relative;
+      height: 1px;
     }
     &-button {
       position: absolute;
@@ -260,11 +266,11 @@ export default {
       border-bottom: none;
       &:first-child {
         left: 0px;
-        top: 2px;
+        top: 3px;
       }
       &:last-child {
         left: 210px;
-        top: 2px;
+        top: 3px;
       }
       &active {
         background-color: #fff;
