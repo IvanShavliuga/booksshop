@@ -8,5 +8,8 @@ Vue.config.productionTip = false
 new Vue({
   router,
   store,
+  created () {
+    this.$router.push('/test/booksshop/')
+  },
   render: h => h(App)
 }).$mount('#app')
