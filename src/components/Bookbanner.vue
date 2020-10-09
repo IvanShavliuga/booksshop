@@ -78,49 +78,49 @@ export default {
     return {
       books: [{
         id: 0,
-        img: '/img/book_5.png',
+        img: '/img/book_5.jpg',
         title: 'The Hare With Amber',
         author: 'Edmund De Waal',
         price: 50,
         sale: 30
       }, {
         id: 1,
-        img: '/img/book_5.png',
+        img: '/img/book_5.jpg',
         title: 'The Hare With Amber',
         author: 'Edmund De Waal',
         price: 50,
         sale: 30
       }, {
         id: 2,
-        img: '/img/book_5.png',
+        img: '/img/book_5.jpg',
         title: 'The Hare With Amber',
         author: 'Edmund De Waal',
         price: 50,
         sale: 30
       }, {
         id: 3,
-        img: '/img/book_5.png',
+        img: '/img/book_5.jpg',
         title: 'The Hare With Amber',
         author: 'Edmund De Waal',
         price: 50,
         sale: 30
       }, {
         id: 4,
-        img: '/img/book_5.png',
+        img: '/img/book_5.jpg',
         title: 'The Hare With Amber',
         author: 'Edmund De Waal',
         price: 50,
         sale: 30
       }, {
         id: 5,
-        img: '/img/book_5.png',
+        img: '/img/book_5.jpg',
         title: 'The Hare With Amber',
         author: 'Edmund De Waal',
         price: 50,
         sale: 30
       }, {
         id: 6,
-        img: '/img/book_5.png',
+        img: '/img/book_5.jpg',
         title: 'The Hare With Amber',
         author: 'Edmund De Waal',
         price: 50,

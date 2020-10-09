@@ -47,7 +47,7 @@ export default {
         title: 'The Human Face of Big Data',
         sale: 45,
         price: 27.51,
-        img: '/img/book_4.png'
+        img: '/img/book_4.jpg'
       }
     }
   }

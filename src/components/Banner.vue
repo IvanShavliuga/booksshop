@@ -118,26 +118,26 @@ export default {
   data () {
     return {
       selid: 0,
-      selbg: '/img/banner1.png',
-      selbook: '/img/book_1.png',
+      selbg: '/img/banner1.jpg',
+      selbook: '/img/book_1.jpg',
       selauthor: 'Lee Child',
       seltitle: 'A Wanted men',
       selsubtitle: '(Jack Reacher #17)',
       list: [{
-        bg: '/img/banner_1.png',
-        book: '/img/book_1.png',
+        bg: '/img/banner_1.jpg',
+        book: '/img/book_1.jpg',
         author: 'Lee Child',
         title: 'A Wanted men',
         subtitle: '(Jack Reacher #17)'
       }, {
-        bg: '/img/banner_2.png',
-        book: '/img/book_2.png',
+        bg: '/img/banner_2.jpg',
+        book: '/img/book_2.jpg',
         author: 'Havinder Singh',
         title: 'Can Love You Happy Twice',
         subtitle: '(The Hare Amber Eyes)'
       }, {
-        bg: '/img/banner_3.png',
-        book: '/img/book_3.png',
+        bg: '/img/banner_3.jpg',
+        book: '/img/book_3.jpg',
         author: 'Girichi Kundli',
         title: 'Marathon Baba',
         subtitle: '(The Hare Amber Eyes)'
@@ -175,8 +175,8 @@ export default {
   },
   created: function () {
     this.selid = 0
-    this.selbg = '/img/banner_1.png'
-    this.selbook = '/img/book_1.png'
+    this.selbg = '/img/banner_1.jpg'
+    this.selbook = '/img/book_1.jpg'
   },
   mounted: function () {
     this.autoplay()
