@@ -10,7 +10,7 @@
 export default {
   data () {
     return {
-      img: '/img/telepat.jpg',
+      img: 'https://ivanshavliuga.github.io/test/booksshop/img/telepat.jpg',
       title: 'Телепатия. Проклятие языка',
       author: 'Иван Шавлюга',
       price: 10,
