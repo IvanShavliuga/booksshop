@@ -31,7 +31,7 @@ export default {
   &__line {
     width:auto!important;
     margin: 15px 0;
-    height: 35px;
+    height: 25px;
     padding: 5px 20px;
     border-radius: 4px;
     border: 1px solid @bordercolor;

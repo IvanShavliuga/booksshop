@@ -106,6 +106,7 @@
       width: 136px;
     }
     &-form {
+      display: flex;
       width: 457px;
       height: 40px;
       border-radius: 2px;
