@@ -17,16 +17,7 @@
       <li class="menu__list-item">
         <a class="menu__list-link" href="md">Medical</a></li>
       <li class="menu__list-item">
-        <a class="menu__listborder-bottom: 1px solid @bordercolor;
-        height: 50px;
-        margin: 0;
-        padding: 0;
-        &-list {
-          display: flex;
-          justify-content: center;
-          margin: 0;
-          height: 50px;
-        }-link" href="r">Reference</a></li>
+        <a class="menu__list-link" href="r">Reference</a></li>
       <li class="menu__list-item itemactive">
         <a class="menu__list-link" href="s">Science</a></li>
     </ul>
