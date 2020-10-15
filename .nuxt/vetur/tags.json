@@ -53,6 +53,12 @@
   "LazyHelloWorld": {
     "description": "Auto imported from components/HelloWorld.vue"
   },
+  "Menu": {
+    "description": "Auto imported from components/Menu.vue"
+  },
+  "LazyMenu": {
+    "description": "Auto imported from components/Menu.vue"
+  },
   "Path": {
     "description": "Auto imported from components/Path.vue"
   },
@@ -65,11 +71,23 @@
   "LazyPromo": {
     "description": "Auto imported from components/Promo.vue"
   },
+  "Search": {
+    "description": "Auto imported from components/Search.vue"
+  },
+  "LazySearch": {
+    "description": "Auto imported from components/Search.vue"
+  },
   "Tabspanel": {
     "description": "Auto imported from components/Tabspanel.vue"
   },
   "LazyTabspanel": {
     "description": "Auto imported from components/Tabspanel.vue"
+  },
+  "Userstatus": {
+    "description": "Auto imported from components/Userstatus.vue"
+  },
+  "LazyUserstatus": {
+    "description": "Auto imported from components/Userstatus.vue"
   },
   "Codepen": {
     "description": "Auto imported from components/icons/codepen.vue"
