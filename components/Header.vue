@@ -1,33 +1,12 @@
 <template>
   <header class="header">
-    <div class="header__topline">
-      <div class="header__wrapper">
-        <div class="header__userpanel">
-          <ul class="header__userpanel-list">
-            <li class="header__userpanel-item">
-              <a class="header__userpanel-link" href="#">Sign in</a></li>
-            <li class="header__userpanel-item">
-              <a class="header__userpanel-link" href="#">My account</a></li>
-            <li class="header__userpanel-item">
-              <a class="header__userpanel-link" href="#">Order status</a></li>
-            <li class="header__userpanel-item">
-              <a class="header__userpanel-link" href="#">Help</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <Userstatus/>
     <div class="header__baseblock">
       <div class="header__wrapper">
         <div class="header__searchpanel">
           <div class="header__searchpanel-logo">
           </div>
-          <form class="header__searchpanel-form">
-            <input class="header__searchpanel-input" type="text">
-            <button class="header__searchpanel-button">
-              <i class="header__searchpanel-icon">&nbsp;</i>
-              Search
-            </button>
-          </form>
+          <Search/>
           <div class="header__cart">
             <i class="header__cart-icon">&nbsp;</i>
             <span class="header__cart-title">
@@ -51,34 +30,20 @@
         </div>
       </div>
     </div>
-    <nav class="header__menu">
-      <div class="header__wrapper">
-        <ul class="header__menu-list">
-          <li class="header__menu-item itemactive">
-            <a class="header__menu-link" href="cm">Computers</a></li>
-          <li class="header__menu-item">
-            <a class="header__menu-link" href="c">Cooking</a></li>
-          <li class="header__menu-item">
-            <a class="header__menu-link" href="e">Education</a></li>
-          <li class="header__menu-item">
-            <a class="header__menu-link" href="f">Fiction</a></li>
-          <li class="header__menu-item">
-            <a class="header__menu-link" href="h">Health</a></li>
-          <li class="header__menu-item">
-            <a class="header__menu-link" href="mt">Mathematics</a></li>
-          <li class="header__menu-item">
-            <a class="header__menu-link" href="md">Medical</a></li>
-          <li class="header__menu-item">
-            <a class="header__menu-link" href="r">Reference</a></li>
-          <li class="header__menu-item itemactive">
-            <a class="header__menu-link" href="s">Science</a></li>
-        </ul>
-      </div>
-    </nav>
+    <Menu/>
   </header>
 </template>
 <script>
-
+import Userstatus from './Userstatus.vue'
+import Menu from './Menu.vue'
+import Search from './Search.vue'
+export default {
+  components: {
+    Userstatus,
+    Menu,
+    Search
+  }
+}
 </script>
 <style scoped lang="less">
 @import '../assets/css/style.less';
@@ -104,49 +69,11 @@
       background-repeat: no-repeat;
       height: 140px;
       width: 136px;
-    }
-    &-form {
-      width: 457px;
-      height: 40px;
-      border-radius: 2px;
-      background-color: @bgform;
-      border: 3px solid @bgform;
-      padding: 0;
-      //margin: 40px 5px;
-    }
-    &-input {
-      width: 327px;
-      height: 32px;
-      margin-top: -1px;
-      border: (40px - 32px ) / 2 solid @bgform;
-      color: @bgform;
-      font-size: 26px;
-      text-decoration: none;
-      display: inline-block;
-    }
-    &-button {
-      width: 457px - 327px - 17px;
-      height: 38px;
-      margin-left: 5px;
-      padding-left: 30px;
-      display: inline-block;
-      border: 2px solid @bgform;
-      background-color: @bgform;
-      font-size: 23px;
-      color: #ffffff;
-      font-family: @bodyfont;
-      position: relative;
-    }
-    &-icon {
-      background-image: url('../assets/images/search.svg');
-      background-size: 100%;
-      width: 18px;
-      height: 18px;
-      display: block;
-      position: absolute;
-      z-index: 10;
-      top: 7px;
-      left: 7px;
+      @media screen and (max-width: 1200px) {
+        height: 130px;
+        width: 126px;
+        background-size: contain;
+      }
     }
   }
   &__cart {
@@ -207,11 +134,7 @@
       font-family: @bodyfont;
     }
   }
-  &__topline {
-    background-color: rgb(65,65,65);
-    width: 100%;
-    height: 30px;
-  }
+
   &__wishlist {
     margin: 5px 15px 5px -35px;
     padding: 10px;
@@ -247,61 +170,6 @@
       top: 35px;
       left: 65px;
       background-color: @bgform;
-    }
-  }
-  &__userpanel {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    justify-content: flex-end;
-    &-list {
-      display: inline;
-      margin: 0;
-    }
-    &-item {
-      display: inline;
-      margin: 0 10px;
-      font-size: 16px;
-      line-height: 26px;
-      color: #ffffff;
-      font-weight: 300;
-      font-family: @bodyfont;
-      text-align: center;
-    }
-    &-link {
-      color: #ffffff;
-      text-decoration: none;
-    }
-  }
-  &__menu {
-    border-bottom: 1px solid @bordercolor;
-    height: 50px;
-    margin: 0;
-    padding: 0;
-    &-list {
-      display: flex;
-      justify-content: center;
-      margin: 0;
-      height: 50px;
-    }
-    &-item {
-      list-style: none;
-      margin: 0;
-      padding: 10px 21px;
-      &:first-child {
-        float: left;
-      }
-      &:last-child {
-        float: right;
-      }
-    }
-    &-link {
-      font-size: 19px;
-      line-height: 26px;
-      color: #5b5b5b;
-      font-family: @bodyfont;
-      margin: 0;
-      text-decoration: none;
     }
   }
 }

@@ -35,6 +35,9 @@ export default {
     top: 0;
     width: 50%;
     animation: runstring 4s infinite;
+    @media screen and (max-width: 1200px) {
+      width: 70%;
+    }
     &-link {
       color: #dfeb21;
       font-weight: bold;
