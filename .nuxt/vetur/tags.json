@@ -59,11 +59,11 @@
   "LazyMenu": {
     "description": "Auto imported from components/Menu.vue"
   },
-  "Path": {
-    "description": "Auto imported from components/Path.vue"
+  "Pathcomp": {
+    "description": "Auto imported from components/Pathcomp.vue"
   },
-  "LazyPath": {
-    "description": "Auto imported from components/Path.vue"
+  "LazyPathcomp": {
+    "description": "Auto imported from components/Pathcomp.vue"
   },
   "Promo": {
     "description": "Auto imported from components/Promo.vue"

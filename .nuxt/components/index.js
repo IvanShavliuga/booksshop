@@ -8,7 +8,7 @@ export { default as Footer } from '../..\\components\\Footer.vue'
 export { default as Header } from '../..\\components\\Header.vue'
 export { default as HelloWorld } from '../..\\components\\HelloWorld.vue'
 export { default as Menu } from '../..\\components\\Menu.vue'
-export { default as Path } from '../..\\components\\Path.vue'
+export { default as Pathcomp } from '../..\\components\\Pathcomp.vue'
 export { default as Promo } from '../..\\components\\Promo.vue'
 export { default as Search } from '../..\\components\\Search.vue'
 export { default as Tabspanel } from '../..\\components\\Tabspanel.vue'
@@ -32,7 +32,7 @@ export const LazyFooter = import('../..\\components\\Footer.vue' /* webpackChunk
 export const LazyHeader = import('../..\\components\\Header.vue' /* webpackChunkName: "components_Header" */).then(c => c.default || c)
 export const LazyHelloWorld = import('../..\\components\\HelloWorld.vue' /* webpackChunkName: "components_HelloWorld" */).then(c => c.default || c)
 export const LazyMenu = import('../..\\components\\Menu.vue' /* webpackChunkName: "components_Menu" */).then(c => c.default || c)
-export const LazyPath = import('../..\\components\\Path.vue' /* webpackChunkName: "components_Path" */).then(c => c.default || c)
+export const LazyPathcomp = import('../..\\components\\Pathcomp.vue' /* webpackChunkName: "components_Pathcomp" */).then(c => c.default || c)
 export const LazyPromo = import('../..\\components\\Promo.vue' /* webpackChunkName: "components_Promo" */).then(c => c.default || c)
 export const LazySearch = import('../..\\components\\Search.vue' /* webpackChunkName: "components_Search" */).then(c => c.default || c)
 export const LazyTabspanel = import('../..\\components\\Tabspanel.vue' /* webpackChunkName: "components_Tabspanel" */).then(c => c.default || c)
