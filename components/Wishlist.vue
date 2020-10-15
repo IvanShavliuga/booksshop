@@ -16,6 +16,9 @@
     line-height: 26px;
     color: @colform;
     font-family: @bodyfont;
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
   }
   &__icon {
     width: 25px;
@@ -26,6 +29,9 @@
     background-image: url('../assets/images/star.svg');
     background-size: 100%;
     display: block;
+    @media screen and (max-width: 800px) {
+      margin-left: 0;
+    }
   }
   &__counter {
     font-size: 13px;
@@ -42,6 +48,13 @@
     top: 35px;
     left: 65px;
     background-color: @bgform;
+    @media screen and (max-width: 800px) {
+      left: 25px;
+      top: 15px;
+    }
+    @media screen and (max-width: 655px) {
+      left: 25px;
+    }
   }
 }
 </style>

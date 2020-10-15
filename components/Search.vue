@@ -23,6 +23,10 @@
   @media screen and (max-width: 965px) {
     width: 380px;
   }
+  @media screen and (max-width: 820px) {
+    border: 1px solid @bgform;
+    width: 360px;
+  }
   &__input {
     width: 327px;
     height: 36px;
@@ -38,6 +42,10 @@
     @media screen and (max-width: 965px) {
       width: 247px;
     }
+    @media screen and (max-width: 820px) {
+      border: 1px solid @bgform;
+      margin-top: 1px;
+    }
   }
   &__button {
     width: 457px - 327px - 17px;
@@ -47,10 +55,13 @@
     display: block;
     border: 2px solid @bgform;
     background-color: @bgform;
-    font-size: 23px;
+    font-size: 20px;
     color: #ffffff;
     font-family: @bodyfont;
     position: relative;
+    @media screen and (max-width: 820px) {
+      width: 457px - 327px - 24px;
+    }
   }
   &__icon {
     background-image: url('../assets/images/search.svg');
