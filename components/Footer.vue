@@ -312,6 +312,9 @@
   &__links {
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: 1010px) {
+      flex-direction: column;
+    }
     &-header {
       font-size: 20px;
       line-height: 20px;

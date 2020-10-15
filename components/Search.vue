@@ -17,6 +17,12 @@
   border: 3px solid @bgform;
   padding: 0;
   display: flex;
+  @media screen and (max-width: 1035px) {
+    width: 430px;
+  }
+  @media screen and (max-width: 965px) {
+    width: 380px;
+  }
   &__input {
     width: 327px;
     height: 36px;
@@ -26,6 +32,12 @@
     font-size: 26px;
     text-decoration: none;
     display: block;
+    @media screen and (max-width: 1035px) {
+      width: 307px;
+    }
+    @media screen and (max-width: 965px) {
+      width: 247px;
+    }
   }
   &__button {
     width: 457px - 327px - 17px;

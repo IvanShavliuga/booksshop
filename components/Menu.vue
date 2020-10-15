@@ -31,11 +31,21 @@
   height: 50px;
   margin: 0;
   padding: 0;
+  @media screen and (max-width: 1060px) {
+    height: auto;
+  }
+  &__wrapper {
+    .wrapper();
+  }
   &__list {
     display: flex;
     justify-content: center;
     margin: 0;
     height: 50px;
+    @media screen and (max-width: 1060px) {
+      flex-direction: column;
+      height: auto;
+    }
     &-item {
       list-style: none;
       margin: 0;

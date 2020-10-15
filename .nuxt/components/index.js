@@ -2,6 +2,7 @@ export { default as Banner } from '../..\\components\\Banner.vue'
 export { default as Book } from '../..\\components\\Book.vue'
 export { default as Bookbanner } from '../..\\components\\Bookbanner.vue'
 export { default as Booklist } from '../..\\components\\Booklist.vue'
+export { default as Cart } from '../..\\components\\Cart.vue'
 export { default as Catlist } from '../..\\components\\Catlist.vue'
 export { default as Commentbox } from '../..\\components\\Commentbox.vue'
 export { default as Footer } from '../..\\components\\Footer.vue'
@@ -13,6 +14,7 @@ export { default as Promo } from '../..\\components\\Promo.vue'
 export { default as Search } from '../..\\components\\Search.vue'
 export { default as Tabspanel } from '../..\\components\\Tabspanel.vue'
 export { default as Userstatus } from '../..\\components\\Userstatus.vue'
+export { default as Wishlist } from '../..\\components\\Wishlist.vue'
 export { default as Codepen } from '../..\\components\\icons\\codepen.vue'
 export { default as Github } from '../..\\components\\icons\\github.vue'
 export { default as IconBase } from '../..\\components\\icons\\IconBase.vue'
@@ -26,6 +28,7 @@ export const LazyBanner = import('../..\\components\\Banner.vue' /* webpackChunk
 export const LazyBook = import('../..\\components\\Book.vue' /* webpackChunkName: "components_Book" */).then(c => c.default || c)
 export const LazyBookbanner = import('../..\\components\\Bookbanner.vue' /* webpackChunkName: "components_Bookbanner" */).then(c => c.default || c)
 export const LazyBooklist = import('../..\\components\\Booklist.vue' /* webpackChunkName: "components_Booklist" */).then(c => c.default || c)
+export const LazyCart = import('../..\\components\\Cart.vue' /* webpackChunkName: "components_Cart" */).then(c => c.default || c)
 export const LazyCatlist = import('../..\\components\\Catlist.vue' /* webpackChunkName: "components_Catlist" */).then(c => c.default || c)
 export const LazyCommentbox = import('../..\\components\\Commentbox.vue' /* webpackChunkName: "components_Commentbox" */).then(c => c.default || c)
 export const LazyFooter = import('../..\\components\\Footer.vue' /* webpackChunkName: "components_Footer" */).then(c => c.default || c)
@@ -37,6 +40,7 @@ export const LazyPromo = import('../..\\components\\Promo.vue' /* webpackChunkNa
 export const LazySearch = import('../..\\components\\Search.vue' /* webpackChunkName: "components_Search" */).then(c => c.default || c)
 export const LazyTabspanel = import('../..\\components\\Tabspanel.vue' /* webpackChunkName: "components_Tabspanel" */).then(c => c.default || c)
 export const LazyUserstatus = import('../..\\components\\Userstatus.vue' /* webpackChunkName: "components_Userstatus" */).then(c => c.default || c)
+export const LazyWishlist = import('../..\\components\\Wishlist.vue' /* webpackChunkName: "components_Wishlist" */).then(c => c.default || c)
 export const LazyCodepen = import('../..\\components\\icons\\codepen.vue' /* webpackChunkName: "components_icons/codepen" */).then(c => c.default || c)
 export const LazyGithub = import('../..\\components\\icons\\github.vue' /* webpackChunkName: "components_icons/github" */).then(c => c.default || c)
 export const LazyIconBase = import('../..\\components\\icons\\IconBase.vue' /* webpackChunkName: "components_icons/IconBase" */).then(c => c.default || c)

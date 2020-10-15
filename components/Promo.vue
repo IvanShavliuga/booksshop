@@ -25,6 +25,9 @@
   margin: 15px 15px 0 0;
   color: #ffffff;
   padding: 10px;
+  @media screen and (max-width: 1130px) {
+    display: none;
+  }
   &__header {
     width: 230px;
     text-align: center;

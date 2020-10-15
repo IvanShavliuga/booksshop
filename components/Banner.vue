@@ -21,6 +21,9 @@
 @import '../assets/css/style.less';
 .banner {
   margin: 15px;
+  @media screen and (max-width: 950px) {
+    display: none;
+  }
   &__item {
     width: 784px;
     height: 304px;
