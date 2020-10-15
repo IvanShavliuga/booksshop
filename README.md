@@ -6,11 +6,6 @@ Books online shop
 ./psd
 ```
 
-##old work
-```
-old version
-```
-
 ## Project setup
 ```
 npm install
