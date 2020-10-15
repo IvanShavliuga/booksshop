@@ -63,7 +63,7 @@
 import Header from '@/components/Header.vue'
 import Hello from '@/components/HelloWorld.vue'
 import Footer from '@/components/Footer.vue'
-import Pathcomp from '@/components/Path.vue'
+import Pathcomp from '@/components/Pathcomp.vue'
 import Bookbanner from '@/components/Bookbanner.vue'
 import Commentbox from '@/components/Commentbox.vue'
 

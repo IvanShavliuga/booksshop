@@ -22,7 +22,7 @@ export default {
   }
 }
 </script>
-<style lang="less">
+<style scoped lang="less">
 @import '../assets/css/style.less';
 .path {
   width: 100%;
@@ -30,8 +30,7 @@ export default {
     .wrapper();
   }
   &__line {
-    margin: 15px;
-    margin-bottom: 0;
+    margin: 15px 0;
     height: 24px;
     padding: 5px 20px;
     border-radius: 4px;

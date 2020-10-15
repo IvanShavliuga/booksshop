@@ -19,7 +19,7 @@
   display: flex;
   &__input {
     width: 327px;
-    height: 38px;
+    height: 36px;
     margin-top: -1px;
     border: 3px solid @bgform;
     color: @bgform;

@@ -19,6 +19,9 @@
 <style scoped lang="less">
 @import '../assets/css/style.less';
 .userstatus {
+  &__wrapper {
+    .wrapper();
+  }
   &__topline {
     background-color: rgb(65,65,65);
     width: 100%;

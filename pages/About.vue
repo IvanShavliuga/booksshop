@@ -84,7 +84,7 @@ import Iconlist from '@/components/icons/Iconlist.vue'
 import Promo from '@/components/Promo.vue'
 import Footer from '@/components/Footer.vue'
 import Bookbanner from '@/components/Bookbanner.vue'
-import Pathcomp from '@/components/Path.vue'
+import Pathcomp from '@/components/Pathcomp.vue'
 
 export default {
   name: 'Home',
