@@ -13,6 +13,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  @media screen and (max-width: 845px) {
+    width: 90vw;
+  }
 }
 </style>
 <script>

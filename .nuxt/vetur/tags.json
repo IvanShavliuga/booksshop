@@ -23,6 +23,12 @@
   "LazyBooklist": {
     "description": "Auto imported from components/Booklist.vue"
   },
+  "Cart": {
+    "description": "Auto imported from components/Cart.vue"
+  },
+  "LazyCart": {
+    "description": "Auto imported from components/Cart.vue"
+  },
   "Catlist": {
     "description": "Auto imported from components/Catlist.vue"
   },
@@ -88,6 +94,12 @@
   },
   "LazyUserstatus": {
     "description": "Auto imported from components/Userstatus.vue"
+  },
+  "Wishlist": {
+    "description": "Auto imported from components/Wishlist.vue"
+  },
+  "LazyWishlist": {
+    "description": "Auto imported from components/Wishlist.vue"
   },
   "Codepen": {
     "description": "Auto imported from components/icons/codepen.vue"
