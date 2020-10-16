@@ -59,6 +59,9 @@ export default {
   margin: 0 15px;
   padding: 0;
   border: 1px solid @bordercolor;
+  @media screen and (max-width: 845px) {
+    display: none;
+  }
   &__header {
     padding: 0 20px;
     margin-bottom: 0;

@@ -38,6 +38,12 @@ export default {
     @media screen and (max-width: 1200px) {
       width: 70%;
     }
+    @media screen and (max-width: 920px) {
+      width: 100%;
+    }
+    @media screen and (max-width: 650px) {
+      width: 120%;
+    }
     &-link {
       color: #dfeb21;
       font-weight: bold;

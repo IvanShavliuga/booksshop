@@ -30,6 +30,12 @@
   margin-top: 15px;
   height: 30px;
   z-index: 10;
+  @media screen and (max-width: 1020px) {
+    width: auto;
+  }
+  @media screen and (max-width: 845px) {
+    width: 90vw;
+  }
   &__select {
     position: relative;
     background: #fff!important;
@@ -42,6 +48,12 @@
     display: flex;
     width: 60vw;
     margin: 0;
+    @media screen and (max-width: 1200px) {
+      width: 67.7vw;
+    }
+    @media screen and (max-width: 845px) {
+      width: 90vw;
+    }
     &-item {
       padding: 2px 10px;
       font-size: 17px;
@@ -56,6 +68,9 @@
       &:hover {
         .hover();
       }
+      @media screen and (max-width: 1200px) {
+        width: 42vw;
+      }
     }
     &-empty {
       width: 60vw - 10vw * 4;
@@ -66,6 +81,9 @@
       &:hover {
         background: transparent;
         color: transparent;
+      }
+      @media screen and (max-width: 1200px) {
+        width: 18vw;
       }
     }
   }
