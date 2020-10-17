@@ -21,21 +21,42 @@
 @import '../assets/css/style.less';
 .banner {
   margin: 15px;
-  @media screen and (max-width: 950px) {
-    display: none;
-  }
   &__item {
     width: 784px;
     height: 304px;
     padding: 0;
     margin: 0;
     position: relative;
+    @media screen and (max-width: 1060px) {
+      width: 650px;
+    }
+    @media screen and (max-width: 950px) {
+      width: 500px;
+    }
+    @media screen and (max-width: 790px) {
+      width: 400px;
+    }
+    @media screen and (max-width: 670px) {
+      width: 100%;
+    }
     &-background {
       width: 784px;
       height: 304px;
       padding: 0;
       margin: 0;
       position: relative;
+      @media screen and (max-width: 1060px) {
+        width: 650px;
+      }
+      @media screen and (max-width: 950px) {
+        width: 500px;
+      }
+      @media screen and (max-width: 790px) {
+        width: 400px;
+      }
+      @media screen and (max-width: 670px) {
+        width: 100%;
+      }
     }
     &-bookmini {
       position: absolute;
@@ -46,6 +67,9 @@
       left: 180px;
       top: 140px;
       display:flex;
+      @media screen and (max-width: 420px) {
+        display: none;
+      }
     }
     &-disk {
       width: 50px;
@@ -64,6 +88,11 @@
       left: 80px;
       top: 30px;
       z-index: 10;
+      @media screen and (max-width: 320px) {
+        width: 109px;
+        height: 188px;
+        top: 60px;
+      }
     }
     &-text {
       position: absolute;
@@ -72,6 +101,9 @@
       z-index: 10;
       color: #fff;
       width: 400px;
+      @media screen and (max-width: 950px) {
+        display: none;
+      }
     }
     &-title {
       font-size: 52px;
@@ -81,6 +113,9 @@
       font-family: @bodyfont;
       text-align: center;
       transform: scaleX(1.05);
+      @media screen and (max-width: 1060px) {
+        transform: scaleX(0.75);
+      }
     }
     &-subtitle {
       font-size: 27px;
