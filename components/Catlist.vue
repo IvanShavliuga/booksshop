@@ -1,6 +1,24 @@
 <template>
   <aside class="aside">
     <h2 class="aside__header">Categories</h2>
+    <div class="aside__collapse">
+      <a class="aside__collapse-title">Categories</a>
+      <a class="aside__collapse-burger">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          role="presentation"
+        >
+          <title lang="en">menu</title>
+          <g stroke="#46ae49" fill="transparent">
+            <line x1="20" y1="12" x2="30" y2="20"/>
+            <line x1="2" y1="20" x2="30" y2="20"/>
+            <line x1="20" y1="28" x2="30" y2="20"/>
+          </g>
+        </svg>
+      </a>
+    </div>
     <nav class="aside__nav">
       <ul>
         <li class="aside__nav-item itemactive"><a class="aside__nav-link" href="#cat"> All</a></li>
@@ -59,8 +77,50 @@ export default {
   margin: 0 15px;
   padding: 0;
   border: 1px solid @bordercolor;
-  @media screen and (max-width: 845px) {
-    display: none;
+  @media screen and (max-width: 1060px) {
+    position: relative;
+    width: 1vw;
+    border: none;
+    margin: 0;
+    margin-right: 30px;
+    margin-top: 30px;
+  }
+  &__collapse {
+    position: absolute;
+    left: -35px;
+    top: 10px;
+    padding: 0 15px;
+    width: 1vw;
+    height: 250px;
+    z-index: 50;
+    height: 40px;
+    @media screen and (min-width: 1061px) {
+      display: none;
+    }
+    @media screen and (max-width: 925px) {
+      left: -25px;
+    }
+    @media screen and (max-width: 910px) {
+      left: -5px;
+    }
+    &-title {
+      position: absolute;
+      transform: rotateZ(90deg);
+      left: -70px;
+      top: 50px;
+      font-size: 25px;
+      line-height: 42px;
+      text-transform: uppercase;
+      color: #434343;
+      @media screen and (max-width: 925px) {
+        left: -65px;
+      }
+    }
+    &-burger {
+      position: absolute;
+      left: -5px;
+      top: -40px;
+    }
   }
   &__header {
     padding: 0 20px;
@@ -70,9 +130,15 @@ export default {
     color: #6b6969;
     font-weight: 300;
     font-family: @bodyfont;
+    @media screen and (max-width: 1060px) {
+      display: none;
+    }
   }
   &__nav {
     margin-top: 0;
+    @media screen and (max-width: 1060px) {
+      display: none;
+    }
     &-list {
       padding: 0 20px;
     }

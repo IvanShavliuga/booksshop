@@ -6,9 +6,11 @@
         <div class="header__searchpanel">
           <div class="header__searchpanel-logo">
           </div>
-          <Search/>
-          <Cart/>
-          <Wishlist/>
+          <Search id="searchblock"/>
+          <div class="header__searchpanel-status">
+            <Cart/>
+            <Wishlist/>
+          </div>
         </div>
       </div>
     </div>
@@ -62,6 +64,9 @@ export default {
     @media screen and (max-width: 915px) {
       height: auto;
     }
+    @media screen and (max-width: 600px) {
+      flex-direction: column-reverse;
+    }
     &-logo {
       background-image: url('../assets/images/logo.png');
       background-position: center 30px;
@@ -76,6 +81,19 @@ export default {
       @media screen and (max-width: 1035px) {
         height: 100px;
         width: 96px;
+      }
+      @media screen and (max-width: 615px) {
+        display: none;
+      }
+    }
+    &-status {
+      display: flex;
+      flex-direction: row;
+      div:first-child {
+        margin-right: 30px;
+        @media screen and (min-width: 601px) and (max-width: 705px) {
+          margin-right: 10px;
+        }
       }
     }
   }

@@ -65,10 +65,10 @@ export default {
   }
   &__block {
     width: 70vw;
-    @media screen and (max-width: 845px) {
+    /*@media screen and (max-width: 845px) {
       width: 90vw;
       margin: 0 auto;
-    }
+    }*/
   }
 }
 </style>

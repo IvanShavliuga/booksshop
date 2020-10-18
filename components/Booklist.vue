@@ -13,7 +13,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  @media screen and (max-width: 845px) {
+  @media screen and (max-width: 1060px) {
     width: 90vw;
   }
 }
