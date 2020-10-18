@@ -85,6 +85,9 @@
       @media screen and (max-width: 1200px) {
         width: 18vw;
       }
+      @media screen and (max-width: 630px) {
+        display: none;
+      }
     }
   }
 }

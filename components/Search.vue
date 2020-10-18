@@ -27,6 +27,9 @@
     border: 1px solid @bgform;
     width: 360px;
   }
+  @media screen and (max-width: 600px) {
+    width: 90%;
+  }
   &__input {
     width: 327px;
     height: 36px;
@@ -46,6 +49,9 @@
       border: 1px solid @bgform;
       margin-top: 1px;
     }
+    @media screen and (max-width: 600px) {
+      width: 90%;
+    }
   }
   &__button {
     width: 457px - 327px - 17px;
@@ -61,6 +67,9 @@
     position: relative;
     @media screen and (max-width: 820px) {
       width: 457px - 327px - 24px;
+    }
+    @media screen and (max-width: 600px) {
+      width: 150px;
     }
   }
   &__icon {
