@@ -51,7 +51,7 @@
     @media screen and (max-width: 1200px) {
       width: 67.7vw;
     }
-    @media screen and (max-width: 845px) {
+    @media screen and (max-width: 1060px) {
       width: 90vw;
     }
     &-item {
@@ -84,6 +84,9 @@
       }
       @media screen and (max-width: 1200px) {
         width: 18vw;
+      }
+      @media screen and (max-width: 1060px) {
+        width: auto;
       }
       @media screen and (max-width: 630px) {
         display: none;
