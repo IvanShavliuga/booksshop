@@ -113,6 +113,9 @@ export default {
   &__block {
     width: 53vw;
     margin: 10px auto 0 auto;
+    @media screen and (max-width: 650px) {
+      width: 56vw;
+    }
     &-title {
       font-size: 41px;
       line-height: 22px;
@@ -121,6 +124,12 @@ export default {
       font-family: @bodyfont;
       margin-top: 15px;
       margin-bottom: 30px;
+      @media screen and (max-width: 630px) {
+        font-size: 32px;
+      }
+      @media screen and (max-width: 560px) {
+        font-size: 27px;
+      }
     }
     &-text {
       margin-top: 30px;
@@ -130,6 +139,17 @@ export default {
       line-height: 26px;
       color: #7e7e7e;
       font-family: @bodyfont;
+      @media screen and (max-width: 1300px) {
+        width: 49vw;
+      }
+      @media screen and (max-width: 650px) {
+        width: 56vw;
+        height: 250px;
+      }
+      @media screen and (max-width: 530px) {
+        width: 56vw;
+        height: auto;
+      }
     }
   }
   &__pay {
@@ -138,12 +158,39 @@ export default {
     margin-bottom: 15px;
     padding: 15px;
     border: 1px solid @bordercolor;
+    @media screen and (max-width: 1300px) {
+      width: 49vw;
+    }
+    @media screen and (max-width: 1200px) {
+      width: 46vw;
+    }
+    @media screen and (max-width: 800px) {
+      width: 43vw;
+    }
+    @media screen and (max-width: 650px) {
+      width: 63vw;
+      margin-left: -120px;
+      margin-top: 20px;
+    }
+    @media screen and (max-width: 650px) {
+      width: 65vw;
+    }
     &-topblock {
       display: flex;
+      @media screen and (max-width: 495px) {
+        flex-direction: column;
+        justify-content: center;
+      }
     }
     &-headblock {
       width: 30vw;
       margin-top: 5px;
+      @media screen and (max-width: 745px) {
+        margin: 0 auto;
+      }
+      @media screen and (max-width: 495px) {
+        width: 54vw;
+      }
     }
     &-button {
       background-image: linear-gradient(0deg, #79b260 0%, #92d774 100%);
@@ -156,11 +203,32 @@ export default {
       color: #ffffff;
       font-weight: bold;
       font-family: @pricefont;
+      @media screen and (max-width: 1200px) {
+        font-size: 20px;
+        padding: 10px 5px;
+        width: 150px;
+      }
+
     }
     &-header {
       font-size: 36px;
       font-family: @bodyfont;
       margin: 0;
+      @media screen and (max-width: 880px) {
+        font-size: 26px;
+      }
+      @media screen and (max-width: 745px) {
+        font-size: 20px;
+      }
+      @media screen and (max-width: 495px) {
+        font-size: 30px;
+      }
+      @media screen and (max-width: 400px) {
+        font-size: 26px;
+      }
+      @media screen and (max-width: 340px) {
+        font-size: 20px;
+      }
     }
     &-title {
       color: #015699;
@@ -180,6 +248,9 @@ export default {
       text-align: left;
       margin-top: 5px;
       margin-left: 0;
+      @media screen and (max-width: 745px) {
+        text-align: center;
+      }
     }
     &-icon {
       background-image: url('../assets/images/lock.svg');
@@ -229,18 +300,35 @@ export default {
     width: 252px;
     height: 393px;
     margin: 15px;
+    @media screen and (max-width: 700px) {
+      width: 202px;
+      height: 343px;
+    }
+    @media screen and (max-width: 650px) {
+      width: 132px;
+      height: 273px;
+    }
   }
   &__pannels {
-    width: 56vw;
+    width: 55vw;
     margin: 0;
     margin-top: 15px;
     padding: 0;
+    @media screen and (max-width: 1300px) {
+      width: 54vw;
+    }
     &-block {
       width: 55vw;
       border: 1px solid @bordercolor;
       padding: 18px 5px;
       margin-right: 0;
       margin-top: 40px;
+      @media screen and (max-width: 1300px) {
+        width: 56vw;
+      }
+      @media screen and (max-width: 1200px) {
+        width: 63vw;
+      }
     }
     &-text {
       width: 47vw;
@@ -249,6 +337,9 @@ export default {
       color: #7e7e7e;
       margin: 15px;
       font-family: @bodyfont;
+      @media screen and (max-width: 1200px) {
+        width: 61vw;
+      }
     }
     &-tabs {
       position: relative;
@@ -281,5 +372,20 @@ export default {
       }
     }
   }
+  &__section {
+    @media screen and (max-width: 1200px) {
+      width: 90vw;
+    }
+    &-box {
+      @media screen and (max-width: 1200px) {
+        width: 90vw;
+      }
+    }
+  }
 }
+/*hr {
+  @media screen and (max-width: 630px) {
+    display: none;
+  }
+}*/
 </style>

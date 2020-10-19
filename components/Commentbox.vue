@@ -58,6 +58,12 @@ export default {
 .commbox {
   border: 1px solid @bordercolor;
   margin-top: 15px;
+  @media screen and (max-width: 1300px) {
+    width: 57vw;
+  }
+  @media screen and (max-width: 1200px) {
+    width: 64vw;
+  }
   &__title {
     font-size: 20px;
     line-height: 26px;
@@ -111,11 +117,26 @@ export default {
     }
     &-input, &-area {
       width: 570px;
+      @media screen and (max-width: 1200px) {
+        width: 40vw;
+      }
+      @media screen and (max-width: 630px) {
+        width: 37vw;
+      }
     }
     &-info {
       width: 120px;
       margin: 0;
       margin-left: 15px;
+      @media screen and (max-width: 1200px) {
+        width: 160px;
+      }
+      @media screen and (max-width: 730px) {
+        width: 200px;
+      }
+      @media screen and (max-width: 630px) {
+        width: 240px;
+      }
     }
     &-enters {
       width: 570px;
@@ -173,5 +194,8 @@ export default {
       margin-right: 50px;
     }
   }
+}
+hr {
+  margin: 10px 0;
 }
 </style>

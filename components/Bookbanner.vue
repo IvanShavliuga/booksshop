@@ -21,6 +21,9 @@
   margin: 15px;
   margin-right: 0;
   margin-top: 55px;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
   &__header {
     font-size: 18px;
     margin: 10px;
