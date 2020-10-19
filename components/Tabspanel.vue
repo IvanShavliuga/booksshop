@@ -36,6 +36,10 @@
   @media screen and (max-width: 845px) {
     width: 90vw;
   }
+  @media screen and (max-width: 580px) {
+    height: auto;
+    width: 80vw;
+  }
   &__select {
     position: relative;
     background: #fff!important;
@@ -54,6 +58,11 @@
     @media screen and (max-width: 1060px) {
       width: 90vw;
     }
+    @media screen and (max-width: 580px) {
+      flex-direction: column;
+      margin-left: 20px;
+      width: 80vw;
+    }
     &-item {
       padding: 2px 10px;
       font-size: 17px;
@@ -70,6 +79,9 @@
       }
       @media screen and (max-width: 1200px) {
         width: 42vw;
+      }
+      @media screen and (max-width: 580px) {
+        width: 80vw;
       }
     }
     &-empty {
