@@ -44,6 +44,20 @@ export default {
     @media screen and (max-width: 650px) {
       width: 120%;
     }
+    @media screen and (max-width: 570px) {
+      width: 110%;
+      right: 0;
+      font-size: 11px;
+      line-height: 19px;
+      // animation: none;
+    }
+    @media screen and (max-width: 570px) {
+      width: 120%;
+      right: 0;
+      font-size: 11px;
+      line-height: 19px;
+      // animation: none;
+    }
     &-link {
       color: #dfeb21;
       font-weight: bold;

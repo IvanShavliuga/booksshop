@@ -18,11 +18,23 @@
     margin-left: 20px;
   }
   @media screen and (max-width: 500px) {
-    width: 89vw;
+    width: 87vw;
+  }
+  @media screen and (max-width: 488px) {
+    justify-content: space-between;
   }
   @media screen and (max-width: 440px) {
-    width: 75vw;
     margin-left: 20px;
+    width: 85vw;
+  }
+  @media screen and (max-width: 370px) {
+    width: 81vw;
+  }
+  @media screen and (max-width: 338px) {
+    justify-content: center;
+  }
+  @media screen and (max-width: 300px) {
+    width: 77vw;
   }
 }
 </style>

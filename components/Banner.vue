@@ -42,6 +42,9 @@
     @media screen and (max-width: 670px) {
       width: 100%;
     }
+    @media screen and (max-width: 230px) {
+      width: 200px;
+    }
     &-background {
       width: 784px;
       height: 304px;
@@ -62,6 +65,9 @@
       }
       @media screen and (max-width: 670px) {
         width: 100%;
+      }
+      @media screen and (max-width: 230px) {
+        width: 200px;
       }
     }
     &-bookmini {
@@ -98,6 +104,12 @@
         width: 109px;
         height: 188px;
         top: 60px;
+      }
+      @media screen and (max-width: 230px) {
+        width: 79px;
+        height: 148px;
+        top: 80px;
+        left: 60px;
       }
     }
     &-text {

@@ -36,9 +36,9 @@
   @media screen and (max-width: 845px) {
     width: 90vw;
   }
-  @media screen and (max-width: 580px) {
+  @media screen and (max-width: 585px) {
     height: auto;
-    width: 80vw;
+    width: 83vw;
   }
   &__select {
     position: relative;
@@ -59,9 +59,9 @@
       width: 87vw;
       margin-left: 20px;
     }
-    @media screen and (max-width: 580px) {
+    @media screen and (max-width: 585px) {
       flex-direction: column;
-      width: 80vw;
+      width: 83vw;
     }
     &-item {
       padding: 2px 10px;
@@ -83,11 +83,17 @@
       @media screen and (max-width: 1060px) {
         width: 30vw;
       }
-      @media screen and (max-width: 580px) {
-        width: 80vw;
+      @media screen and (max-width: 585px) {
+        width: 83vw;
       }
       @media screen and (max-width: 440px) {
         width: 80vw;
+      }
+      @media screen and (max-width: 370px) {
+        width: 75vw;
+      }
+      @media screen and (max-width: 300px) {
+        width: 70vw;
       }
     }
     &-empty {

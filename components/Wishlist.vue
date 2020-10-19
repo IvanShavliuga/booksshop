@@ -22,6 +22,9 @@
     @media screen and (max-width: 600px) {
       display: block;
     }
+    @media screen and (max-width: 358px) {
+      display: none;
+    }
   }
   &__icon {
     width: 25px;
@@ -37,6 +40,12 @@
     }
     @media screen and (max-width: 600px) {
       display: block;
+    }
+    @media screen and (max-width: 300px) {
+      margin-left: -5px;
+    }
+    @media screen and (max-width: 250px) {
+      margin-left: -65px;
     }
   }
   &__counter {
@@ -57,6 +66,17 @@
     @media screen and (min-width: 601px) and (max-width: 800px) {
       left: 25px;
       top: 15px;
+    }
+    @media screen and (max-width: 358px) {
+      left: 45px;
+      top: 15px;
+    }
+    @media screen and (max-width: 300px) {
+      left: 10px;
+      top: 15px;
+    }
+    @media screen and (max-width: 250px) {
+      left: -40px;
     }
   }
 }

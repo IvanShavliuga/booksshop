@@ -33,6 +33,11 @@
   @media screen and (min-width: 601px) and (max-width: 655px) {
     width: 110px;
   }
+  @media screen and (max-width: 300px) {
+    border-right: none;
+    margin-left: 15px;
+    width: 191px;
+  }
   &__icon {
     background-image: url('../assets/images/cart.svg');
     background-size: 100%;
@@ -49,6 +54,9 @@
     @media screen and (min-width: 601px) and (max-width: 655px) {
       display: none;
     }
+    @media screen and (max-width: 300px) {
+      display: none;
+    }
   }
   &__title {
     font-size: 23px;
@@ -59,6 +67,9 @@
     margin-left: 27px;
     word-spacing: -1px;
     @media screen and (min-width: 601px)  and (max-width: 740px) {
+      display: none;
+    }
+    @media screen and (max-width: 250px) {
       display: none;
     }
   }
@@ -94,6 +105,12 @@
     @media screen and (max-width: 655px) {
       left: 5px;
     }
+    @media screen and (max-width: 250px) {
+      display: block;
+      position: absolute;
+      left: 5px;
+      top: 25px;
+    }
   }
   &__check {
     background-image: linear-gradient(0deg, #242424 0%, #424242 100%);
@@ -114,6 +131,12 @@
     }
     @media screen and (min-width: 601px)  and (max-width: 655px) {
       left: -20px;
+    }
+    @media screen and (max-width: 250px) {
+      display: block;
+      position: absolute;
+      left: -20px;
+      top: 45px;
     }
   }
 }

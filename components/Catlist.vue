@@ -93,6 +93,10 @@
       @media screen and (max-width:  670px) {
         left: 20px;
       }
+      @media screen and (max-width: 400px) {
+        left: 7px;
+        transform: scaleX(0.8);
+      }
     }
     &-btn > span::before {
       content: '';
@@ -122,6 +126,10 @@
       }
       @media screen and (max-width: 670px) {
         left: -110px;
+      }
+      @media screen and (max-width: 400px) {
+        font-size: 20px;
+        top: 80px;
       }
     }
     &-burger {
@@ -224,6 +232,14 @@
   }
   @media screen and (max-width:  670px) {
     margin-left: 22px;
+  }
+  @media screen and (max-width: 400px) {
+    margin-left: 22px;
+    width: 220px;
+  }
+  @media screen and (max-width: 242px) {
+    margin-left: 22px;
+    width: 190px;
   }
   /*@media screen and (min-width: 1061px) {
     position: static;

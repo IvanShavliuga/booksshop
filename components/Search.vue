@@ -3,7 +3,7 @@
     <input class="search__input" type="text">
     <button class="search__button">
       <i class="search__icon">&nbsp;</i>
-      Search
+      <span class="search__btntext">Search</span>
     </button>
   </form>
 </template>
@@ -70,6 +70,14 @@
     }
     @media screen and (max-width: 600px) {
       width: 150px;
+    }
+    @media screen and (max-width: 300px) {
+      width: 40px;
+    }
+  }
+  &__btntext {
+    @media screen and (max-width: 300px) {
+      display: none;
     }
   }
   &__icon {
