@@ -56,11 +56,11 @@
       width: 67.7vw;
     }
     @media screen and (max-width: 1060px) {
-      width: 90vw;
+      width: 87vw;
+      margin-left: 20px;
     }
     @media screen and (max-width: 580px) {
       flex-direction: column;
-      margin-left: 20px;
       width: 80vw;
     }
     &-item {
@@ -80,7 +80,13 @@
       @media screen and (max-width: 1200px) {
         width: 42vw;
       }
+      @media screen and (max-width: 1060px) {
+        width: 30vw;
+      }
       @media screen and (max-width: 580px) {
+        width: 80vw;
+      }
+      @media screen and (max-width: 440px) {
         width: 80vw;
       }
     }
@@ -98,9 +104,6 @@
         width: 18vw;
       }
       @media screen and (max-width: 1060px) {
-        width: auto;
-      }
-      @media screen and (max-width: 630px) {
         display: none;
       }
     }

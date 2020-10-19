@@ -26,8 +26,12 @@
 .wrapper() {
   width: 80%;
   margin: 0 auto;
+  @media screen and (min-width: 1200px) and (max-width: 1250){
+    margin-left: 20px;
+  }
   @media screen and (max-width: 1200px) {
     width: 90%;
+    margin-left: 20px;
   }
   @media screen and (max-width: 915px) {
     width: 100%;
@@ -97,7 +101,7 @@
     @media screen and (min-width: 1061px) {
       display: none;
     }
-  }  
+  }
 }
 
 @keyframes runstring {

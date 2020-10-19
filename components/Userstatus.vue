@@ -24,7 +24,7 @@
   }
   &__topline {
     background-color: rgb(65,65,65);
-    width: 100%;
+    width: auto;
     height: 30px;
   }
   &__userpanel {
