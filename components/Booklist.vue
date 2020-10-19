@@ -14,7 +14,15 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   @media screen and (max-width: 1060px) {
-    width: 90vw;
+    width: 87vw;
+    margin-left: 20px;
+  }
+  @media screen and (max-width: 500px) {
+    width: 89vw;
+  }
+  @media screen and (max-width: 440px) {
+    width: 75vw;
+    margin-left: 20px;
   }
 }
 </style>

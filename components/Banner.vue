@@ -27,6 +27,9 @@
     padding: 0;
     margin: 0;
     position: relative;
+    @media screen and (max-width: 1080px) {
+      width: 680px;
+    }
     @media screen and (max-width: 1060px) {
       width: 650px;
     }
@@ -45,6 +48,9 @@
       padding: 0;
       margin: 0;
       position: relative;
+      @media screen and (max-width: 1080px) {
+        width: 680px;
+      }
       @media screen and (max-width: 1060px) {
         width: 650px;
       }
