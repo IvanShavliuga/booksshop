@@ -42,6 +42,64 @@
     }
   }
 }
+.burger() {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  padding: 0;
+  margin-top: -5px;
+  /*#menu__collapse-toggle:checked {
+    height: auto;
+  }*/
+  @media screen and (max-width: 1060px) {
+    height: 50px;
+  }
+  /* стилизуем кнопку */
+  &-btn {
+    display: flex; /* используем flex для центрирования содержимого */
+    align-items: center;  /* центрируем содержимое кнопки */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 50;
+    @media screen and (min-width: 1061px) {
+      display: none;
+    }
+  }
+  /* добавляем "гамбургер" */
+  &-btn > span,
+  &-btn > span::before,
+  &-btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+  }
+  &-btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  &-btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  &-title {
+    float: left;
+    font-size: 28px;
+    line-height: 42px;
+    text-transform: uppercase;
+    color: #ccc;
+    margin-left: 65px;
+    @media screen and (min-width: 1061px) {
+      display: none;
+    }
+  }  
+}
+
 @keyframes runstring {
   0% {
     right: 0%;

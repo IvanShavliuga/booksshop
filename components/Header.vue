@@ -66,6 +66,7 @@ export default {
     }
     @media screen and (max-width: 600px) {
       flex-direction: column-reverse;
+      padding-bottom: 20px;
     }
     &-logo {
       background-image: url('../assets/images/logo.png');
