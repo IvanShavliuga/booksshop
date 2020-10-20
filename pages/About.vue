@@ -25,52 +25,54 @@
       </div>
     </div>
     <div class="about__wrapper about__flex">
-      <article class="about__links">
-        <h3 class="about__links-title">Literature</h3>
-        <ul class="about__links-list">
-          <li class="about__links-item">
-            <a class="about__links-href"
-              href="https://author.today/u/ischavliuga/works">
-              Author Today
-            </a>
-          </li>
-          <li class="about__links-item">
-            <a class="about__links-href"
-              href="https://samlib.ru/i/iwan_sergeewich_shawljuga/">
-              SamLib.ru
-            </a>
-          </li>
-          <li class="about__links-item">
-            <a class="about__links-href"
-              href="https://isschavliuga.ucoz.net">
-              Personal web-site
-            </a>
-          </li>
-        </ul>
-      </article>
-      <article class="about__links">
-        <h3 class="about__links-title">Science</h3>
-        <ul class="about__links-list">
-          <li class="about__links-item">
-            <a class="about__links-href"
-              href="https://mendel-info.usite.pro">
-              Table of Mendeleev
-            </a>
-          </li>
-          <li class="about__links-item">
-            <a class="about__links-href"
-              href="https://t.me/mendelinfo">
-              Telegram channel of science
-            </a>
-          </li>
-          <li class="about__links-item">
-            <a class="about__links-href"
-              href="https://www.t.me/vuejscodesru">
-              Telegram channel of framework vue.js
-            </a>
-          </li>
-        </ul>
-      </article>
+      <div class="about__blocklinks">
+        <article class="about__links">
+          <h3 class="about__links-title">Literature</h3>
+          <ul class="about__links-list">
+            <li class="about__links-item">
+              <a class="about__links-href"
+                href="https://author.today/u/ischavliuga/works">
+                Author Today
+              </a>
+            </li>
+            <li class="about__links-item">
+              <a class="about__links-href"
+                href="https://samlib.ru/i/iwan_sergeewich_shawljuga/">
+                SamLib.ru
+              </a>
+            </li>
+            <li class="about__links-item">
+              <a class="about__links-href"
+                href="https://isschavliuga.ucoz.net">
+                Personal web-site
+              </a>
+            </li>
+          </ul>
+        </article>
+        <article class="about__links">
+          <h3 class="about__links-title">Science</h3>
+          <ul class="about__links-list">
+            <li class="about__links-item">
+              <a class="about__links-href"
+                href="https://mendel-info.usite.pro">
+                Table of Mendeleev
+              </a>
+            </li>
+            <li class="about__links-item">
+              <a class="about__links-href"
+                href="https://t.me/mendelinfo">
+                Telegram channel of science
+              </a>
+            </li>
+            <li class="about__links-item">
+              <a class="about__links-href"
+                href="https://www.t.me/vuejscodesru">
+                Telegram channel of framework vue.js
+              </a>
+            </li>
+          </ul>
+        </article>
+      </div>
       <Bookbanner/>
     </div>
     <Footer/>
@@ -124,18 +126,37 @@ export default {
   &__empty {
     height: 400px;
   }
+  &__blocklinks {
+    @media screen and (max-width: 600px) {
+      flex-wrap: wrap;
+    }
+    @media screen and (max-width: 450px) {
+      flex-direction: column-reverse;
+    }
+  }
   &__links {
     width: 33%;
     padding: 15px;
     margin: 15px;
+    @media screen and (max-width: 900px) {
+      width: auto;
+    }
     &-href {
       color: #2523bd;
       font-size: 22px;
       text-decoration: none;
+      @media screen and (max-width: 375px) {
+        font-size: 16px;
+      }
     }
     &-title {
       font-size: 28px;
       color: @colform;
+    }
+  }
+  &__title {
+    @media screen and (max-width: 800px) {
+      font-size: 27px;
     }
   }
   &__title, &__prof, &__desc {
@@ -150,10 +171,33 @@ export default {
       padding: 0 15px;
       color: #2523bd;
       font-size: 22px;
+      @media screen and (max-width: 800px) {
+        padding: 0 10px;
+      }
+      @media screen and (max-width: 400px) {
+        padding: 0 5px;
+      }
     }
   }
   &__info {
     width: auto;
+    @media screen and (max-width: 1200px) {
+      width: 400px;
+    }
+    @media screen and (max-width: 800px) {
+      width: 300px;
+    }
+    @media screen and (max-width: 660px) {
+      width: 400px;
+    }
+    @media screen and (max-width: 520px) {
+      width: 300px;
+      margin-left: 50px;
+    }
+    @media screen and (max-width: 375px) {
+      width: 200px;
+      margin-left: 50px;
+    }
   }
   &__promo {
     margin-left: -100px;
