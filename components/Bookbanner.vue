@@ -21,9 +21,9 @@
   margin: 15px;
   margin-right: 0;
   margin-top: 55px;
-  /*@media screen and (max-width: 900px) {
+  @media screen and (max-width: 500px) {
     display: none;
-  }*/
+  }
   @media screen and (max-width: 900px) {
     width: 25vw;
   }

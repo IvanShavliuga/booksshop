@@ -64,6 +64,9 @@ export default {
   @media screen and (max-width: 1200px) {
     width: 64vw;
   }
+  @media screen and (max-width: 500px) {
+    width: 92vw;
+  }
   &__title {
     font-size: 20px;
     line-height: 26px;
@@ -122,6 +125,9 @@ export default {
       }
       @media screen and (max-width: 630px) {
         width: 37vw;
+      }
+      @media screen and (max-width: 500px) {
+        width: 50vw;
       }
     }
     &-info {

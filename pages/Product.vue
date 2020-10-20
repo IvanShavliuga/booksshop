@@ -329,6 +329,9 @@ export default {
       @media screen and (max-width: 1200px) {
         width: 63vw;
       }
+      @media screen and (max-width: 500px) {
+        width: 90vw;
+      }
     }
     &-text {
       width: 47vw;
@@ -339,6 +342,9 @@ export default {
       font-family: @bodyfont;
       @media screen and (max-width: 1200px) {
         width: 61vw;
+      }
+      @media screen and (max-width: 500px) {
+        width: 87vw;
       }
     }
     &-tabs {
@@ -355,6 +361,10 @@ export default {
       font-family: @bodyfont;
       border: 1px solid @bordercolor;
       border-bottom: none;
+      @media screen and (max-width: 530px) {
+        font-size: 14px;
+        padding: 6px 10px;
+      }
       &:first-child {
         left: 0px;
         top: 3px;
@@ -362,6 +372,9 @@ export default {
       &:last-child {
         left: 210px;
         top: 3px;
+        @media screen and (max-width: 530px) {
+          left: 150px;
+        }
       }
       &active {
         background-color: #fff;

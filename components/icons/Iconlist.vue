@@ -94,6 +94,10 @@ export default {
   display: flex;
   justify-content: flex-start;
   width: 350px;
+  @media screen and (max-width: 520px) {
+    width: 300px;
+    flex-wrap: wrap;
+  }
   &__item {
     padding: 3px;
     margin: 0;
