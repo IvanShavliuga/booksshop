@@ -30,13 +30,13 @@
   margin-top: 15px;
   height: 30px;
   z-index: 10;
-  @media screen and (max-width: 1020px) {
+  @media (max-width: 1020px) {
     width: auto;
   }
-  @media screen and (max-width: 845px) {
+  @media (max-width: 845px) {
     width: 90vw;
   }
-  @media screen and (max-width: 580px) {
+  @media (max-width: 615px) {
     height: auto;
     width: 80vw;
   }
@@ -52,14 +52,14 @@
     display: flex;
     width: 60vw;
     margin: 0;
-    @media screen and (max-width: 1200px) {
+    @media (max-width: 1200px) {
       width: 67.7vw;
     }
-    @media screen and (max-width: 1060px) {
+    @media (max-width: 1060px) {
       width: 87vw;
       margin-left: 20px;
     }
-    @media screen and (max-width: 580px) {
+    @media (max-width: 615px) {
       flex-direction: column;
       width: 80vw;
     }
@@ -77,16 +77,13 @@
       &:hover {
         .hover();
       }
-      @media screen and (max-width: 1200px) {
+      @media (max-width: 1200px) {
         width: 42vw;
       }
-      @media screen and (max-width: 1060px) {
+      @media (max-width: 1060px) {
         width: 30vw;
       }
-      @media screen and (max-width: 580px) {
-        width: 80vw;
-      }
-      @media screen and (max-width: 440px) {
+      @media (max-width: 615px) {
         width: 80vw;
       }
     }
@@ -100,10 +97,10 @@
         background: transparent;
         color: transparent;
       }
-      @media screen and (max-width: 1200px) {
+      @media (max-width: 1200px) {
         width: 18vw;
       }
-      @media screen and (max-width: 1060px) {
+      @media (max-width: 1060px) {
         display: none;
       }
     }

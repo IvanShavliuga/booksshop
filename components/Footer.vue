@@ -312,7 +312,7 @@
   &__links {
     display: flex;
     justify-content: space-between;
-    @media screen and (max-width: 1010px) {
+    @media (max-width: 1010px) {
       flex-direction: column;
     }
     &-header {

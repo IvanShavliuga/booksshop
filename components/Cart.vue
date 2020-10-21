@@ -24,13 +24,13 @@
   padding-right: 1px;
   border-right: 1px solid #ccc;
   position: relative;
-  @media screen and (min-width: 601px) and (max-width: 1130px) {
+  @media (min-width: 601px) and (max-width: 1130px) {
     border-right: none;
   }
-  @media screen and (min-width: 601px) and (max-width: 740px) {
+  @media (min-width: 601px) and (max-width: 740px) {
     width: 140px;
   }
-  @media screen and (min-width: 601px) and (max-width: 655px) {
+  @media (min-width: 601px) and (max-width: 655px) {
     width: 110px;
   }
   &__icon {
@@ -43,10 +43,10 @@
     z-index: 20;
     top: 11px;
     left: -13px;
-    @media screen and (min-width: 601px) and (max-width: 740px) {
+    @media (min-width: 601px) and (max-width: 740px) {
       left: -3px;
     }
-    @media screen and (min-width: 601px) and (max-width: 655px) {
+    @media (min-width: 601px) and (max-width: 655px) {
       display: none;
     }
   }
@@ -58,7 +58,7 @@
     display: inline-block;
     margin-left: 27px;
     word-spacing: -1px;
-    @media screen and (min-width: 601px)  and (max-width: 740px) {
+    @media (min-width: 601px)  and (max-width: 740px) {
       display: none;
     }
   }
@@ -69,7 +69,7 @@
     margin-left: -5px;
     display: inline-block;
     background-color: transparent;
-    /*@media screen and (max-width: 740px) {
+    /*@media (max-width: 740px) {
       display: block;
       position: absolute;
       left: 20px;
@@ -85,13 +85,13 @@
     color: @colform;
     font-weight: bold;
     font-family: @bodyfont;
-    @media screen and (min-width: 601px)  and (max-width: 740px) {
+    @media (min-width: 601px)  and (max-width: 740px) {
       display: block;
       position: absolute;
       left: 35px;
       top: 25px;
     }
-    @media screen and (max-width: 655px) {
+    @media (max-width: 655px) {
       left: 5px;
     }
   }
@@ -106,13 +106,13 @@
     padding: 12px 15px;
     color: #ffffff;
     font-family: @bodyfont;
-    @media screen and (min-width: 601px)  and (max-width: 740px) {
+    @media (min-width: 601px)  and (max-width: 740px) {
       display: block;
       position: absolute;
       left: 15px;
       top: 45px;
     }
-    @media screen and (min-width: 601px)  and (max-width: 655px) {
+    @media (min-width: 601px)  and (max-width: 655px) {
       left: -20px;
     }
   }

@@ -16,10 +16,10 @@
     line-height: 26px;
     color: @colform;
     font-family: @bodyfont;
-    @media screen and (max-width: 800px) {
+    @media (max-width: 800px) {
       display: none;
     }
-    @media screen and (max-width: 600px) {
+    @media (max-width: 600px) {
       display: block;
     }
   }
@@ -32,10 +32,10 @@
     background-image: url('../assets/images/star.svg');
     background-size: 100%;
     display: block;
-    @media screen and (min-width: 601px) and (max-width: 800px) {
+    @media (min-width: 601px) and (max-width: 800px) {
       margin-left: 0;
     }
-    @media screen and (max-width: 600px) {
+    @media (max-width: 600px) {
       display: block;
     }
   }
@@ -54,7 +54,7 @@
     top: 35px;
     left: 65px;
     background-color: @bgform;
-    @media screen and (min-width: 601px) and (max-width: 800px) {
+    @media (min-width: 601px) and (max-width: 800px) {
       left: 25px;
       top: 15px;
     }

@@ -26,7 +26,7 @@ export default {
 @import '../assets/css/style.less';
 .path {
   width: 100%;
-  @media screen and (max-width: 500px) {
+  @media (max-width: 500px) {
     width: 90vw;
     margin: 0 auto;
   }

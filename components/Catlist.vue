@@ -62,7 +62,7 @@
   margin: 0 15px;
   padding: 0;
   border: 1px solid @bordercolor;
-  @media screen and (max-width: 1060px) {
+  @media (max-width: 1060px) {
     position: relative;
     width: 1vw;
     border: none;
@@ -83,14 +83,14 @@
   }
   &__collapse {
     .burger();
-    /*@media screen and (max-width: 925px) {
+    /*@media (max-width: 925px) {
       left: -25px;
     }
-    @media screen and (max-width: 910px) {
+    @media (max-width: 910px) {
       left: -5px;
     }*/
     &-btn {
-      @media screen and (max-width:  670px) {
+      @media (max-width:  670px) {
         left: 20px;
       }
     }
@@ -117,10 +117,10 @@
       line-height: 42px;
       text-transform: uppercase;
       color: #434343;
-      @media screen and (max-width: 925px) {
+      @media (max-width: 925px) {
         left: -120px;
       }
-      @media screen and (max-width: 670px) {
+      @media (max-width: 670px) {
         left: -110px;
       }
     }
@@ -138,13 +138,13 @@
     color: #6b6969;
     font-weight: 300;
     font-family: @bodyfont;
-    @media screen and (max-width: 1060px) {
+    @media (max-width: 1060px) {
       display: none;
     }
   }
   &__nav {
     margin-top: 0;
-    @media screen and (max-width: 1060px) {
+    @media (max-width: 1060px) {
       display: none;
     }
     &-list {
@@ -216,16 +216,16 @@
   .aside__nav-link {
     display: block;
   }
-  @media screen and (max-width:  915px) {
+  @media (max-width:  915px) {
     margin-left: 12px;
   }
-  @media screen and (max-width:  915px) {
+  @media (max-width:  915px) {
     width: 250px;
   }
-  @media screen and (max-width:  670px) {
+  @media (max-width:  670px) {
     margin-left: 22px;
   }
-  /*@media screen and (min-width: 1061px) {
+  /*@media (min-width: 1061px) {
     position: static;
     display: flex;
     justify-content: center;
@@ -236,7 +236,7 @@
     box-shadow: none;
   }
   .menu__list-item {
-    @media screen and (max-width: 1260px) {
+    @media (max-width: 1260px) {
       padding: 10px 5px;
     }
   }*/

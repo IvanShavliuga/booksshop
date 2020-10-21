@@ -27,19 +27,19 @@
     padding: 0;
     margin: 0;
     position: relative;
-    @media screen and (max-width: 1080px) {
+    @media (max-width: 1080px) {
       width: 680px;
     }
-    @media screen and (max-width: 1060px) {
+    @media (max-width: 1060px) {
       width: 650px;
     }
-    @media screen and (max-width: 950px) {
+    @media (max-width: 950px) {
       width: 500px;
     }
-    @media screen and (max-width: 790px) {
+    @media (max-width: 790px) {
       width: 400px;
     }
-    @media screen and (max-width: 670px) {
+    @media (max-width: 670px) {
       width: 100%;
     }
     &-background {
@@ -48,19 +48,19 @@
       padding: 0;
       margin: 0;
       position: relative;
-      @media screen and (max-width: 1080px) {
+      @media (max-width: 1080px) {
         width: 680px;
       }
-      @media screen and (max-width: 1060px) {
+      @media (max-width: 1060px) {
         width: 650px;
       }
-      @media screen and (max-width: 950px) {
+      @media (max-width: 950px) {
         width: 500px;
       }
-      @media screen and (max-width: 790px) {
+      @media (max-width: 790px) {
         width: 400px;
       }
-      @media screen and (max-width: 670px) {
+      @media (max-width: 670px) {
         width: 100%;
       }
     }
@@ -73,7 +73,7 @@
       left: 180px;
       top: 140px;
       display:flex;
-      @media screen and (max-width: 420px) {
+      @media (max-width: 420px) {
         display: none;
       }
     }
@@ -94,7 +94,7 @@
       left: 80px;
       top: 30px;
       z-index: 10;
-      @media screen and (max-width: 320px) {
+      @media (max-width: 320px) {
         width: 109px;
         height: 188px;
         top: 60px;
@@ -107,7 +107,7 @@
       z-index: 10;
       color: #fff;
       width: 400px;
-      @media screen and (max-width: 950px) {
+      @media (max-width: 950px) {
         display: none;
       }
     }
@@ -119,7 +119,7 @@
       font-family: @bodyfont;
       text-align: center;
       transform: scaleX(1.05);
-      @media screen and (max-width: 1060px) {
+      @media (max-width: 1060px) {
         transform: scaleX(0.75);
       }
     }

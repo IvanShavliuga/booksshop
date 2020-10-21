@@ -13,16 +13,19 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  @media screen and (max-width: 1060px) {
+  @media (max-width: 1060px) {
     width: 87vw;
     margin-left: 20px;
   }
-  @media screen and (max-width: 500px) {
-    width: 89vw;
+  @media (max-width: 615px) {
+    width: 83.5vw;
   }
-  @media screen and (max-width: 440px) {
-    width: 75vw;
+  @media (max-width: 440px) {
+    //width: 75vw;
     margin-left: 20px;
+  }
+  @media (max-width: 405px) {
+    width: 85.5vw;
   }
 }
 </style>
