@@ -58,13 +58,13 @@ export default {
 .commbox {
   border: 1px solid @bordercolor;
   margin-top: 15px;
-  @media screen and (max-width: 1300px) {
+  @media (max-width: 1300px) {
     width: 57vw;
   }
-  @media screen and (max-width: 1200px) {
+  @media (max-width: 1200px) {
     width: 64vw;
   }
-  @media screen and (max-width: 500px) {
+  @media (max-width: 500px) {
     width: 92vw;
   }
   &__title {
@@ -120,13 +120,13 @@ export default {
     }
     &-input, &-area {
       width: 570px;
-      @media screen and (max-width: 1200px) {
+      @media (max-width: 1200px) {
         width: 40vw;
       }
-      @media screen and (max-width: 630px) {
+      @media (max-width: 630px) {
         width: 37vw;
       }
-      @media screen and (max-width: 500px) {
+      @media (max-width: 500px) {
         width: 50vw;
       }
     }
@@ -134,13 +134,13 @@ export default {
       width: 120px;
       margin: 0;
       margin-left: 15px;
-      @media screen and (max-width: 1200px) {
+      @media (max-width: 1200px) {
         width: 160px;
       }
-      @media screen and (max-width: 730px) {
+      @media (max-width: 730px) {
         width: 200px;
       }
-      @media screen and (max-width: 630px) {
+      @media (max-width: 630px) {
         width: 240px;
       }
     }
