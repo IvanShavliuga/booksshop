@@ -68,6 +68,10 @@ export default {
       flex-direction: column-reverse;
       padding-bottom: 20px;
     }
+    @media (max-width: 350px) {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
     &-logo {
       background-image: url('../assets/images/logo.png');
       background-position: center 30px;

@@ -33,6 +33,16 @@
   @media (min-width: 601px) and (max-width: 655px) {
     width: 110px;
   }
+  @media (max-width: 350px) {
+    width: 145px;
+    border: none;
+    margin-left: 15px;
+  }
+  @media (max-width: 210px) {
+    width: 150px;
+    border: none;
+    margin-left: -15px;
+  }
   &__icon {
     background-image: url('../assets/images/cart.svg');
     background-size: 100%;
@@ -49,6 +59,9 @@
     @media (min-width: 601px) and (max-width: 655px) {
       display: none;
     }
+    @media (max-width: 350px) {
+      display:none;
+    }
   }
   &__title {
     font-size: 23px;
@@ -60,6 +73,9 @@
     word-spacing: -1px;
     @media (min-width: 601px)  and (max-width: 740px) {
       display: none;
+    }
+    @media (max-width: 350px) {
+      display:none;
     }
   }
   &__counter {
@@ -94,6 +110,12 @@
     @media (max-width: 655px) {
       left: 5px;
     }
+    @media (max-width: 350px) {
+      display: block;
+      position: absolute;
+      left: 45px;
+      top: 25px;
+    }
   }
   &__check {
     background-image: linear-gradient(0deg, #242424 0%, #424242 100%);
@@ -114,6 +136,12 @@
     }
     @media (min-width: 601px)  and (max-width: 655px) {
       left: -20px;
+    }
+    @media (max-width: 350px) {
+      display: block;
+      position: absolute;
+      left: 15px;
+      top: 45px;
     }
   }
 }

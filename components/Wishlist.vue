@@ -22,6 +22,9 @@
     @media (max-width: 600px) {
       display: block;
     }
+    @media (max-width: 270px) {
+      display: none;
+    }
   }
   &__icon {
     width: 25px;
@@ -37,6 +40,9 @@
     }
     @media (max-width: 600px) {
       display: block;
+    }
+    @media (max-width: 270px) {
+      margin-left: -20px;
     }
   }
   &__counter {
@@ -56,6 +62,10 @@
     background-color: @bgform;
     @media (min-width: 601px) and (max-width: 800px) {
       left: 25px;
+      top: 15px;
+    }
+    @media (max-width: 270px) {
+      left: 5px;
       top: 15px;
     }
   }

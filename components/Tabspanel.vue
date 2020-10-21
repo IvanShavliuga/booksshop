@@ -40,6 +40,16 @@
     height: auto;
     width: 80vw;
   }
+  @media (max-width: 350px) {
+    margin-left: -20px;
+    width: 85vw;
+  }
+  @media (max-width: 290px) {
+    width: 200px;
+  }
+  @media (max-width: 240px) {
+    width: 150px;
+  }
   &__select {
     position: relative;
     background: #fff!important;
@@ -63,6 +73,15 @@
       flex-direction: column;
       width: 80vw;
     }
+    @media (max-width: 350px) {
+      width: 85vw;
+    }
+    @media (max-width: 290px) {
+      width: 200px;
+    }
+    @media (max-width: 240px) {
+      width: 150px;
+    }
     &-item {
       padding: 2px 10px;
       font-size: 17px;
@@ -85,6 +104,16 @@
       }
       @media (max-width: 615px) {
         width: 80vw;
+      }
+      @media (max-width: 350px) {
+        width: 83vw;
+      }
+      @media (max-width: 290px) {
+        width: 180px;
+        padding: 2px 10px;
+      }
+      @media (max-width: 240px) {
+        width: 150px;
       }
     }
     &-empty {
