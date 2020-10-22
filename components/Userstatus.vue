@@ -26,15 +26,25 @@
     background-color: rgb(65,65,65);
     width: auto;
     height: 30px;
+    @media (max-width: 350px) {
+      height: auto;
+    }
   }
   &__userpanel {
     display: flex;
     margin: 0;
     padding: 0;
     justify-content: flex-end;
+    @media (max-width: 350px) {
+      height: auto;
+    }
     &-list {
       display: inline;
       margin: 0;
+      @media (max-width: 350px) {
+        display: flex;
+        flex-wrap: wrap;
+      }
     }
     &-item {
       display: inline;
@@ -45,6 +55,10 @@
       font-weight: 300;
       font-family: @bodyfont;
       text-align: center;
+      @media (max-width: 350px) {
+        display: block;
+        font-size: 14px;
+      }
     }
     &-link {
       color: #ffffff;

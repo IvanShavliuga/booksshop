@@ -27,6 +27,21 @@
   @media (max-width: 405px) {
     width: 85.5vw;
   }
+  @media (max-width: 385px) {
+    justify-content: space-around;
+    width: 84.5vw;
+  }
+  @media (max-width: 350px) {
+    width: 88vw;
+    margin-left: 0;
+  }
+  @media (max-width: 290px) {
+    width: 200px;
+    border: none;
+  }
+  @media (max-width: 240px) {
+    width: 150px;
+  }
 }
 </style>
 <script>

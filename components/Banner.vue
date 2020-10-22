@@ -95,9 +95,16 @@
       top: 30px;
       z-index: 10;
       @media (max-width: 320px) {
-        width: 109px;
-        height: 188px;
+        width: 89px;
+        height: 168px;
         top: 60px;
+        left: 70px;
+      }
+      @media (max-width: 250px) {
+        width: 69px;
+        height: 148px;
+        top: 60px;
+        left: 60px;
       }
     }
     &-text {

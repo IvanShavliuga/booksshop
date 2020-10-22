@@ -93,6 +93,9 @@
       @media (max-width:  670px) {
         left: 20px;
       }
+      @media (max-width: 350px) {
+        left: 0;
+      }
     }
     &-btn > span::before {
       content: '';
@@ -122,6 +125,11 @@
       }
       @media (max-width: 670px) {
         left: -110px;
+      }
+      @media (max-width: 350px) {
+        left: -110px;
+        top: 80px;
+        font-size: 20px;
       }
     }
     &-burger {

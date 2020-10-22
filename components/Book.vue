@@ -27,11 +27,21 @@ export default {
   width: @wbook + 10px;
   margin: 10px 15px;
   padding: 10px;
+  @media (max-width: 520px) {
+    width: @wbook - 10px;
+    padding: 10px 15px;
+    margin: 10px 5px;
+  }
   &__image {
     width: @wbook;
     height: @hbook;
     border: 4px solid white;
     box-shadow: 1px 1px 3px 5px #aaa;
+    @media (max-width: 520px) {
+      width: @wbook - 20px;
+      height: @hbook - 20px;
+      margin: 10px 0;
+    }
   }
   &__title {
     font-size: 15px;
@@ -47,6 +57,9 @@ export default {
     color: @pricecolor;
     font-family: @pricefont;
     text-align: center;
+    @media (max-width: 520px) {
+      margin-bottom: 5px;
+    }
   }
   &__sale {
     position: absolute;
@@ -63,6 +76,13 @@ export default {
     font-family: @bodyfont;
     text-align: center;
     border-radius: 50%;
+    @media (max-width: 520px) {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+      line-height: 39px;
+      top: -10px;
+    }
   }
 }
 </style>

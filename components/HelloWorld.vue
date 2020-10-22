@@ -26,6 +26,9 @@ export default {
   text-align: center;
   height: 20px;
   position: relative;
+  @media (max-width: 650px) {
+    height: 45px;
+  }
   &__text {
     font-size: 16px;
     color: #dfebb0;
@@ -42,7 +45,14 @@ export default {
       width: 100%;
     }
     @media (max-width: 650px) {
-      width: 120%;
+      height: 45px;
+      width: 350px;
+      padding: 5px 0;
+      //animation: runstringmob 4s infinite;
+    }
+    @media (max-width: 350px) {
+      font-size: 12px;
+      width: 250px;
     }
     &-link {
       color: #dfeb21;
