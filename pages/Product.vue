@@ -101,11 +101,20 @@ export default {
 @import '../assets/css/style.less';
 
 .product {
+  margin: 0;
+  padding: 0;
   &__wrapper {
     .wrapper();
   }
   &__flex {
     display: flex;
+    &:first-child {
+      @media (max-width: 660px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
   }
   &__border {
     border: 1px solid @bordercolor;
@@ -113,8 +122,8 @@ export default {
   &__block {
     width: 53vw;
     margin: 10px auto 0 auto;
-    @media screen and (max-width: 650px) {
-      width: 56vw;
+    @media (max-width: 650px) {
+      width: 65vw;
     }
     &-title {
       font-size: 41px;
@@ -124,11 +133,21 @@ export default {
       font-family: @bodyfont;
       margin-top: 15px;
       margin-bottom: 30px;
-      @media screen and (max-width: 630px) {
+      @media (max-width: 630px) {
         font-size: 32px;
       }
-      @media screen and (max-width: 560px) {
+      /*@media (max-width: 560px) {
         font-size: 27px;
+      }*/
+      @media (max-width: 450px) {
+        font-size: 27px;
+        line-height: 40px;
+        word-spacing: -1px;
+      }
+      @media (max-width: 350px) {
+        font-size: 27px;
+        line-height: 40px;
+        word-spacing: 7px;
       }
     }
     &-text {
@@ -139,17 +158,21 @@ export default {
       line-height: 26px;
       color: #7e7e7e;
       font-family: @bodyfont;
-      @media screen and (max-width: 1300px) {
+      @media (max-width: 1300px) {
         width: 49vw;
       }
-      @media screen and (max-width: 650px) {
-        width: 56vw;
-        height: 250px;
-      }
-      @media screen and (max-width: 530px) {
-        width: 56vw;
+      @media (max-width: 650px) {
+        width: 65vw;
+        height: auto;
+      }/*
+      @media (max-width: 530px) {
+        width: 58vw;
         height: auto;
       }
+      @media (max-width: 450px) {
+        width: 52vw;
+        height: auto;
+      }*/
     }
   }
   &__pay {
@@ -158,26 +181,30 @@ export default {
     margin-bottom: 15px;
     padding: 15px;
     border: 1px solid @bordercolor;
-    @media screen and (max-width: 1300px) {
+    @media (max-width: 1300px) {
       width: 49vw;
     }
-    @media screen and (max-width: 1200px) {
+    @media (max-width: 1200px) {
       width: 46vw;
     }
-    @media screen and (max-width: 800px) {
+    /*@media (max-width: 800px) {
       width: 43vw;
-    }
-    @media screen and (max-width: 650px) {
-      width: 63vw;
-      margin-left: -120px;
-      margin-top: 20px;
-    }
-    @media screen and (max-width: 650px) {
+    }*/
+    @media (max-width: 650px) {
       width: 65vw;
+      /*margin-left: -120px;
+      margin-top: 20px;*/
+    }
+    @media (max-width: 370px) {
+      margin-left: -10px;
+    }
+    @media (max-width: 280px) {
+      border: none;
+      margin-left: -15px;
     }
     &-topblock {
       display: flex;
-      @media screen and (max-width: 495px) {
+      @media (max-width: 495px) {
         flex-direction: column;
         justify-content: center;
       }
@@ -185,11 +212,18 @@ export default {
     &-headblock {
       width: 30vw;
       margin-top: 5px;
-      @media screen and (max-width: 745px) {
+      @media (max-width: 745px) {
         margin: 0 auto;
       }
-      @media screen and (max-width: 495px) {
-        width: 54vw;
+      @media (max-width: 495px) {
+        width: 58vw;
+      }
+      /*@media (max-width: 350px) {
+        width: 190px;
+      }*/
+      @media (max-width: 290px) {
+        width: 150px;
+        margin: 0;
       }
     }
     &-button {
@@ -203,30 +237,36 @@ export default {
       color: #ffffff;
       font-weight: bold;
       font-family: @pricefont;
-      @media screen and (max-width: 1200px) {
+      @media (max-width: 1200px) {
         font-size: 20px;
         padding: 10px 5px;
         width: 150px;
       }
-
+      @media (max-width: 500px) {
+        font-size: 17px;
+        padding: 2px 5px;
+        height: 30px;
+        margin: 10px auto;
+        width: 120px;
+      }
     }
     &-header {
       font-size: 36px;
       font-family: @bodyfont;
       margin: 0;
-      @media screen and (max-width: 880px) {
+      @media (max-width: 880px) {
         font-size: 26px;
       }
-      @media screen and (max-width: 745px) {
+      @media (max-width: 745px) {
         font-size: 20px;
       }
-      @media screen and (max-width: 495px) {
+      @media (max-width: 495px) {
         font-size: 30px;
       }
-      @media screen and (max-width: 400px) {
+      /*@media (max-width: 400px) {
         font-size: 26px;
-      }
-      @media screen and (max-width: 340px) {
+      }*/
+      @media (max-width: 370px) {
         font-size: 20px;
       }
     }
@@ -248,8 +288,12 @@ export default {
       text-align: left;
       margin-top: 5px;
       margin-left: 0;
-      @media screen and (max-width: 745px) {
+      @media (max-width: 745px) {
         text-align: center;
+      }
+      @media (max-width: 500px) {
+        margin-top: 0;
+        margin-bottom: 0;
       }
     }
     &-icon {
@@ -271,6 +315,11 @@ export default {
     &-cards {
       display: flex;
       margin: 0;
+      @media (max-width: 270px) {
+        width: 100px;
+        flex-wrap: wrap;
+        margin: 0 auto;
+      }
     }
     &-card {
       width: 43px;
@@ -300,13 +349,25 @@ export default {
     width: 252px;
     height: 393px;
     margin: 15px;
-    @media screen and (max-width: 700px) {
+    /*@media (max-width: 700px) {
       width: 202px;
       height: 343px;
     }
-    @media screen and (max-width: 650px) {
+    @media (max-width: 650px) {
       width: 132px;
       height: 273px;
+    }
+    @media (max-width: 450px) {
+      width: 102px;
+      height: 253px;
+    }*/
+    @media (max-width: 360px) {
+      width: 202px;
+      height: 343px;
+    }
+    @media (max-width: 240px) {
+      width: 102px;
+      height: 243px;
     }
   }
   &__pannels {
@@ -314,7 +375,7 @@ export default {
     margin: 0;
     margin-top: 15px;
     padding: 0;
-    @media screen and (max-width: 1300px) {
+    @media (max-width: 1300px) {
       width: 54vw;
     }
     &-block {
@@ -323,14 +384,17 @@ export default {
       padding: 18px 5px;
       margin-right: 0;
       margin-top: 40px;
-      @media screen and (max-width: 1300px) {
+      @media (max-width: 1300px) {
         width: 56vw;
       }
-      @media screen and (max-width: 1200px) {
+      @media (max-width: 1200px) {
         width: 63vw;
       }
-      @media screen and (max-width: 500px) {
+      @media (max-width: 500px) {
         width: 90vw;
+      }
+      @media (max-width: 270px) {
+        margin-top: 60px;
       }
     }
     &-text {
@@ -340,10 +404,10 @@ export default {
       color: #7e7e7e;
       margin: 15px;
       font-family: @bodyfont;
-      @media screen and (max-width: 1200px) {
+      @media (max-width: 1200px) {
         width: 61vw;
       }
-      @media screen and (max-width: 500px) {
+      @media (max-width: 500px) {
         width: 87vw;
       }
     }
@@ -361,9 +425,14 @@ export default {
       font-family: @bodyfont;
       border: 1px solid @bordercolor;
       border-bottom: none;
-      @media screen and (max-width: 530px) {
+      @media (max-width: 530px) {
         font-size: 14px;
         padding: 6px 10px;
+      }
+      @media (max-width: 270px) {
+        padding: 6px 2px;
+        width: 110px;
+        height: 60px;
       }
       &:first-child {
         left: 0px;
@@ -372,8 +441,14 @@ export default {
       &:last-child {
         left: 210px;
         top: 3px;
-        @media screen and (max-width: 530px) {
-          left: 150px;
+        @media (max-width: 530px) {
+          left: 120px;
+        }
+        @media (max-width: 250px) {
+          left: 130px;
+        }
+        @media (max-width: 250px) {
+          left: 115px;
         }
       }
       &active {
@@ -386,18 +461,19 @@ export default {
     }
   }
   &__section {
-    @media screen and (max-width: 1200px) {
+    @media (max-width: 1200px) {
       width: 90vw;
+      margin: 0 auto;
     }
     &-box {
-      @media screen and (max-width: 1200px) {
+      @media (max-width: 1200px) {
         width: 90vw;
       }
     }
   }
 }
 /*hr {
-  @media screen and (max-width: 630px) {
+  @media (max-width: 630px) {
     display: none;
   }
 }*/

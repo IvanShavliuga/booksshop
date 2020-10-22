@@ -3,7 +3,7 @@
     <input class="search__input" type="text">
     <button class="search__button">
       <i class="search__icon">&nbsp;</i>
-      Search
+      <span class="search__btntext">Search</span>
     </button>
   </form>
 </template>
@@ -71,6 +71,9 @@
     @media (max-width: 600px) {
       width: 150px;
     }
+    @media (max-width: 350px) {
+      width: 40px;
+    }
   }
   &__icon {
     background-image: url('../assets/images/search.svg');
@@ -82,6 +85,11 @@
     z-index: 10;
     top: 7px;
     left: 7px;
+  }
+  &__btntext {
+    @media (max-width: 350px) {
+      display:none;
+    }
   }
 }
 </style>

@@ -116,36 +116,37 @@ export default {
 @import '../assets/css/style.less';
 
 .about {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
   &__wrapper {
     .wrapper();
   }
   &__flex {
     display: flex;
     justify-content: center;
+    width: 90vw;
   }
   &__empty {
     height: 400px;
   }
   &__blocklinks {
-    @media screen and (max-width: 600px) {
+    @media (max-width: 600px) {
       flex-wrap: wrap;
     }
-    @media screen and (max-width: 450px) {
+    @media (max-width: 450px) {
       flex-direction: column-reverse;
     }
   }
   &__links {
-    width: 33%;
+    width: 50vw;
     padding: 15px;
     margin: 15px;
-    @media screen and (max-width: 900px) {
-      width: auto;
-    }
     &-href {
       color: #2523bd;
       font-size: 22px;
       text-decoration: none;
-      @media screen and (max-width: 375px) {
+      @media (max-width: 375px) {
         font-size: 16px;
       }
     }
@@ -155,7 +156,7 @@ export default {
     }
   }
   &__title {
-    @media screen and (max-width: 800px) {
+    @media (max-width: 800px) {
       font-size: 27px;
     }
   }
@@ -171,30 +172,30 @@ export default {
       padding: 0 15px;
       color: #2523bd;
       font-size: 22px;
-      @media screen and (max-width: 800px) {
+      @media (max-width: 800px) {
         padding: 0 10px;
       }
-      @media screen and (max-width: 400px) {
+      @media (max-width: 400px) {
         padding: 0 5px;
       }
     }
   }
   &__info {
     width: auto;
-    @media screen and (max-width: 1200px) {
+    @media (max-width: 1200px) {
       width: 400px;
     }
-    @media screen and (max-width: 800px) {
+    @media (max-width: 800px) {
       width: 300px;
     }
-    @media screen and (max-width: 660px) {
+    @media (max-width: 660px) {
       width: 400px;
     }
-    @media screen and (max-width: 520px) {
-      width: 300px;
+    @media (max-width: 520px) {
+      width: 280px;
       margin-left: 50px;
     }
-    @media screen and (max-width: 375px) {
+    @media (max-width: 375px) {
       width: 200px;
       margin-left: 50px;
     }

@@ -57,6 +57,8 @@ export default {
 @import '../assets/css/style.less';
 
 .home {
+  margin: 0;
+  padding: 0;
   &__wrapper {
     .wrapper();
   }
