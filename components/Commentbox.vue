@@ -143,6 +143,9 @@ export default {
       @media (max-width: 630px) {
         width: 240px;
       }
+      @media (max-width: 280px) {
+        margin-left: -5px;
+      }
     }
     &-enters {
       width: 570px;
@@ -158,6 +161,9 @@ export default {
       color: #a2a2a2;
       text-align: right;
       font-family: @bodyfont;
+      @media (max-width: 385px) {
+        font-size: 12px;
+      }
     }
     &-input {
       font-size: 16px;

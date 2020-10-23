@@ -19,6 +19,7 @@ export { default as Codepen } from '../..\\components\\icons\\codepen.vue'
 export { default as Github } from '../..\\components\\icons\\github.vue'
 export { default as IconBase } from '../..\\components\\icons\\IconBase.vue'
 export { default as Iconlist } from '../..\\components\\icons\\Iconlist.vue'
+export { default as IconUser } from '../..\\components\\icons\\IconUser.vue'
 export { default as Linkedin } from '../..\\components\\icons\\linkedin.vue'
 export { default as Portfolio } from '../..\\components\\icons\\portfolio.vue'
 export { default as Telegram } from '../..\\components\\icons\\telegram.vue'
@@ -45,6 +46,7 @@ export const LazyCodepen = import('../..\\components\\icons\\codepen.vue' /* web
 export const LazyGithub = import('../..\\components\\icons\\github.vue' /* webpackChunkName: "components_icons/github" */).then(c => c.default || c)
 export const LazyIconBase = import('../..\\components\\icons\\IconBase.vue' /* webpackChunkName: "components_icons/IconBase" */).then(c => c.default || c)
 export const LazyIconlist = import('../..\\components\\icons\\Iconlist.vue' /* webpackChunkName: "components_icons/Iconlist" */).then(c => c.default || c)
+export const LazyIconUser = import('../..\\components\\icons\\IconUser.vue' /* webpackChunkName: "components_icons/IconUser" */).then(c => c.default || c)
 export const LazyLinkedin = import('../..\\components\\icons\\linkedin.vue' /* webpackChunkName: "components_icons/linkedin" */).then(c => c.default || c)
 export const LazyPortfolio = import('../..\\components\\icons\\portfolio.vue' /* webpackChunkName: "components_icons/portfolio" */).then(c => c.default || c)
 export const LazyTelegram = import('../..\\components\\icons\\telegram.vue' /* webpackChunkName: "components_icons/telegram" */).then(c => c.default || c)

@@ -93,7 +93,7 @@ export default {
 .icons {
   display: flex;
   justify-content: flex-start;
-  width: 350px;
+  width: 450px;
   @media (max-width: 520px) {
     width: 300px;
     flex-wrap: wrap;

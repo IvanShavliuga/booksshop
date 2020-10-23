@@ -125,6 +125,12 @@
   "LazyIconlist": {
     "description": "Auto imported from components/icons/Iconlist.vue"
   },
+  "IconUser": {
+    "description": "Auto imported from components/icons/IconUser.vue"
+  },
+  "LazyIconUser": {
+    "description": "Auto imported from components/icons/IconUser.vue"
+  },
   "Linkedin": {
     "description": "Auto imported from components/icons/linkedin.vue"
   },

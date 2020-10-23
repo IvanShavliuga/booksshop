@@ -25,11 +25,8 @@ export default {
 <style scoped lang="less">
 @import '../assets/css/style.less';
 .path {
-  width: 100%;
-  @media (max-width: 500px) {
-    width: 90vw;
-    margin: 0 auto;
-  }
+  width: 90vw;
+  margin: 0 auto;
   &__wrapper {
     .wrapper();
   }
