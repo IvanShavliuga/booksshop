@@ -10,7 +10,7 @@
       <div class="about__info">
         <h1 class="about__title">Ivan Shavliuga (Ivanov)</h1>
         <h2 class="about__prof">junior vue.js developer</h2>
-        <p class="about__desc">Created this page. Used by:
+        <div class="about__desc">Created this page. Used by:
           <ul class="about__skills">
             <li class="about__skills-item">HTML5</li>
             <li class="about__skills-item">CSS3</li>
@@ -20,7 +20,7 @@
             <li class="about__skills-item">Less</li>
             <li class="about__skills-item">Webpack</li>
           </ul>
-        </p>
+        </div>
         <Iconlist/>
       </div>
     </div>
