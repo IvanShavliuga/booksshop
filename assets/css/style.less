@@ -104,6 +104,18 @@
   }
 }
 
+.posabsolute(@top, @left) {
+  position: absolute;
+  display: block;
+  top: @top;
+  left: @left;
+}
+
+.hwblock(@h, @w) {
+  height: @h;
+  width: @w;
+}
+
 @keyframes runstring {
   0% {
     right: 0%;
@@ -179,4 +191,5 @@ hr {
 body {
   margin: 0!important;
   padding: 0!important;
+  font-family: @bodyfont;
 }

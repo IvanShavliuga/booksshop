@@ -82,7 +82,6 @@
       font-size: 19px;
       line-height: 26px;
       color: #5b5b5b;
-      font-family: @bodyfont;
       margin: 0;
       text-decoration: none;
     }

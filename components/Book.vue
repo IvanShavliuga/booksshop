@@ -47,7 +47,7 @@ export default {
     font-size: 15px;
     color: @colform;
     font-weight: 300;
-    font-family: @bodyfont;
+
     text-align: center;
     margin-bottom: 0;
   }
@@ -73,7 +73,7 @@ export default {
     line-height: 46px;
     color: #ffffff;
     font-weight: bold;
-    font-family: @bodyfont;
+
     text-align: center;
     border-radius: 50%;
     @media (max-width: 520px) {

@@ -71,7 +71,7 @@ export default {
     font-size: 20px;
     line-height: 26px;
     color: #7e7e7e;
-    font-family: @bodyfont;
+
     margin: 15px;
     font-weight: 300;
     margin-bottom: 10px;
@@ -96,7 +96,7 @@ export default {
       font-size: 14px;
       line-height: 26px;
       color: #a2a2a2;
-      font-family: @bodyfont;
+
       margin-top: 0;
       padding-left: 0;
     }
@@ -107,7 +107,7 @@ export default {
       font-size: 13px;
       line-height: 21px;
       color: #7e7e7e;
-      font-family: @bodyfont;
+
     }
   }
   &__form {
@@ -160,7 +160,7 @@ export default {
       margin-top: 11px;
       color: #a2a2a2;
       text-align: right;
-      font-family: @bodyfont;
+
       @media (max-width: 385px) {
         font-size: 12px;
       }
@@ -172,7 +172,7 @@ export default {
       margin: 10px;
       text-align: left;
       color: #a2a2a2;
-      font-family: @bodyfont;
+
       background-color: #ffffff;
       border: 1px solid #e2e2e2;
     }

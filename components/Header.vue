@@ -76,16 +76,13 @@ export default {
       background-image: url('../assets/images/logo.png');
       background-position: center 30px;
       background-repeat: no-repeat;
-      height: 140px;
-      width: 136px;
+      .hwblock(140px, 136px);
       @media (max-width: 1200px) {
-        height: 130px;
-        width: 126px;
+        .hwblock(130px, 126px);
         background-size: contain;
       }
       @media (max-width: 1035px) {
-        height: 100px;
-        width: 96px;
+        .hwblock(100px, 96px);
       }
       @media (max-width: 615px) {
         display: none;

@@ -35,14 +35,14 @@
     &-title {
       font-size: 27px;
       font-weight: bold;
-      font-family: @bodyfont;
+
       margin: 0 auto;
     }
     &-subtitle {
       font-size: 15px;
       margin: 0 auto;
       font-weight: 300;
-      font-family: @bodyfont;
+
     }
   }
   &__image {
@@ -73,21 +73,21 @@
       font-size: 21px;
       font-weight: 300;
       margin: 5px auto;
-      font-family: @bodyfont;
+
     }
     &-price {
       font-size: 29px;
       line-height: 26px;
       font-weight: bold;
       margin: 5px auto;
-      font-family: @bodyfont;
+
     }
     &-button {
       font-size: 19px;
       padding: 0 15px;
       color: #ffffff;
       font-weight: bold;
-      font-family: @bodyfont;
+
       background-image: linear-gradient(0deg, #51a451 0%, #61c261 100%);
       border: 1px solid #52a452;
       border-radius: 4px;

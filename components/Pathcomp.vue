@@ -40,7 +40,7 @@ export default {
     &-link {
       font-size: 16px;
       color: #a6a6a6;
-      font-family: @bodyfont;
+
       text-decoration: none;
     }
   }
