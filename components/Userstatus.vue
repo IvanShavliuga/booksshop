@@ -47,12 +47,16 @@ export default {
   }
   &__collapse {
     position: relative;
-    width: 96vw;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    margin-top: 0;
+    @media (max-width: 500px) {
+      width: 96vw;
+    }
     &-btn {
       @media (max-width: 500px) {
-        position: absolute;
-        left: 5px;
-        top: 5px;
+        .posabsolute(5px, 5px);
       }
       @media (min-width: 501px) {
         display: none;
@@ -61,32 +65,38 @@ export default {
   }
   &__topline {
     background-color: rgb(65,65,65);
-    width: auto;
-    height: 30px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 40px;
+    margin-top: 0;
   }
   &__userpanel {
     position: relative;
     display: flex;
     margin: 0;
     padding: 0;
+    margin-top: 0;
+    height: 40px;
     justify-content: flex-end;
     &-list {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      margin-top: 0;
+      justify-content: flex-end;
+      height: 40px;
       @media (max-width: 500px) {
         display: none;
-      }
-      @media (min-width: 501px) {
-        display: inline;
-        margin: 0;
       }
     }
     &-item {
       display: inline;
       margin: 0 10px;
       font-size: 16px;
-      line-height: 26px;
       color: #ffffff;
       font-weight: 300;
-      font-family: @bodyfont;
+      height: 40px;
       text-align: center;
     }
     &-link {
@@ -97,6 +107,10 @@ export default {
 }
 #userstatus__collapse-toggle {
   opacity: 0;
+  display: inline;
+  @media (min-width: 501px) {
+    display: none;
+  }
 }
 #userstatus__collapse-toggle:checked ~ .userstatus__userpanel-list {
   @media (max-width: 500px) {
@@ -109,8 +123,10 @@ export default {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
+    height: auto;
     box-shadow: 1px 1px 7px 7px rgba(10,10,10,0.5);
   }
+
 }
 
 </style>

@@ -130,7 +130,7 @@ export default {
       line-height: 22px;
       color: #595959;
       font-weight: 300;
-      font-family: @bodyfont;
+
       margin-top: 15px;
       margin-bottom: 30px;
       @media (max-width: 630px) {
@@ -157,7 +157,7 @@ export default {
       font-size: 16px;
       line-height: 26px;
       color: #7e7e7e;
-      font-family: @bodyfont;
+
       @media (max-width: 1300px) {
         width: 49vw;
       }
@@ -252,7 +252,7 @@ export default {
     }
     &-header {
       font-size: 36px;
-      font-family: @bodyfont;
+
       margin: 0;
       @media (max-width: 880px) {
         font-size: 26px;
@@ -284,7 +284,7 @@ export default {
       font-size: 17px;
       line-height: 17px;
       color: #939292;
-      font-family: @bodyfont;
+
       text-align: left;
       margin-top: 5px;
       margin-left: 0;
@@ -403,7 +403,7 @@ export default {
       line-height: 26px;
       color: #7e7e7e;
       margin: 15px;
-      font-family: @bodyfont;
+
       @media (max-width: 1200px) {
         width: 61vw;
       }
@@ -422,7 +422,7 @@ export default {
       color: #7e7e7e;
       padding: 6px 15px;
       margin-right: 10px;
-      font-family: @bodyfont;
+
       border: 1px solid @bordercolor;
       border-bottom: none;
       @media (max-width: 530px) {

@@ -31,7 +31,7 @@
     font-size: 18px;
     margin: 10px;
     color: #7e7e7e;
-    font-family: @bodyfont;
+
   }
   &__block {
     display: flex;
@@ -47,8 +47,6 @@
       border: 4px solid white;
       box-shadow: 1px 1px 3px 5px #aaa;
       @media (max-width: 900px) {
-        /*box-shadow: none;
-        border: none;*/
         width: 40px;
         height: 68px;
         margin: 15px auto;
@@ -69,7 +67,6 @@
       line-height: 16px;
       color: #595959;
       font-weight: 300;
-      font-family: @bodyfont;
     }
     &-price {
       margin-top: 0;
@@ -87,7 +84,6 @@
       margin-left: 0;
       padding: 9px 10px;
       color: #ffffff;
-      font-family: @bodyfont;
       @media (max-width: 900px) {
         font-size: 10px;
       }

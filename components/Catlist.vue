@@ -145,7 +145,7 @@
     line-height: 30px;
     color: #6b6969;
     font-weight: 300;
-    font-family: @bodyfont;
+
     @media (max-width: 1060px) {
       display: none;
     }
@@ -163,7 +163,7 @@
       font-size: 15px;
       line-height: 27px;
       color: #555454;
-      font-family: @bodyfont;
+
     }
     &-item {
       padding: 5px 20px;
@@ -171,7 +171,7 @@
       line-height: 32px;
       color: #525252;
       font-weight: bold;
-      font-family: @bodyfont;
+
       .hover();
       &:first-child {
         text-transform: uppercase;
@@ -181,7 +181,7 @@
       font-size: 15px;
       line-height: 26px;
       color: #5b5b5b;
-      font-family: @bodyfont;
+
       margin: 0;
       text-decoration: none;
     }

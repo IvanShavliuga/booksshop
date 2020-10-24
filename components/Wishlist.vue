@@ -15,7 +15,7 @@
     font-size: 21px;
     line-height: 26px;
     color: @colform;
-    font-family: @bodyfont;
+
     @media (max-width: 800px) {
       display: none;
     }
@@ -49,24 +49,18 @@
     font-size: 13px;
     line-height: 16px;
     color: #ffffff;
-    font-family: @bodyfont;
     width: 27px;
     height: 16px;
     border-radius: 8px;
     padding: 3px;
-    display: block;
-    position: absolute;
     text-align: center;
-    top: 35px;
-    left: 65px;
+    .posabsolute(35px, 65px);
     background-color: @bgform;
     @media (min-width: 601px) and (max-width: 800px) {
-      left: 25px;
-      top: 15px;
+      .posabsolute(15px, 25px);
     }
     @media (max-width: 270px) {
-      left: 5px;
-      top: 15px;
+      .posabsolute(15px, 5px);
     }
   }
 }

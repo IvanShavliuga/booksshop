@@ -63,7 +63,6 @@
     background-color: @bgform;
     font-size: 20px;
     color: #ffffff;
-    font-family: @bodyfont;
     position: relative;
     @media (max-width: 820px) {
       width: 457px - 327px - 24px;

@@ -40,7 +40,6 @@
   }
   @media (max-width: 210px) {
     width: 150px;
-    border: none;
     margin-left: -15px;
   }
   &__icon {
@@ -48,11 +47,8 @@
     background-size: 100%;
     width: 29px;
     height: 31px;
-    display: block;
-    position: absolute;
     z-index: 20;
-    top: 11px;
-    left: -13px;
+    .posabsolute(11px, -13px);
     @media (min-width: 601px) and (max-width: 740px) {
       left: -3px;
     }
@@ -66,7 +62,6 @@
   &__title {
     font-size: 23px;
     line-height: 56px;
-    font-family: @bodyfont;
     color: #6d6d6d;
     display: inline-block;
     margin-left: 27px;
@@ -85,12 +80,6 @@
     margin-left: -5px;
     display: inline-block;
     background-color: transparent;
-    /*@media (max-width: 740px) {
-      display: block;
-      position: absolute;
-      left: 20px;
-      top: 35px;
-    }*/
   }
   &__total {
     font-size: 27px;
@@ -100,21 +89,14 @@
     display: inline-block;
     color: @colform;
     font-weight: bold;
-    font-family: @bodyfont;
     @media (min-width: 601px)  and (max-width: 740px) {
-      display: block;
-      position: absolute;
-      left: 35px;
-      top: 25px;
+      .posabsolute(25px, 35px);
     }
     @media (max-width: 655px) {
       left: 5px;
     }
     @media (max-width: 350px) {
-      display: block;
-      position: absolute;
-      left: 45px;
-      top: 25px;
+      .posabsolute(25px, 45px);
     }
   }
   &__check {
@@ -127,21 +109,14 @@
     margin-left: 15px;
     padding: 12px 15px;
     color: #ffffff;
-    font-family: @bodyfont;
     @media (min-width: 601px)  and (max-width: 740px) {
-      display: block;
-      position: absolute;
-      left: 15px;
-      top: 45px;
+      .posabsolute(45px, 15px);
     }
     @media (min-width: 601px)  and (max-width: 655px) {
       left: -20px;
     }
     @media (max-width: 350px) {
-      display: block;
-      position: absolute;
-      left: 15px;
-      top: 45px;
+      .posabsolute(45px, 15px);
     }
   }
 }

@@ -292,7 +292,7 @@
       color: #dddddd;
       font-weight: 300;
       margin-bottom: 4px;
-      font-family: @bodyfont;
+
     }
     &-button {
       background-color: transparent;
@@ -320,7 +320,7 @@
       line-height: 20px;
       color: @footercolor;
       font-weight: 300;
-      font-family: @bodyfont;
+
     }
     &-block {
       width: auto;
@@ -335,7 +335,7 @@
       line-height: 24px;
       color: @footercolor;
       font-weight: 300;
-      font-family: @bodyfont;
+
     }
   }
 }

@@ -123,7 +123,7 @@
       line-height: 2px;
       color: #ffffff;
       font-weight: bold;
-      font-family: @bodyfont;
+
       text-align: center;
       transform: scaleX(1.05);
       @media (max-width: 1060px) {
@@ -135,7 +135,7 @@
       line-height: 0;
       color: #ffffff;
       font-weight: 200;
-      font-family: @bodyfont;
+
       text-align: center;
     }
     &-author {
