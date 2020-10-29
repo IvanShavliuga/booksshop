@@ -17,11 +17,22 @@
             <li class="userstatus__userpanel-item">
               <a class="userstatus__userpanel-link" href="#">Sign in</a></li>
             <li class="userstatus__userpanel-item">
-              <a class="userstatus__userpanel-link" href="#">My account</a></li>
+              <a class="userstatus__userpanel-link" href="#">{{user.name}}</a></li>
             <li class="userstatus__userpanel-item">
               <a class="userstatus__userpanel-link" href="#">Order status</a></li>
             <li class="userstatus__userpanel-item">
               <a class="userstatus__userpanel-link" href="#">Help</a></li>
+              <li class="userstatus__userpanel-item userstatus__userpanel-devlogo">
+                <a class="userstatus__userpanel-link" href="#">
+                  <ib class="userstatus__collapse-icon"
+                    icon-name="developer"
+                    width="55"
+                    height="32"
+                    icon-color="#fff">
+                    <devlogo/>
+                  </ib>
+                </a>
+              </li>
           </ul>
         </div>
       </div>
@@ -31,11 +42,21 @@
 <script>
 import ib from './icons/IconBase.vue'
 import user from './icons/IconUser.vue'
+import devlogo from './icons/iv2.vue'
 
 export default {
   components: {
     ib,
-    user
+    user,
+    devlogo
+  },
+  data () {
+    return {
+      user: {}
+    }
+  },
+  created () {
+    this.user = this.$store.getters.user
   }
 }
 </script>
@@ -65,7 +86,6 @@ export default {
   }
   &__topline {
     background-color: rgb(65,65,65);
-    width: 100%;
     padding: 0;
     margin: 0;
     height: 40px;
@@ -96,8 +116,11 @@ export default {
       font-size: 16px;
       color: #ffffff;
       font-weight: 300;
-      height: 40px;
+      padding-top: 5px;
+      height: 35px;
       text-align: center;
+    }
+    &-devlogo {
     }
     &-link {
       color: #ffffff;

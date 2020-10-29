@@ -25,11 +25,11 @@ export const  state = () =>({
     subtitle: '(The Hare Amber Eyes)'
   }],
   user: {
-    Name: 'Alex',
-    Coutry: 'UK',
-    price: 45,
-    Purchase: [1],
-    MyLike: [1]
+    name: 'Alex',
+    country: 'UK',
+    total: 45,
+    purchase: [1],
+    like: [1]
   },
   books: [
     { id: 1, author: 'Братья Стругацкие', title: 'Обитаемый остров', price: 10, likes: 25, desc: 'Главный герой попадает на планету и совершает революцию.' },
@@ -55,6 +55,7 @@ export const  state = () =>({
   ]
 })
 export const  getters = {
+  user: state=>{return state.user},
   slider: state=>{return  state.slider},
   baseimgurl: state=>{return state.baseimgurl}
 }
