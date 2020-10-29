@@ -15,23 +15,27 @@
           </label>
           <ul class="userstatus__userpanel-list">
             <li class="userstatus__userpanel-item">
-              <a class="userstatus__userpanel-link" href="#">Sign in</a></li>
+              <a class="userstatus__userpanel-link" href="#">Sign {{(user.auth)?'in':'out'}}</a></li>
             <li class="userstatus__userpanel-item">
               <a class="userstatus__userpanel-link" href="#">{{user.name}}</a></li>
             <li class="userstatus__userpanel-item">
-              <a class="userstatus__userpanel-link" href="#">Order status</a></li>
+              <a class="userstatus__userpanel-link" href="#">Order status
+                <span class="userstatus__userpanel-counter">({{user.purchase.length}})
+                </span>
+              </a>
+            </li>
             <li class="userstatus__userpanel-item">
               <a class="userstatus__userpanel-link" href="#">Help</a></li>
               <li class="userstatus__userpanel-item userstatus__userpanel-devlogo">
-                <a class="userstatus__userpanel-link" href="#">
+                <router-link to="/about" class="userstatus__userpanel-link" href="#">
                   <ib class="userstatus__collapse-icon"
                     icon-name="developer"
-                    width="55"
-                    height="32"
+                    width="32"
+                    height="20"
                     icon-color="#fff">
                     <devlogo/>
                   </ib>
-                </a>
+                </router-link>
               </li>
           </ul>
         </div>
@@ -120,7 +124,10 @@ export default {
       height: 35px;
       text-align: center;
     }
-    &-devlogo {
+    &-counter {
+      color: #eec476;
+      font-size: 16px;
+      font-weight: bold;
     }
     &-link {
       color: #ffffff;

@@ -4,8 +4,10 @@
     <div class="header__baseblock">
       <div class="header__wrapper">
         <div class="header__searchpanel">
-          <div class="header__searchpanel-logo">
-          </div>
+          <router-link to="/">
+            <div class="header__searchpanel-logo">
+            </div>
+          </router-link>
           <Search id="searchblock"/>
           <div class="header__searchpanel-status">
             <Cart/>

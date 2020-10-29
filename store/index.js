@@ -29,7 +29,8 @@ export const  state = () =>({
     country: 'UK',
     total: 45,
     purchase: [1],
-    like: [1]
+    like: [1],
+    authflag: true
   },
   books: [
     { id: 1, author: 'Братья Стругацкие', title: 'Обитаемый остров', price: 10, likes: 25, desc: 'Главный герой попадает на планету и совершает революцию.' },
