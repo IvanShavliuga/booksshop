@@ -1,8 +1,8 @@
 <template>
 <aside class="bookbanner">
   <h3 class="bookbanner__header">You may also like</h3>
-  <div class="bookbanner__block" v-for="(b,k) in books" :key="k">
-    <img class="bookbanner__block-image" :src="b.img" :alt="b.title +' - '+b.author"/>
+  <div class="bookbanner__block" v-for="(b,k) in books" :key="k" :title="b.title">
+    <img class="bookbanner__block-image" :src="baseurl+b.img"  :title="b.title" :alt="b.title +' - '+b.author"/>
     <div class="bookbanner__block-text">
       <h4 class="bookbanner__block-title">{{b.title}}</h4>
       <p class="bookbanner__block-price">${{b.price}}</p>
@@ -100,57 +100,61 @@
 export default {
   data () {
     return {
+      baseurl: '',
       books: [{
         id: 0,
-        img: 'https://ivanshavliuga.github.io/test/booksshop/img/book_4.jpg',
+        img: 'book_1.jpg',
         title: 'The Hare With Amber',
         author: 'Edmund De Waal',
         price: 50,
         sale: 30
       }, {
         id: 1,
-        img: 'https://ivanshavliuga.github.io/test/booksshop/img/book_4.jpg',
+        img: 'book_2.jpg',
         title: 'The Hare With Amber',
         author: 'Edmund De Waal',
         price: 50,
         sale: 30
       }, {
         id: 2,
-        img: 'https://ivanshavliuga.github.io/test/booksshop/img/book_4.jpg',
+        img: 'book_3.jpg',
         title: 'The Hare With Amber',
         author: 'Edmund De Waal',
         price: 50,
         sale: 30
       }, {
         id: 3,
-        img: 'https://ivanshavliuga.github.io/test/booksshop/img/book_4.jpg',
+        img: 'book_4.jpg',
         title: 'The Hare With Amber',
         author: 'Edmund De Waal',
         price: 50,
         sale: 30
       }, {
         id: 4,
-        img: 'https://ivanshavliuga.github.io/test/booksshop/img/book_4.jpg',
+        img: 'book_5.jpg',
         title: 'The Hare With Amber',
         author: 'Edmund De Waal',
         price: 50,
         sale: 30
       }, {
         id: 5,
-        img: 'https://ivanshavliuga.github.io/test/booksshop/img/book_4.jpg',
+        img: 'book_6.jpg',
         title: 'The Hare With Amber',
         author: 'Edmund De Waal',
         price: 50,
         sale: 30
       }, {
         id: 6,
-        img: 'https://ivanshavliuga.github.io/test/booksshop/img/book_4.jpg',
+        img: 'book_1.jpg',
         title: 'The Hare With Amber',
         author: 'Edmund De Waal',
         price: 50,
         sale: 30
       }]
     }
+  },
+  created () {
+    this.baseurl = this.$store.getters.baseimgurl;
   }
 }
 </script>

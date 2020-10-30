@@ -15,13 +15,28 @@
           </label>
           <ul class="userstatus__userpanel-list">
             <li class="userstatus__userpanel-item">
-              <a class="userstatus__userpanel-link" href="#">Sign in</a></li>
+              <a class="userstatus__userpanel-link" href="#">Sign {{(user.auth)?'in':'out'}}</a></li>
             <li class="userstatus__userpanel-item">
-              <a class="userstatus__userpanel-link" href="#">My account</a></li>
+              <a class="userstatus__userpanel-link" href="#">{{user.name}}</a></li>
             <li class="userstatus__userpanel-item">
-              <a class="userstatus__userpanel-link" href="#">Order status</a></li>
+              <a class="userstatus__userpanel-link" href="#">Order status
+                <span class="userstatus__userpanel-counter">({{user.purchase.length}})
+                </span>
+              </a>
+            </li>
             <li class="userstatus__userpanel-item">
               <a class="userstatus__userpanel-link" href="#">Help</a></li>
+              <li class="userstatus__userpanel-item userstatus__userpanel-devlogo">
+                <router-link to="/about" class="userstatus__userpanel-link" href="#">
+                  <ib class="userstatus__collapse-icon"
+                    icon-name="developer"
+                    width="32"
+                    height="20"
+                    icon-color="#fff">
+                    <devlogo/>
+                  </ib>
+                </router-link>
+              </li>
           </ul>
         </div>
       </div>
@@ -31,11 +46,21 @@
 <script>
 import ib from './icons/IconBase.vue'
 import user from './icons/IconUser.vue'
+import devlogo from './icons/iv2.vue'
 
 export default {
   components: {
     ib,
-    user
+    user,
+    devlogo
+  },
+  data () {
+    return {
+      user: {}
+    }
+  },
+  created () {
+    this.user = this.$store.getters.user
   }
 }
 </script>
@@ -65,7 +90,6 @@ export default {
   }
   &__topline {
     background-color: rgb(65,65,65);
-    width: 100%;
     padding: 0;
     margin: 0;
     height: 40px;
@@ -74,9 +98,10 @@ export default {
   &__userpanel {
     position: relative;
     display: flex;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     margin-top: 0;
+    //width: 90vw;
     height: 40px;
     justify-content: flex-end;
     &-list {
@@ -91,13 +116,20 @@ export default {
       }
     }
     &-item {
-      display: inline;
+      display: block;
       margin: 0 10px;
       font-size: 16px;
       color: #ffffff;
       font-weight: 300;
-      height: 40px;
+      padding-top: 5px;
+      height: 35px;
       text-align: center;
+    }
+    &-counter {
+      color: #eec476;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 2px;
     }
     &-link {
       color: #ffffff;

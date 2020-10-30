@@ -168,6 +168,7 @@
 export default {
   data () {
     return {
+      baseurl: '',
       selid: 0,
       selbg: 'https://ivanshavliuga.github.io/test/booksshop/img/banner1.jpg',
       selbook: 'https://ivanshavliuga.github.io/test/booksshop/img/book_1.jpg',
@@ -202,8 +203,8 @@ export default {
       } else {
         this.selid = 0
       }
-      this.selbg = this.list[this.selid].bg
-      this.selbook = this.list[this.selid].book
+      this.selbg = this.baseurl + this.list[this.selid].bg
+      this.selbook = this.baseurl + this.list[this.selid].book
       this.selauthor = this.list[this.selid].author
       this.seltitle = this.list[this.selid].title
       this.selsubtitle = this.list[this.selid].subtitle
@@ -225,9 +226,11 @@ export default {
     }
   },
   created: function () {
+    this.list = this.$store.getters.slider;
+    this.baseurl = this.$store.getters.baseimgurl;
     this.selid = 0
-    this.selbg = 'https://ivanshavliuga.github.io/test/booksshop/img/banner_1.jpg'
-    this.selbook = 'https://ivanshavliuga.github.io/test/booksshop/img/book_1.jpg'
+    this.selbg = this.baseurl + 'banner_1.jpg'
+    this.selbook = this.baseurl + 'book_1.jpg'
   },
   mounted: function () {
     this.autoplay()

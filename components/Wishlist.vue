@@ -1,10 +1,22 @@
 <template>
   <div class="wishlist">
   <i class="wishlist__icon"></i>
-  <span class="wishlist__counter">20</span>
+  <span class="wishlist__counter">{{user.like.length}}</span>
   <span class="wishlist__title">Wish list</span>
 </div>
 </template>
+<script>
+export default {
+  data () {
+    return {
+      user: {}
+    }
+  },
+  created () {
+    this.user = this.$store.getters.user
+  }
+}
+</script>
 <style scoped lang="less">
 @import '../assets/css/style.less';
 .wishlist {
@@ -15,7 +27,6 @@
     font-size: 21px;
     line-height: 26px;
     color: @colform;
-
     @media (max-width: 800px) {
       display: none;
     }

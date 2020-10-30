@@ -1,12 +1,13 @@
 <template>
 <article class="book">
-  <img class="book__image" :src="img"/>
+  <img class="book__image" :src="img" :alt="img"/>
   <h3 class="book__title">{{title}}</h3>
   <p class="book__price">${{price}}</p>
   <p class="book__sale">{{sale}}%</p>
 </article>
 </template>
 <script>
+import {getters} from './../store'
 export default {
   data () {
     return {
@@ -16,6 +17,9 @@ export default {
       price: 10,
       sale: 45
     }
+  },
+  created () {
+    this.img = this.$store.getters.baseimgurl + 'book_2.jpg'
   }
 }
 </script>
