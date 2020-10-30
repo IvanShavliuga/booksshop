@@ -98,9 +98,10 @@ export default {
   &__userpanel {
     position: relative;
     display: flex;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     margin-top: 0;
+    //width: 90vw;
     height: 40px;
     justify-content: flex-end;
     &-list {
@@ -115,7 +116,7 @@ export default {
       }
     }
     &-item {
-      display: inline;
+      display: block;
       margin: 0 10px;
       font-size: 16px;
       color: #ffffff;
@@ -128,6 +129,7 @@ export default {
       color: #eec476;
       font-size: 16px;
       font-weight: bold;
+      letter-spacing: 2px;
     }
     &-link {
       color: #ffffff;
