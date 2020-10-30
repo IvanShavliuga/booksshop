@@ -2,19 +2,31 @@
   <div class="cart">
     <i class="cart__icon">&nbsp;</i>
     <span class="cart__title">
-      Your cart
+      <span class="cart__title-text">Your cart</span>
       <button class="cart__counter">
-        (2 items)
+        ({{user.purchase.length}} items)
       </button>
     </span>
     <span class="cart__total">
-      $125.0
+      ${{user.total}}
     </span>
     <button class="cart__check">
       Checkout
     </button>
   </div>
 </template>
+<script>
+export default {
+  data () {
+    return {
+      user: {}
+    }
+  },
+  created () {
+    this.user = this.$store.getters.user
+  }
+}
+</script>
 <style scoped lang="less">
 @import '../assets/css/style.less';
 .cart {
@@ -71,6 +83,11 @@
     }
     @media (max-width: 350px) {
       display:none;
+    }
+    &-text {
+      @media (max-width: 1320px) {
+        font-size: 18px;
+      }
     }
   }
   &__counter {
