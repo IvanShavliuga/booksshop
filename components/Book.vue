@@ -1,9 +1,9 @@
 <template>
 <article class="book">
-  <img class="book__image" :src="img" :alt="img"/>
-  <h3 class="book__title">{{title}}</h3>
-  <p class="book__price">${{price}}</p>
-  <p class="book__sale">{{sale}}%</p>
+  <img class="book__image" :src="img" :alt="book.title"/>
+  <h3 class="book__title">{{book.title}}</h3>
+  <p class="book__price">${{book.price}}</p>
+  <p class="book__sale" v-if="book.sale">{{book.sale}}%</p>
 </article>
 </template>
 <script>
@@ -18,8 +18,14 @@ export default {
       sale: 45
     }
   },
+  props: {
+    book: {
+      type: Object,
+      required: true
+    }
+  },
   created () {
-    this.img = this.$store.getters.baseimgurl + 'book_2.jpg'
+    this.img = this.$store.getters.baseimgurl + this.book.img
   }
 }
 </script>
