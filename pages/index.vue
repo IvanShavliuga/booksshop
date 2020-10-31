@@ -50,6 +50,9 @@ export default {
         img: '/img/book_4.jpg'
       }
     }
+  },
+  created () {
+    this.$store.dispatch('syncUser')
   }
 }
 </script>

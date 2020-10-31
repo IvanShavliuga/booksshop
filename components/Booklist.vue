@@ -1,6 +1,6 @@
 <template>
 <div class="list">
-  <Book v-for="(i,k) in [1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9]" :key="i+k"/>
+  <Book v-for="(b,k) in books" :key="b.id+k" :book="b"/>
 </div>
 </template>
 <style lang="less">
@@ -49,6 +49,14 @@ import Book from '@/components/Book.vue'
 export default {
   components: {
     Book
+  },
+  data () {
+    return {
+      books: []
+    }
+  },
+  created () {
+    this.books = this.$store.getters.books
   }
 }
 </script>
