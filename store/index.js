@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import Axios from 'axios'
 
+Vue.use(Axios)
 Vue.use(Vuex)
 
 export const  state = () =>({
@@ -32,6 +34,7 @@ export const  state = () =>({
     like: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
     authflag: true
   },
+  playlist: [],
   books: [
     { id: 1, img: 'book_7.jpg', author: 'Братья Стругацкие', title: 'Обитаемый остров', price: 10, likes: 25, sale: 0, desc: 'Главный герой попадает на планету и совершает революцию.' },
     { id: 2, img: 'book_8.jpg', author: 'Михаил Лермонтов', title: 'Герой нашего времени', price: 15, likes: 13, sale: 0, desc: 'Главный герой рушит все вокруг себя и погибает сам' },
@@ -57,6 +60,7 @@ export const  state = () =>({
   ]
 })
 export const  getters = {
+  playlist: state=>{return state.playlist},
   user: state=>{return state.user},
   books: state=>{return state.books},
   slider: state=>{return  state.slider},
@@ -72,10 +76,25 @@ export const mutations = {
       total += state.books[state.user.purchase[ind]-1].price
     }
     state.user.total = total
+  },
+  SYNC_PLAYLIST(state, arr) {
+    /*let arr;
+    let dt = Axios.get(url)
+      .then(response => response.data)
+      .then(response => (this.arr=response))
+      state.playlist = dt
+      let dt = fetch(url).then(res =>
+        res.json()
+      )*/
+    state.playlist = arr
+    //console.log(state.playlist, 'arr '+arr)
   }
 }
 export const actions = {
   syncUser({commit}) {
     commit('SYNC_USER')
+  },
+  syncPlaylist({commit}, arr) {
+    commit('SYNC_PLAYLIST', arr)
   }
 }
