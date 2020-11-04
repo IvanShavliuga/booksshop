@@ -6,7 +6,8 @@
   </div>
   <div :class="['playlist__item', (k==id)?'itemactive':'']"
     v-for="(f,k) in [0,1,2,3,4,5,6,7]"
-    :key="k">
+    :key="k"
+    @click="selectfile(k)">
     <div class="playlist__number">
       #{{f+1}}
     </div>
@@ -34,6 +35,11 @@ export default {
     },
     playevent() {
       this.status="play"
+    },
+    selectfile(id) {
+      let audiotag = document.querySelector('audio')
+      audiotag.src = this.fullurl(id)
+      this.id  = id
     }
   },
   components: {
@@ -44,19 +50,19 @@ export default {
       .then(response => {
         for(let i=0; i<response.data.length; i++)
           this.files.push(response.data[i].name)})
-    console.log(this.files)
-  }
+      }
 }
 </script>
 <style scoped lang="less">
 @import '../assets/css/style.less';
 .playlist {
   width: 550px;
-  padding: 15px 0;
+  padding: 0;
   margin: 15px 30px;
-  background-color: #dfdfdf;
+  background-color: #fcfcfc;
   box-shadow: 1px 1px 3px 5px #aaa;
   &__item {
+    background-color: #fcfcfc;
     position: relative;
     padding-left: 15px;
   }
@@ -69,8 +75,12 @@ export default {
   }
   &__player {
     border-bottom: 7px double #999;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
+    padding: 15px 0;
+    margin: 15px 0;
+    background-color: #dfdfdf;
+  }
+  &__number {
+    color: red;
   }
 }
 </style>
