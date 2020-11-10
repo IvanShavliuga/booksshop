@@ -6,7 +6,7 @@
   </div>
   <div class="promo__image">
     <img class="promo__image-book" :src="book.img"/>
-    <img class="promo__image-panel" src="/img/panel.png"/>
+    <img class="promo__image-panel" src="https://ivanshavliuga.github.io/simples/photos/booksshop/panel.png"/>
   </div>
   <div class="promo__desc">
     <p class="promo__desc-sale">Save {{book.sale}} Today</p>

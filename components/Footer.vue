@@ -251,13 +251,13 @@
         <h4 class="footer__cards-header"> We accept all major Credit Card/Debit Card/Internet Banking </h4>
         <p class="footer__cards-images">
           <button class="footer__cards-button">
-            <img class="footer__cards-img" src="/img/card1.png" alt="card"/>
+            <img class="footer__cards-img" src="https://ivanshavliuga.github.io/simples/photos/booksshop/card1.png" alt="card"/>
           </button>
           <button class="footer__cards-button">
-            <img class="footer__cards-img" src="/img/card2.png" alt="card"/>
+            <img class="footer__cards-img" src="https://ivanshavliuga.github.io/simples/photos/booksshop/card2.png" alt="card"/>
           </button>
           <button class="footer__cards-button">
-            <img class="footer__cards-img" src="/img/card3.png" alt="card"/>
+            <img class="footer__cards-img" src="https://ivanshavliuga.github.io/simples/photos/booksshop/card3.png" alt="card"/>
           </button>
         </p>
       </div>

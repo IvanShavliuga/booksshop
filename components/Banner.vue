@@ -5,7 +5,7 @@
     <img class="banner__item-bookmax" :src="selbook"/>
     <div class="banner__item-bookmini">
       <img class="banner__item-photomini" :src="selbook"/>
-      <img class="banner__item-disk" src="/img/disk.png"/>
+      <img class="banner__item-disk" src="https://ivanshavliuga.github.io/simples/photos/booksshop/disk.png"/>
     </div>
     <div class="banner__item-text" :style="(seltitle.length > 13)?'top: 120px':''">
       <h1 class="banner__item-title" :style="(seltitle.length > 13)?'font-size: 33px':''">{{seltitle}}</h1>
