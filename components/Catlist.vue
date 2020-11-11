@@ -9,40 +9,27 @@
       <a class="aside__collapse-title">Categories</a>
       <nav class="aside__nav">
         <ul>
-          <li class="aside__nav-item itemactive"><a class="aside__nav-link" href="#cat"> All</a></li>
-          <li class="aside__nav-item"><a class="aside__nav-link" href="#cat"> Fiction & Literature</a></li>
+          <!--itemactive-->
+          <li class="aside__nav-item"
+            v-for="(c,k) in catlist" :key="k">
+            <div class="aside__nav-hcat">
+              <a class="aside__nav-link"
+              :href="'/'+c"
+              >
+                {{c.name}}
+              </a>
+            </div>
           <ul class="aside__nav-list">
-            <li class="aside__nav-cat"><a class="aside__nav-link" href="#cat"> Children</a></li>
-            <li class="aside__nav-cat"><a class="aside__nav-link" href="#cat"> Science</a></li>
-            <li class="aside__nav-cat"><a class="aside__nav-link" href="#cat"> Fantasy</a></li>
-            <li class="aside__nav-cat"><a class="aside__nav-link" href="#cat"> Mystery</a></li>
-            <li class="aside__nav-cat"><a class="aside__nav-link" href="#cat"> Romance</a></li>
-            <li class="aside__nav-cat"><a class="aside__nav-link" href="#cat"> Horror</a></li>
-            <li class="aside__nav-cat"><a class="aside__nav-link" href="#cat"> Poetry</a></li>
-            <li class="aside__nav-cat"><a class="aside__nav-link" href="#cat"> Literature</a></li>
-            <li class="aside__nav-cat"><a class="aside__nav-link" href="#cat"> Crime</a></li>
+            <li class="aside__nav-cat"
+              v-for="(c2,k2) in c.sublist"
+              :key="k2"
+            >
+              <a class="aside__nav-link" :href="'/'+c2">
+                {{c2}}
+              </a>
+            </li>
           </ul>
-          <li class="aside__nav-item"><a class="aside__nav-link" href="#cat"> Non - Fiction</a></li>
-          <ul class="aside__nav-list">
-            <li class="aside__nav-cat"><a class="aside__nav-link" href="#cat"> Comic</a></li>
-            <li class="aside__nav-cat"><a class="aside__nav-link" href="#cat"> Cook</a></li>
-            <li class="aside__nav-cat"><a class="aside__nav-link" href="#cat"> Psychology</a></li>
-            <li class="aside__nav-cat"><a class="aside__nav-link" href="#cat"> Medical</a></li>
-            <li class="aside__nav-cat"><a class="aside__nav-link" href="#cat"> Art</a></li>
-            <li class="aside__nav-cat"><a class="aside__nav-link" href="#cat"> Photography</a></li>
-            <li class="aside__nav-cat"><a class="aside__nav-link" href="#cat"> Law</a></li>
-            <li class="aside__nav-cat"><a class="aside__nav-link" href="#cat"> History</a></li>
-            <li class="aside__nav-cat"><a class="aside__nav-link" href="#cat"> Business</a></li>
-            <li class="aside__nav-cat"><a class="aside__nav-link" href="#cat"> Computers</a></li>
-          </ul>
-          <li class="aside__nav-item"><a class="aside__nav-link" href="#cat"> Other</a></li>
-          <ul class="aside__nav-list">
-            <li class="aside__nav-cat"><a class="aside__nav-link" href="#cat"> Baby</a></li>
-            <li class="aside__nav-cat"><a class="aside__nav-link" href="#cat"> Sex</a></li>
-            <li class="aside__nav-cat"><a class="aside__nav-link" href="#cat"> Travel</a></li>
-            <li class="aside__nav-cat"><a class="aside__nav-link" href="#cat"> Science</a></li>
-            <li class="aside__nav-cat"><a class="aside__nav-link" href="#cat"> Sport`s</a></li>
-          </ul>
+          </li>
         </ul>
       </nav>
     </div>
@@ -50,6 +37,49 @@
 </template>
 
 <script>
+export default {
+  data () {
+    return {
+      catlist: [{
+        name: "Fiction & Literature",
+        sublist: [
+          "Children",
+          "Science",
+          "Fantasy",
+          "Mystery",
+          "Romance",
+          "Horror",
+          "Poetry",
+          "Literature",
+          "Crime",
+        ]
+      }, {
+        name: "Non - Fiction",
+        sublist: [
+          "Comic",
+          "Cook",
+          "Psychology",
+          "Medical",
+          "Art",
+          "Photography",
+          "Law",
+          "History",
+          "Business",
+          "Computers",
+        ]
+      }, {
+        name: "Other",
+        sublist: [
+          "Baby",
+          "Sex",
+          "Travel",
+          "Science",
+          "Sport`s",
+        ]
+      }]
+    }
+  }
+}
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
@@ -157,13 +187,19 @@
     }
     &-list {
       padding: 0 20px;
+      margin: 0;
     }
     &-cat {
       border-bottom: 1px solid @bordercolor;
       font-size: 15px;
       line-height: 27px;
       color: #555454;
-
+      font-weight: normal;
+      margin-left: -20px;
+      .hover();
+    }
+    &-hcat {
+      .hover();
     }
     &-item {
       padding: 5px 20px;
@@ -171,8 +207,6 @@
       line-height: 32px;
       color: #525252;
       font-weight: bold;
-
-      .hover();
       &:first-child {
         text-transform: uppercase;
       }
@@ -181,8 +215,8 @@
       font-size: 15px;
       line-height: 26px;
       color: #5b5b5b;
-
       margin: 0;
+      padding: 0 5px;
       text-decoration: none;
     }
   }
