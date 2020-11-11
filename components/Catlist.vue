@@ -202,7 +202,7 @@ export default {
       .hover();
     }
     &-item {
-      padding: 5px 20px;
+      padding: 5px 15px;
       font-size: 17px;
       line-height: 32px;
       color: #525252;
