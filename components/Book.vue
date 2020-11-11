@@ -1,6 +1,11 @@
 <template>
 <article class="book">
-  <img class="book__image" :src="img" :alt="book.title"/>
+  <img class="book__image"
+  :src="img"
+  :alt="book.title"
+  width="84px"
+  height="111px"
+/>
   <h3 class="book__title">{{book.title}}</h3>
   <p class="book__price">${{book.price}}</p>
   <p class="book__sale" v-if="book.sale">{{book.sale}}%</p>
@@ -83,7 +88,6 @@ export default {
     line-height: 46px;
     color: #ffffff;
     font-weight: bold;
-
     text-align: center;
     border-radius: 50%;
     @media (max-width: 520px) {

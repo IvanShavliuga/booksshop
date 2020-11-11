@@ -80,7 +80,7 @@ export default {
   data () {
     return {
       book: {
-        img: '/img/book_6.jpg',
+        img: 'https://ivanshavliuga.github.io/simples/photos/booksshop/book_6.jpg',
         title: 'Star Wars Episode I',
         author: 'Terry Brooks',
         price: 150,

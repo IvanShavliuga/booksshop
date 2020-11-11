@@ -10,7 +10,7 @@
 export default {
   props: {
     filelink: {
-      type: String,
+      type: [String, undefined],
       required: true
     }
   },
