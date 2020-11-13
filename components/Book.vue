@@ -57,11 +57,11 @@ export default {
       height: @hbook - 20px;
       margin: 10px 0;
     }
-    @media (max-width: 395px) {
+    /*@media (max-width: 395px) {
       width: @wbook;
       height: @hbook;
       margin: 15px 0;
-    }
+    }*/
   }
   &__title {
     font-size: 15px;
