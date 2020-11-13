@@ -154,7 +154,7 @@ export default {
     z-index: 60;
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 40px;
     height: auto;
     box-shadow: 1px 1px 7px 7px rgba(10,10,10,0.5);
   }

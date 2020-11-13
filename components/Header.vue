@@ -66,7 +66,7 @@ export default {
     @media (max-width: 915px) {
       height: auto;
     }
-    @media (max-width: 600px) {
+    @media (max-width: @smalltablet) {
       flex-direction: column-reverse;
       padding-bottom: 20px;
     }

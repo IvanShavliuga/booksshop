@@ -27,7 +27,7 @@
     border: 1px solid @bgform;
     width: 360px;
   }
-  @media (max-width: 600px) {
+  @media (max-width: @smalltablet) {
     width: 90%;
   }
   &__input {
@@ -49,7 +49,7 @@
       border: 1px solid @bgform;
       margin-top: 1px;
     }
-    @media (max-width: 600px) {
+    @media (max-width: @smalltablet) {
       width: 90%;
     }
   }
@@ -67,7 +67,7 @@
     @media (max-width: 820px) {
       width: 457px - 327px - 24px;
     }
-    @media (max-width: 600px) {
+    @media (max-width: @smalltablet) {
       width: 150px;
     }
     @media (max-width: 350px) {
