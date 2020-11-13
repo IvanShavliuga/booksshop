@@ -118,7 +118,7 @@ export default {
     &-item {
       display: block;
       margin: 0 10px;
-      font-size: 16px;
+      font-size: @fontsmallsize;
       color: #ffffff;
       font-weight: 300;
       padding-top: 5px;
@@ -127,7 +127,7 @@ export default {
     }
     &-counter {
       color: #eec476;
-      font-size: 16px;
+      font-size: @fontsmallsize;
       font-weight: bold;
       letter-spacing: 2px;
     }

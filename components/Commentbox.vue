@@ -153,7 +153,7 @@ export default {
       margin-right: 15px;
     }
     &-label {
-      font-size: 16px;
+      font-size: @fontsmallsize;
       line-height: 26px;
       margin: 10px;
       height: 29px;
@@ -166,7 +166,7 @@ export default {
       }
     }
     &-input {
-      font-size: 16px;
+      font-size: @fontsmallsize;
       line-height: 26px;
       height: 29px;
       margin: 10px;
@@ -179,7 +179,7 @@ export default {
     &-area {
       margin: 10px;
       height: 142px;
-      font-size: 16px;
+      font-size: @fontsmallsize;
       line-height: 26px;
       text-align: left;
       color: #a2a2a2;

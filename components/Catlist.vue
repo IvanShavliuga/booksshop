@@ -207,14 +207,11 @@ export default {
       line-height: 32px;
       color: #525252;
       font-weight: bold;
-      &:first-child {
-        text-transform: uppercase;
-      }
     }
     &-link {
       font-size: 15px;
       line-height: 26px;
-      color: #5b5b5b;
+      color: @menucolor;
       margin: 0;
       padding: 0 5px;
       text-decoration: none;
@@ -241,12 +238,11 @@ export default {
 }
 #aside__collapse-toggle:checked ~ .aside__nav {
   position: sticky;
-  overflow-y: scroll;
   z-index: 60;
   display: block;
   margin-top: 15px;
   width: 25vw;
-  margin-left: -15px;
+  margin-left: 5px;
   box-shadow: 1px 1px 7px 7px rgba(10,10,10,0.5);
   /*width: 50%;
   left: 100px;
@@ -267,21 +263,15 @@ export default {
   @media (max-width:  670px) {
     margin-left: 22px;
   }
-  /*@media (min-width: 1061px) {
+  @media (min-width: 1061px) {
     position: static;
     display: flex;
-    justify-content: center;
-    margin: 0;
-    height: 42px;
+    justify-content: flex-start;
+    width: auto;
     margin-top: -15px;
     flex-direction: row;
     box-shadow: none;
   }
-  .menu__list-item {
-    @media (max-width: 1260px) {
-      padding: 10px 5px;
-    }
-  }*/
 }
 #aside__collapse-toggle:checked ~ .aside__collapse-title {
   transform: rotateZ(0);

@@ -38,9 +38,8 @@ export default {
     border: 1px solid @bordercolor;
     box-shadow: 0 0 1px 1px #ddd;
     &-link {
-      font-size: 16px;
-      color: #a6a6a6;
-
+      font-size: @fontsmallsize;
+      color: @pathcolor;
       text-decoration: none;
     }
   }

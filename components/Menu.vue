@@ -76,16 +76,13 @@ export default {
       width: 100%;
     }
     &-link {
-      font-size: 19px;
+      font-size: @fontmenusize;
       line-height: 26px;
-      color: #5b5b5b;
+      color: @menucolor;
       margin: 0;
       text-decoration: none;
     }
   }
-}
-#menu__collapse-toggle {
-  opacity: 0;
 }
 .burgercheck();
 </style>

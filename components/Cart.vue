@@ -91,7 +91,7 @@ export default {
     }
   }
   &__counter {
-    font-size: 16px;
+    font-size: @fontsmallsize;
     color: #6d6d6d;
     border: none;
     margin-left: -5px;

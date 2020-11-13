@@ -84,7 +84,7 @@ export default {
     color: #fff;
     width: 50px;
     height: 50px;
-    font-size: 19px;
+    font-size: @fontmenusize;
     line-height: 46px;
     color: #ffffff;
     font-weight: bold;
@@ -93,7 +93,7 @@ export default {
     @media (max-width: 520px) {
       width: 40px;
       height: 40px;
-      font-size: 16px;
+      font-size: @fontsmallsize;
       line-height: 39px;
       top: -10px;
     }
