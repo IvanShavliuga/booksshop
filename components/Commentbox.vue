@@ -61,7 +61,7 @@ export default {
   @media (max-width: 1300px) {
     width: 57vw;
   }
-  @media (max-width: 1200px) {
+  @media (max-width: @largetablet) {
     width: 64vw;
   }
   @media (max-width: 500px) {
@@ -120,7 +120,7 @@ export default {
     }
     &-input, &-area {
       width: 570px;
-      @media (max-width: 1200px) {
+      @media (max-width: @largetablet) {
         width: 40vw;
       }
       @media (max-width: 630px) {
@@ -134,7 +134,7 @@ export default {
       width: 120px;
       margin: 0;
       margin-left: 15px;
-      @media (max-width: 1200px) {
+      @media (max-width: @largetablet) {
         width: 160px;
       }
       @media (max-width: 730px) {

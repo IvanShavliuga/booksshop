@@ -38,7 +38,7 @@ export default {
     top: 0;
     width: 50%;
     animation: runstring 4s infinite;
-    @media (max-width: 1200px) {
+    @media (max-width: @largetablet) {
       width: 70%;
     }
     @media (max-width: 920px) {

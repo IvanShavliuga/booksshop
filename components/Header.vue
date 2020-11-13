@@ -79,7 +79,7 @@ export default {
       background-position: center 30px;
       background-repeat: no-repeat;
       .hwblock(140px, 136px);
-      @media (max-width: 1200px) {
+      @media (max-width: @largetablet) {
         .hwblock(130px, 126px);
         background-size: contain;
       }
