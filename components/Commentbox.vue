@@ -71,7 +71,6 @@ export default {
     font-size: 20px;
     line-height: 26px;
     color: #7e7e7e;
-
     margin: 15px;
     font-weight: 300;
     margin-bottom: 10px;
@@ -96,7 +95,6 @@ export default {
       font-size: 14px;
       line-height: 26px;
       color: #a2a2a2;
-
       margin-top: 0;
       padding-left: 0;
     }
@@ -107,7 +105,6 @@ export default {
       font-size: 13px;
       line-height: 21px;
       color: #7e7e7e;
-
     }
   }
   &__form {

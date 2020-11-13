@@ -27,7 +27,7 @@
   @media (max-width: 405px) {
     width: 85.5vw;
   }
-  @media (max-width: 385px) {
+  @media (max-width: 395px) {
     justify-content: space-around;
     width: 84.5vw;
   }
