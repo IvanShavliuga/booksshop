@@ -62,7 +62,7 @@
     display: flex;
     width: 60vw;
     margin: 0;
-    @media (max-width: 1200px) {
+    @media (max-width: @largetablet) {
       width: 67.7vw;
     }
     @media (max-width: 1060px) {
@@ -96,7 +96,7 @@
       &:hover {
         .hover();
       }
-      @media (max-width: 1200px) {
+      @media (max-width: @largetablet) {
         width: 42vw;
       }
       @media (max-width: 1060px) {
@@ -126,7 +126,7 @@
         background: transparent;
         color: transparent;
       }
-      @media (max-width: 1200px) {
+      @media (max-width: @largetablet) {
         width: 18vw;
       }
       @media (max-width: 1060px) {

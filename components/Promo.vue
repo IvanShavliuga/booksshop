@@ -35,14 +35,12 @@
     &-title {
       font-size: 27px;
       font-weight: bold;
-
       margin: 0 auto;
     }
     &-subtitle {
       font-size: 15px;
       margin: 0 auto;
       font-weight: 300;
-
     }
   }
   &__image {
@@ -55,8 +53,7 @@
       z-index: 20;
       top: 7px;
       left: 47px;
-      width: @wbook;
-      height: @hbook;
+      .hwblock(@hbook, @wbook);
     }
     &-panel {
       position: absolute;
@@ -73,7 +70,6 @@
       font-size: 21px;
       font-weight: 300;
       margin: 5px auto;
-
     }
     &-price {
       font-size: 29px;
@@ -83,11 +79,10 @@
 
     }
     &-button {
-      font-size: 19px;
+      font-size: @fontmenusize;
       padding: 0 15px;
       color: #ffffff;
       font-weight: bold;
-
       background-image: linear-gradient(0deg, #51a451 0%, #61c261 100%);
       border: 1px solid #52a452;
       border-radius: 4px;

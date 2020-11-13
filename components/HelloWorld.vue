@@ -30,7 +30,7 @@ export default {
     height: 45px;
   }
   &__text {
-    font-size: 16px;
+    font-size: @fontsmallsize;
     color: #dfebb0;
     word-spacing: 7px;
     position: absolute;
@@ -38,7 +38,7 @@ export default {
     top: 0;
     width: 50%;
     animation: runstring 4s infinite;
-    @media (max-width: 1200px) {
+    @media (max-width: @largetablet) {
       width: 70%;
     }
     @media (max-width: 920px) {

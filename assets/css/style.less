@@ -1,21 +1,7 @@
-@bodyfont: 'Segoe';
-@pricefont: 'Helvetica';
-@bgform: #79b260;
-@colform: #6d6d6d;
-@bordercolor: #dddddd;
-@pricecolor: #f05356;
-@wbook: 84px;
-@hbook: 111px;
-@footercolor: #dddddd;
+@import "vars";
+@import "animate";
+@import "fonts";
 
-@font-face {
-  font-family: 'Segoe';
-  src: url('../fonts/Segoe_WP.ttf');
-}
-@font-face {
-  font-family: 'Helvetica';
-  src: url('../fonts/HelveticaLTStdLight.otf');
-}
 .focus() {
   &:focus {
     outline-color: rgba(250,250,12,0.8);
@@ -26,12 +12,12 @@
 .wrapper() {
   width: 80%;
   margin: 0 auto;
-  @media screen and (min-width: 1200px) and (max-width: 1250){
+  @media screen and (min-width: @largetablet) and (max-width: 1250){
     margin-left: 20px;
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: @largetablet) {
     width: 90%;
-    margin-left: 20px;
+    margin-left: 10px;
   }
   @media screen and (max-width: 915px) {
     width: 100%;
@@ -104,6 +90,9 @@
   }
 }
 .burgercheck() {
+  #menu__collapse-toggle {
+    opacity: 0;
+  }
   #menu__collapse-toggle:checked ~ .menu__collapse-btn > span {
     transform: rotate(45deg);
   }
@@ -156,51 +145,15 @@
   height: @h;
   width: @w;
 }
+.generate-rows(8);
 
-@keyframes runstring {
-  0% {
-    right: 0%;
-    opacity: 0.6;
-    animation-delay: 0.05;
+.generate-rows(@n, @i: 1) when (@i =< @n) {
+  .row_@{i} {
+    background-color: lighten(@bgform, @i * 2%);
   }
-  30% {
-    right: 20%;
-    opacity: 1;
-    animation-delay: 0.10;
-  }
-  60% {
-    //right: -10%;
-    opacity: 1;
-    animation-delay: 0.15;
-  }
-  100% {
-    right: 90%;
-    opacity: 0;
-    animation-delay: 0.01;
-  }
+  .generate-rows(@n, (@i + 1));
 }
-@keyframes runstringmob {
-  0% {
-    right: -5%;
-    opacity: 0.6;
-    animation-delay: 0.05;
-  }
-  30% {
-    right: 10%;
-    opacity: 1;
-    animation-delay: 0.10;
-  }
-  60% {
-    //right: -10%;
-    opacity: 1;
-    animation-delay: 0.15;
-  }
-  100% {
-    right: 60%;
-    opacity: 0;
-    animation-delay: 0.01;
-  }
-}
+
 #app, body, html {
   margin: 0;
   padding: 0;

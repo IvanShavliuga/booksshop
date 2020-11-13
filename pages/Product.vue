@@ -154,7 +154,7 @@ export default {
       margin-top: 30px;
       margin-bottom: 20px;
       width: 670px;
-      font-size: 16px;
+      font-size: @fontsmallsize;
       line-height: 26px;
       color: #7e7e7e;
 

@@ -30,10 +30,10 @@ export default {
     @media (max-width: 800px) {
       display: none;
     }
-    @media (max-width: 600px) {
+    @media (max-width: @smalltablet) {
       display: block;
     }
-    @media (max-width: 270px) {
+    @media (max-width: @smallphone) {
       display: none;
     }
   }
@@ -49,10 +49,10 @@ export default {
     @media (min-width: 601px) and (max-width: 800px) {
       margin-left: 0;
     }
-    @media (max-width: 600px) {
+    @media (max-width: @smalltablet) {
       display: block;
     }
-    @media (max-width: 270px) {
+    @media (max-width: @smallphone) {
       margin-left: -20px;
     }
   }
@@ -70,7 +70,7 @@ export default {
     @media (min-width: 601px) and (max-width: 800px) {
       .posabsolute(15px, 25px);
     }
-    @media (max-width: 270px) {
+    @media (max-width: @smallphone) {
       .posabsolute(15px, 5px);
     }
   }

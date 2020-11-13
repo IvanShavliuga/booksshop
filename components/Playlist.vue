@@ -45,7 +45,7 @@ export default {
   components: {
     Player
   },
-  created () {
+  async created () {
     Axios.get('https://ivanshavliuga.github.io/simples/audio/booksshop/telepat/files-array.json')
       .then(response => {
         for(let i=0; i<response.data.length; i++)

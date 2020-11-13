@@ -61,7 +61,7 @@ export default {
   @media (max-width: 1300px) {
     width: 57vw;
   }
-  @media (max-width: 1200px) {
+  @media (max-width: @largetablet) {
     width: 64vw;
   }
   @media (max-width: 500px) {
@@ -71,7 +71,6 @@ export default {
     font-size: 20px;
     line-height: 26px;
     color: #7e7e7e;
-
     margin: 15px;
     font-weight: 300;
     margin-bottom: 10px;
@@ -96,7 +95,6 @@ export default {
       font-size: 14px;
       line-height: 26px;
       color: #a2a2a2;
-
       margin-top: 0;
       padding-left: 0;
     }
@@ -107,7 +105,6 @@ export default {
       font-size: 13px;
       line-height: 21px;
       color: #7e7e7e;
-
     }
   }
   &__form {
@@ -120,7 +117,7 @@ export default {
     }
     &-input, &-area {
       width: 570px;
-      @media (max-width: 1200px) {
+      @media (max-width: @largetablet) {
         width: 40vw;
       }
       @media (max-width: 630px) {
@@ -134,7 +131,7 @@ export default {
       width: 120px;
       margin: 0;
       margin-left: 15px;
-      @media (max-width: 1200px) {
+      @media (max-width: @largetablet) {
         width: 160px;
       }
       @media (max-width: 730px) {
@@ -153,7 +150,7 @@ export default {
       margin-right: 15px;
     }
     &-label {
-      font-size: 16px;
+      font-size: @fontsmallsize;
       line-height: 26px;
       margin: 10px;
       height: 29px;
@@ -166,7 +163,7 @@ export default {
       }
     }
     &-input {
-      font-size: 16px;
+      font-size: @fontsmallsize;
       line-height: 26px;
       height: 29px;
       margin: 10px;
@@ -179,7 +176,7 @@ export default {
     &-area {
       margin: 10px;
       height: 142px;
-      font-size: 16px;
+      font-size: @fontsmallsize;
       line-height: 26px;
       text-align: left;
       color: #a2a2a2;

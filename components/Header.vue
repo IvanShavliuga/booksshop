@@ -66,7 +66,7 @@ export default {
     @media (max-width: 915px) {
       height: auto;
     }
-    @media (max-width: 600px) {
+    @media (max-width: @smalltablet) {
       flex-direction: column-reverse;
       padding-bottom: 20px;
     }
@@ -79,7 +79,7 @@ export default {
       background-position: center 30px;
       background-repeat: no-repeat;
       .hwblock(140px, 136px);
-      @media (max-width: 1200px) {
+      @media (max-width: @largetablet) {
         .hwblock(130px, 126px);
         background-size: contain;
       }

@@ -118,7 +118,7 @@ export default {
     &-item {
       display: block;
       margin: 0 10px;
-      font-size: 16px;
+      font-size: @fontsmallsize;
       color: #ffffff;
       font-weight: 300;
       padding-top: 5px;
@@ -127,7 +127,7 @@ export default {
     }
     &-counter {
       color: #eec476;
-      font-size: 16px;
+      font-size: @fontsmallsize;
       font-weight: bold;
       letter-spacing: 2px;
     }
@@ -154,7 +154,7 @@ export default {
     z-index: 60;
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 40px;
     height: auto;
     box-shadow: 1px 1px 7px 7px rgba(10,10,10,0.5);
   }

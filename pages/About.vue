@@ -147,7 +147,7 @@ export default {
       font-size: 22px;
       text-decoration: none;
       @media (max-width: 375px) {
-        font-size: 16px;
+        font-size: @fontsmallsize;
       }
     }
     &-title {

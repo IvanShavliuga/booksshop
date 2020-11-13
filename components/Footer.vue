@@ -320,7 +320,6 @@
       line-height: 20px;
       color: @footercolor;
       font-weight: 300;
-
     }
     &-block {
       width: auto;
@@ -335,7 +334,6 @@
       line-height: 24px;
       color: @footercolor;
       font-weight: 300;
-
     }
   }
 }
