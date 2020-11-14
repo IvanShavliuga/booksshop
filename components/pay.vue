@@ -17,10 +17,10 @@
         Safe, Secure Shopping
       </p>
       <p class="pay__bottomblock-cards">
-        <button class="pay__bottomblock-card"></button>
-        <button class="pay__bottomblock-card"></button>
-        <button class="pay__bottomblock-card"></button>
-        <button class="pay__bottomblock-card"></button>
+        <button class="pay__card"></button>
+        <button class="pay__card"></button>
+        <button class="pay__card"></button>
+        <button class="pay__card"></button>
       </p>
     </div>
   </div>
@@ -138,18 +138,18 @@
     @media (max-width: 370px) {
       font-size: 20px;
     }
-  }
-  &__title {
-    color: #015699;
-    text-align: left;
-    margin-left: 0;
-  }
-  &__price {
-    color: @pricecolor;
-    font-weight: bold;
-    margin-left: 15px;
-  }
+    &-title {
+      color: #015699;
+      text-align: left;
+      margin-left: 0;
+    }
+    &-price {
+      color: @pricecolor;
+      font-weight: bold;
+      margin-left: 15px;
+    }
 
+  }
   }
   &__icon {
     background-image: url('../assets/images/lock.svg');
@@ -177,29 +177,30 @@
         margin: 0 auto;
       }
     }
-    &-card {
-      width: 43px;
-      height: 25px;
-      border: 1px solid @bordercolor;
-      margin: 3px;
-      &:hover {
-        border: 1px solid rgba(181,176,176,0.57);
-        filter: sepia(0.5);
-        opacity: 0.6;
-      }
-      &:first-child {
-        background-image: url('../assets/images/card1.png');
-      }
-      &:nth-child(2) {
-        background-image: url('../assets/images/card2.png');
-      }
-      &:nth-child(3) {
-        background-image: url('../assets/images/card3.png');
-      }
-      &:last-child {
-        background-image: url('../assets/images/card4.png');
-      }
-    }
+}
+
+.pay__card {
+  width: 43px;
+  height: 25px;
+  border: 1px solid @bordercolor;
+  margin: 3px;
+  &:hover {
+    border: 1px solid rgba(181,176,176,0.57);
+    filter: sepia(0.5);
+    opacity: 0.6;
+  }
+  &:first-child {
+    background-image: url('../assets/images/card1.png');
+  }
+  &:nth-child(2) {
+    background-image: url('../assets/images/card2.png');
+  }
+  &:nth-child(3) {
+    background-image: url('../assets/images/card3.png');
+  }
+  &:last-child {
+    background-image: url('../assets/images/card4.png');
+  }
 }
 </style>
 <script>
