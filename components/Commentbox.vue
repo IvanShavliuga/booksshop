@@ -4,7 +4,7 @@
     <div class="commbox__comment" v-for="(c,k) in comments" :key="k">
       <div class="commbox__comment-block">
         <div class="commbox__comment-avatar">
-          <img class="commbox__comment-image" :src="(c.img=='none')?'/img/user.png':'c.img'" :alt="c.name" :id="c.id" />
+          <img class="commbox__comment-image" :src="fullurlimg(c.id)" :alt="c.name" :id="c.id" />
           <p class="commbox__comment-name">{{c.name}}</p>
         </div>
         <p class="commbox__comment-text">{{c.text}}</p>
@@ -48,7 +48,20 @@ export default {
         img: 'none',
         name: 'Name 2',
         text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially'
-      }]
+      }],
+      baseurl: ''
+    }
+  },
+  created () {
+    this.baseurl = this.$store.getters.baseimgurl
+  },
+  methods: {
+    fullurlimg (id) {
+      if(this.comments[id].img != 'none')
+        return this.baseurl + this.comments[id].img
+      else {
+        return this.baseurl + 'user.png'
+      }
     }
   }
 }
