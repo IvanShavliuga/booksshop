@@ -96,7 +96,7 @@ export default {
 }
 </script>
 <style scoped lang="less">
-@import '../assets/css/style.less';
+@import '../../assets/css/style.less';
 
 .audio {
   margin: 0;

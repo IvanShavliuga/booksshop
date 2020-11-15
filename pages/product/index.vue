@@ -9,31 +9,7 @@
         <article class="product__block">
           <h3 class="product__block-title">{{book.title}}</h3>
           <p class="product__block-text">{{book.desc}}</p>
-          <div class="product__pay">
-            <div class="product__pay-topblock">
-              <div class="product__pay-headblock">
-                <h4 class="product__pay-header">
-                  <span class="product__pay-title">Our price:</span>
-                  <span class="product__pay-price">${{book.price}}</span>
-                </h4>
-                <h5 class="product__pay-sale">Was ${{total}} Save {{book.sale}}% </h5>
-              </div>
-              <button class="product__pay-button">Add to cart</button>
-            </div>
-            <hr/>
-            <div class="product__pay-bottomblock">
-              <p class="product__pay-status">
-                <i class="product__pay-icon">&nbsp;</i>
-                Safe, Secure Shopping
-              </p>
-              <p class="product__pay-cards">
-                <button class="product__pay-card"></button>
-                <button class="product__pay-card"></button>
-                <button class="product__pay-card"></button>
-                <button class="product__pay-card"></button>
-              </p>
-            </div>
-          </div>
+          <Pay :book="book"/>
         </article>
       </section>
       <section  class="product__section product__flex">
@@ -66,7 +42,7 @@ import Footer from '@/components/Footer.vue'
 import Pathcomp from '@/components/Pathcomp.vue'
 import Bookbanner from '@/components/Bookbanner.vue'
 import Commentbox from '@/components/Commentbox.vue'
-
+import Pay from '@/components/pay.vue'
 export default {
   name: 'Home',
   components: {
@@ -75,7 +51,8 @@ export default {
     Footer,
     Pathcomp,
     Bookbanner,
-    Commentbox
+    Commentbox,
+    Pay
   },
   data () {
     return {
@@ -88,17 +65,11 @@ export default {
         desc: 'The Star Wars Episode I: The Phantom Menace novelization was written by Terry Brooks and published on April 21, 1999 by Del Rey. It is based on the script of the movie of the same name. Narration for the abridged audio version was performed by Michael Cumpsty. The unabridged version was performed by Alexander Adams. On January 31, 2012, a new paperback edition '
       }
     }
-  },
-  computed: {
-    total () {
-      const drb = this.book.sale / 100
-      return this.book.price / (1 - drb)
-    }
   }
 }
 </script>
 <style scoped lang="less">
-@import '../assets/css/style.less';
+@import '../../assets/css/style.less';
 
 .product {
   margin: 0;
@@ -175,176 +146,7 @@ export default {
       }*/
     }
   }
-  &__pay {
-    width: 670px;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    padding: 15px;
-    border: 1px solid @bordercolor;
-    @media (max-width: 1300px) {
-      width: 49vw;
-    }
-    @media (max-width: 1200px) {
-      width: 46vw;
-    }
-    /*@media (max-width: 800px) {
-      width: 43vw;
-    }*/
-    @media (max-width: 650px) {
-      width: 65vw;
-      /*margin-left: -120px;
-      margin-top: 20px;*/
-    }
-    @media (max-width: 370px) {
-      margin-left: -10px;
-    }
-    @media (max-width: 280px) {
-      border: none;
-      margin-left: -15px;
-    }
-    &-topblock {
-      display: flex;
-      @media (max-width: 495px) {
-        flex-direction: column;
-        justify-content: center;
-      }
-    }
-    &-headblock {
-      width: 30vw;
-      margin-top: 5px;
-      @media (max-width: 745px) {
-        margin: 0 auto;
-      }
-      @media (max-width: 495px) {
-        width: 58vw;
-      }
-      /*@media (max-width: 350px) {
-        width: 190px;
-      }*/
-      @media (max-width: 290px) {
-        width: 150px;
-        margin: 0;
-      }
-    }
-    &-button {
-      background-image: linear-gradient(0deg, #79b260 0%, #92d774 100%);
-      border: none;
-      padding: 10px 30px;
-      display: block;
-      margin: 15px auto;
-      font-size: 24px;
-      height: 50px;
-      color: #ffffff;
-      font-weight: bold;
-      font-family: @pricefont;
-      @media (max-width: 1200px) {
-        font-size: 20px;
-        padding: 10px 5px;
-        width: 150px;
-      }
-      @media (max-width: 500px) {
-        font-size: 17px;
-        padding: 2px 5px;
-        height: 30px;
-        margin: 10px auto;
-        width: 120px;
-      }
-    }
-    &-header {
-      font-size: 36px;
 
-      margin: 0;
-      @media (max-width: 880px) {
-        font-size: 26px;
-      }
-      @media (max-width: 745px) {
-        font-size: 20px;
-      }
-      @media (max-width: 495px) {
-        font-size: 30px;
-      }
-      /*@media (max-width: 400px) {
-        font-size: 26px;
-      }*/
-      @media (max-width: 370px) {
-        font-size: 20px;
-      }
-    }
-    &-title {
-      color: #015699;
-      text-align: left;
-      margin-left: 0;
-    }
-    &-price {
-      color: @pricecolor;
-      font-weight: bold;
-      margin-left: 15px;
-    }
-    &-sale {
-      font-size: 17px;
-      line-height: 17px;
-      color: #939292;
-
-      text-align: left;
-      margin-top: 5px;
-      margin-left: 0;
-      @media (max-width: 745px) {
-        text-align: center;
-      }
-      @media (max-width: 500px) {
-        margin-top: 0;
-        margin-bottom: 0;
-      }
-    }
-    &-icon {
-      background-image: url('../assets/images/lock.svg');
-      display: inline-block;
-      background-repeat: no-repeat;
-      background-position: center bottom;
-      width: 15px;
-      height: 15px;
-    }
-    &-status {
-      font-size: 13px;
-      line-height: 27px;
-      color: #939292;
-      font-family: "Helvetica Neue CE";
-      text-align: left;
-      margin: 0;
-    }
-    &-cards {
-      display: flex;
-      margin: 0;
-      @media (max-width: 270px) {
-        width: 100px;
-        flex-wrap: wrap;
-        margin: 0 auto;
-      }
-    }
-    &-card {
-      width: 43px;
-      height: 25px;
-      border: 1px solid @bordercolor;
-      margin: 3px;
-      &:hover {
-        border: 1px solid rgba(181,176,176,0.57);
-        filter: sepia(0.5);
-        opacity: 0.6;
-      }
-      &:first-child {
-        background-image: url('../assets/images/card1.png');
-      }
-      &:nth-child(2) {
-        background-image: url('../assets/images/card2.png');
-      }
-      &:nth-child(3) {
-        background-image: url('../assets/images/card3.png');
-      }
-      &:last-child {
-        background-image: url('../assets/images/card4.png');
-      }
-    }
-  }
   &__image {
     width: 252px;
     height: 393px;
