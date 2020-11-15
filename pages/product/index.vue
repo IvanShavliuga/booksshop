@@ -69,7 +69,7 @@ export default {
 }
 </script>
 <style scoped lang="less">
-@import '../assets/css/style.less';
+@import '../../assets/css/style.less';
 
 .product {
   margin: 0;
