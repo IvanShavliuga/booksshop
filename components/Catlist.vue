@@ -14,7 +14,7 @@
             v-for="(c,k) in catlist" :key="k">
             <div class="aside__nav-hcat">
               <a class="aside__nav-link"
-              :href="'/'+c"
+              :href="'/categories?cat='+c"
               >
                 {{c.name}}
               </a>
@@ -24,7 +24,7 @@
               v-for="(c2,k2) in c.sublist"
               :key="k2"
             >
-              <a class="aside__nav-link" :href="'/'+c2">
+              <a class="aside__nav-link" :href="'/categories?cat='+c2">
                 {{c2}}
               </a>
             </li>
