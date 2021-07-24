@@ -9,7 +9,7 @@
       <ul class="menu__list">
         <li :class="['menu__list-item', (k==select)?'itemactive':'']"
            v-for="(l, k) in links">
-          <a class="menu__list-link" :href="'/'+l">{{l}}</a>
+          <a class="menu__list-link" :href="'/categories?cat='+l">{{l}}</a>
         </li>
       </ul>
     </div>
