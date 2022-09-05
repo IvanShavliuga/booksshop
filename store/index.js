@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import Axios from 'axios'
+// import Axios from 'axios'
 
-Vue.use(Axios)
+// Vue.use(Axios)
 Vue.use(Vuex)
 
 export const  state = () =>({
