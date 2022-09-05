@@ -3,6 +3,7 @@
     <Hello/>
     <Header/>
     <Pathcomp/>
+    <template v-if="book">
     <div class="product__wrapper">
       <section class="product__section product__border product__flex">
         <img class="product__image" :src="book.img" :alt="book.author+'-'+book.title"/>
@@ -30,6 +31,7 @@
         <Bookbanner/>
       </section>
     </div>
+    </template>
     <Footer/>
   </main>
 </template>
@@ -66,7 +68,7 @@ export default {
       }
     }
   },
-  created () {
+  /* created () {
     const path = decodeURI(this.$route.fullPath)
     const arr = path.split('id=')
     let id = -1
@@ -79,8 +81,19 @@ export default {
       }
       this.book.img = 'https://ivanshavliuga.github.io/simples/photos/booksshop/' + booksel.img
       
+    } 
+  },*/
+   async fetch() {
+    try {
+      await this.$axios.$post("/api/books/show", { id: +this.$route.query.id }).then((d) => {
+        this.book = d[0]
+        this.book.img = 'https://ivanshavliuga.github.io/simples/photos/booksshop/' + d[0].img
+      }) // [0] ?? null;
+    } catch (e) {
+      console.error(e);
+      throw e;
     }
-  }
+  },
 }
 </script>
 <style scoped lang="less">

@@ -51,6 +51,18 @@ export default {
       }
     }
   },
+   async fetch() {
+    try {
+      const rndId = ~~(Math.random() * 22)
+      await this.$axios.$post("/api/books/show", { id: rndId }).then((d) => {
+        this.promo = d[0]
+        this.promo.img = 'https://ivanshavliuga.github.io/simples/photos/booksshop/' + d[0].img
+      }) // [0] ?? null;
+    } catch (e) {
+      console.error(e);
+      throw e;
+    }
+  },
   created () {
     this.$store.dispatch('syncUser')
   }

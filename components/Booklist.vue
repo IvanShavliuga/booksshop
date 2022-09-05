@@ -1,5 +1,5 @@
 <template>
-<div class="list">
+<div v-if="books.length" class="list">
   <Book v-for="(b,k) in books" :key="b.id+k" :book="b"/>
 </div>
 </template>
@@ -55,8 +55,13 @@ export default {
       books: []
     }
   },
-  created () {
-    this.books = this.$store.getters.books
-  }
+  async fetch() {
+    try {
+      this.books = await this.$axios.$get("/api/books/index");
+    } catch (e) {
+      console.error(e);
+      throw e;
+    }
+  },
 }
 </script>
