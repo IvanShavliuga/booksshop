@@ -1,3 +1,7 @@
+const fs = require('fs')
+const { writeFile, readFile } = fs.promises
+
+
 const books = [
     { id: 22, img: 'book_7.jpg', author: 'Js-guru', title: 'Nuxt.js инструкция по применению', price: 25, likes: 32, sale: 0, desc: 'Документация' },
     { id: 1, img: 'book_7.jpg', author: 'Братья Стругацкие', title: 'Обитаемый остров', price: 10, likes: 25, sale: 0, desc: 'Главный герой попадает на планету и совершает революцию.' },
@@ -25,7 +29,21 @@ const books = [
   function index() {
     return books;
   }
-  function show({ id }) {
-    return books.filter((el) => el.id === +id)
+  async function show({ id }) {
+    const book = books.filter((el) => el.id === +id)
+    await writeFile('/test-file.txt', JSON.stringify(book))
+    return book
   }
-export  { index, show }
+  async function text({ id }) {
+    let text = ''
+    const file =  await readFile('/test.txt').then((d) => {
+      for (const element of d)
+      text +=  String.fromCharCode(element)
+      return d
+    })
+   
+   /*  file.data
+    text */
+    return { text: text }
+  }
+export  { index, show, text }
