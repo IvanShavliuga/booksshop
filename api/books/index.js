@@ -31,12 +31,12 @@ const books = [
   }
   async function show({ id }) {
     const book = books.filter((el) => el.id === +id)
-    await writeFile('/test-file.txt', JSON.stringify(book))
+    await writeFile('./api/books/test-file.txt', JSON.stringify(book))
     return book
   }
   async function text({ id }) {
     let text = ''
-    const file =  await readFile('/test.txt').then((d) => {
+    const file =  await readFile('./api/books/test-2.txt').then((d) => {
       for (const element of d)
       text +=  String.fromCharCode(element)
       return d
