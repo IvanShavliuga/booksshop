@@ -4,7 +4,7 @@
     <Header/>
     <div class="home__wrapper home__flex">
       <Banner/>
-      <Promo :book="promo"/>
+      <Promo :book="promo" @generate="generate"/>
     </div>
     <div class="home__wrapper home__flex">
       <Catlist/>
@@ -61,6 +61,11 @@ export default {
     } catch (e) {
       console.error(e);
       throw e;
+    }
+  },
+  methods: {
+    async generate() {
+      await this.$axios.$post("/api/books/generate")
     }
   },
   created () {

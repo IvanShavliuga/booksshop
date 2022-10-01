@@ -1,3 +1,5 @@
+import { generateKey } from 'crypto'
+
 const fs = require('fs')
 const { writeFile, readFile } = fs.promises
 
@@ -51,6 +53,22 @@ const books = [
     }) 
     return  JSON.parse(fileData);
   }
+  async function generate() {
+    await writeFile('./api/books/index.json', JSON.stringify(books.map((el) => {
+      return {
+        test: `${~~(Math.random() * 100)}-${~~(Math.random() * 100)}-${~~(Math.random() * 100)}`,
+        id: el.id,
+        img: el.img,
+        author: el.author,
+        title: el.title,
+        desc: el.desc,
+        price: ~~(Math.random() * 100 + 40) / 5,
+        sale: ~~(Math.random() * 100),
+        likes: ~~(Math.random() * 100),
+      }
+    }))) 
+    return []
+  }
   async function show({ id }) {
     const book = books.filter((el) => el.id === +id)
     await writeFile('./api/books/test-file.txt', JSON.stringify(book))
@@ -68,4 +86,4 @@ const books = [
     text */
     return { text: text }
   }
-export  { index, show, text }
+export  { index, show, text, generate }
