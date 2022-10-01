@@ -1,3 +1,5 @@
+import { generateKey } from 'crypto'
+
 const fs = require('fs')
 const { writeFile, readFile } = fs.promises
 
@@ -26,8 +28,46 @@ const books = [
     { id: 20, img: 'book_0.jpg', author: 'Александр Пушкин', title: 'Капитанская дочка', price: 7, sale: 0, likes: 23, desc: 'Роман о Пугачевском бунте' },
     { id: 21, img: 'telepat.jpg', author: 'Иван Шавлюга', title: 'Телепатия. Проклятие языка', price: 10, sale: 45, likes: 23, desc: 'Графомания в чистом виде' }
   ]
-  function index() {
-    return books;
+  async function index() {
+   /*  await writeFile('./api/books/index.json', JSON.stringify(books.map((el) => {
+      return {
+        test: `${~~(Math.random() * 100)}-${~~(Math.random() * 100)}-${~~(Math.random() * 100)}`,
+        id: el.id,
+        img: el.img,
+        author: el.author,
+        title: el.title,
+        desc: el.desc,
+        price: ~~(Math.random() * 100 + 20) / 5,
+        sale: ~~(Math.random() * 100),
+        likes: ~~(Math.random() * 100),
+      }
+    }))) 
+    return [] */
+    
+    const fileData =  await readFile('./api/books/index.json', {encoding: 'utf-8'}, function(err,data){
+        if (!err) {
+            return data
+        } else {
+            console.log(err);
+        }
+    }) 
+    return  JSON.parse(fileData);
+  }
+  async function generate() {
+    await writeFile('./api/books/index.json', JSON.stringify(books.map((el) => {
+      return {
+        test: `${~~(Math.random() * 100)}-${~~(Math.random() * 100)}-${~~(Math.random() * 100)}`,
+        id: el.id,
+        img: el.img,
+        author: el.author,
+        title: el.title,
+        desc: el.desc,
+        price: ~~(Math.random() * 100 + 40) / 5,
+        sale: ~~(Math.random() * 100),
+        likes: ~~(Math.random() * 100),
+      }
+    }))) 
+    return []
   }
   async function show({ id }) {
     const book = books.filter((el) => el.id === +id)
@@ -46,4 +86,4 @@ const books = [
     text */
     return { text: text }
   }
-export  { index, show, text }
+export  { index, show, text, generate }

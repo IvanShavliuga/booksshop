@@ -11,7 +11,7 @@
   <div class="promo__desc">
     <p class="promo__desc-sale">Save {{book.sale}} Today</p>
     <p class="promo__desc-price">${{book.price}}</p>
-    <button class="promo__desc-button">Buy now</button>
+    <button class="promo__desc-button" @click="$emit('generate')">Buy now</button>
   </div>
 </section>
 </template>
