@@ -59,9 +59,8 @@ export default {
   created () {
     try {
       this.$axios.$post("/api/books/index").then((d) => {
-        console.log(d)
         this.$store.dispatch('syncBooks', d)
-        this.promo = d.filter((el) => el.id === ~~(Math.random() * d.length))[0]
+        this.promo = d.filter((el) => el.id === ~~(Math.random() * d.length - 1))[0] ?? d[0]
       })
       
     } catch (e) {
