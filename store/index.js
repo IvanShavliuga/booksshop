@@ -48,6 +48,9 @@ export const mutations = {
   SET_USER(state, user) {
       state.user = user || null;
   },
+  SYNC_BOOKS(state, books) {
+    state.books = books || [];
+  },
   SYNC_USER(state) {
     let total = 0
     if (state.books.length) {
@@ -76,5 +79,8 @@ export const actions = {
   },
   syncPlaylist({commit}, arr) {
     commit('SYNC_PLAYLIST', arr)
+  },
+  syncBooks({commit}, dta) {
+    commit('SYNC_BOOKS', dta)
   }
 }

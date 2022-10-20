@@ -21,8 +21,9 @@
 @import '../assets/css/style.less';
 .banner {
   margin: 15px;
+  width: 100%;
   &__item {
-    width: 784px;
+    width: 100%;
     height: 304px;
     padding: 0;
     margin: 0;
@@ -43,7 +44,7 @@
       width: 100%;
     }
     &-background {
-      width: 784px;
+      width: 100%;
       height: 304px;
       padding: 0;
       margin: 0;

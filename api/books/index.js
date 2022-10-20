@@ -3,8 +3,9 @@ import { generateKey } from 'crypto'
 const fs = require('fs')
 const { writeFile, readFile } = fs.promises
 
+let books = []
 
-const books = [
+/* const books = [
     { id: 22, img: 'book_7.jpg', author: 'Js-guru', title: 'Nuxt.js инструкция по применению', price: 25, likes: 32, sale: 0, desc: 'Документация' },
     { id: 1, img: 'book_7.jpg', author: 'Братья Стругацкие', title: 'Обитаемый остров', price: 10, likes: 25, sale: 0, desc: 'Главный герой попадает на планету и совершает революцию.' },
     { id: 2, img: 'book_8.jpg', author: 'Михаил Лермонтов', title: 'Герой нашего времени', price: 15, likes: 13, sale: 0, desc: 'Главный герой рушит все вокруг себя и погибает сам' },
@@ -27,7 +28,7 @@ const books = [
     { id: 19, img: 'book_0.jpg', author: 'Андрей Цифровой', title: 'Сервер как он есть', price: 7, sale: 0, likes: 21, desc: 'Принципы работы сервера' },
     { id: 20, img: 'book_0.jpg', author: 'Александр Пушкин', title: 'Капитанская дочка', price: 7, sale: 0, likes: 23, desc: 'Роман о Пугачевском бунте' },
     { id: 21, img: 'telepat.jpg', author: 'Иван Шавлюга', title: 'Телепатия. Проклятие языка', price: 10, sale: 45, likes: 23, desc: 'Графомания в чистом виде' }
-  ]
+  ] */
   async function index() {
    /*  await writeFile('./api/books/index.json', JSON.stringify(books.map((el) => {
       return {
@@ -46,6 +47,7 @@ const books = [
     
     const fileData =  await readFile('./api/books/index.json', {encoding: 'utf-8'}, function(err,data){
         if (!err) {
+           books = data
             return data
         } else {
             console.log(err);
@@ -54,19 +56,77 @@ const books = [
     return  JSON.parse(fileData);
   }
   async function generate() {
-    await writeFile('./api/books/index.json', JSON.stringify(books.map((el) => {
-      return {
-        test: `${~~(Math.random() * 100)}-${~~(Math.random() * 100)}-${~~(Math.random() * 100)}`,
-        id: el.id,
-        img: el.img,
-        author: el.author,
-        title: el.title,
-        desc: el.desc,
-        price: ~~(Math.random() * 100 + 40) / 5,
-        sale: ~~(Math.random() * 100),
-        likes: ~~(Math.random() * 100),
+    const placeholder = [] 
+    const catList = [
+      "Children",
+          "Science",
+          "Fantasy",
+          "Mystery",
+          "Romance",
+          "Horror",
+          "Poetry",
+          "Literature",
+          "Crime",
+          "Comic",
+          "Cook",
+          "Psychology",
+          "Medical",
+          "Art",
+          "Photography",
+          "Law",
+          "History",
+          "Business",
+          "Computers",
+          "Baby",
+          "Sex",
+          "Travel",
+          "Science",
+          "Sport`s",
+    ]
+    const authorsList = [
+      'Ivan Forta',
+      'Den Abramov',
+      'Stephen Nikiforov',
+      'Adrew Lukov',
+      'Alex Fanaev',
+      'Sophie Mikkenien',
+      'Richard Hummond',
+      'Jhon Toe',
+      'Nik Pole',
+      'Alex Frolov',
+      'Ivan Shavliuga',
+      'Stephen Tenney',
+      'Ann Makie',
+      'Andrew Lientev',
+      'Ivan Serbo',
+      'Inna Terbo',
+      'Albert Tembo',
+      'Alex Fion'
+    ]
+    let id = 0
+    for (const category of catList) {
+      for (let i=0; i<30; i++) {
+        const author = authorsList[~~(Math.random()*authorsList.length)]
+        const title = `графоманская дичь номер ${id}`
+        const desc= 'Просто какая-то бумажная хрень.'
+        const price= ~~(Math.random() * 100 + 40) / 5
+        const sale= ~~(Math.random() * 100)
+        const likes= ~~(Math.random() * 100)
+        placeholder.push({
+          id,
+          img: 'book_0.jpg',
+          author,
+          title,
+          desc,
+          price,
+          sale,
+          likes,
+          category,
+        })
+        id++
       }
-    }))) 
+    }
+    await writeFile('./api/books/index.json', JSON.stringify(placeholder)) 
     return []
   }
   async function show({ id }) {
