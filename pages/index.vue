@@ -4,7 +4,7 @@
     <Header/>
     <div class="home__wrapper home__flex">
       <Banner/>
-      <Promo :book="promo" @generate="generate"/>
+      <Promo v-if="promo" :book="promo" @generate="generate"/>
     </div>
     <div class="home__wrapper home__flex">
       <Catlist/>
@@ -51,25 +51,23 @@ export default {
       }
     }
   },
-   async fetch() {
-    try {
-      const rndId = ~~(Math.random() * 22)
-      await this.$axios.$post("/api/books/show", { id: rndId }).then((d) => {
-        this.promo = d[0]
-        this.promo.img = 'https://ivanshavliuga.github.io/simples/photos/booksshop/' + d[0].img
-      }) // [0] ?? null;
-    } catch (e) {
-      console.error(e);
-      throw e;
-    }
-  },
   methods: {
     async generate() {
       await this.$axios.$post("/api/books/generate")
     }
   },
   created () {
-    this.$store.dispatch('syncUser')
+    try {
+      this.$axios.$post("/api/books/index").then((d) => {
+        console.log(d)
+        this.$store.dispatch('syncBooks', d)
+        this.promo = d.filter((el) => el.id === ~~(Math.random() * d.length))[0]
+      })
+      
+    } catch (e) {
+      throw e;
+    }
+   
   }
 }
 </script>
@@ -84,9 +82,10 @@ export default {
   }
   &__flex {
     display: flex;
+    width: 90%;
   }
   &__block {
-    width: 70vw;
+    width: 100%;
     /*@media screen and (max-width: 845px) {
       width: 90vw;
       margin: 0 auto;
