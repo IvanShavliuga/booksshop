@@ -7,7 +7,7 @@
       <Promo v-if="promo" :book="promo" @generate="generate"/>
     </div>
     <div class="home__wrapper home__flex">
-      <Catlist/>
+      <Catlist @select-category="selCategory"/>
       <div class="home__block">
         <Tabspanel/>
         <Booklist/>
@@ -54,20 +54,20 @@ export default {
   methods: {
     async generate() {
       await this.$axios.$post("/api/books/generate")
+    },
+    selCategory(cat) {
+      this.getBooksQuery(cat)
+    },
+    getBooksQuery(cat = 'all') {
+      this.$axios.$get(`/api/books/index${cat !== 'all' ? '?category=' + cat : ''}`).then((d) => {
+        console.log(d)
+        this.$store.dispatch('syncBooks', d)
+        this.promo = d.filter((el) => el.id === ~~(Math.random() * d.length - 1))[0] ?? d[0]
+      })
     }
   },
   created () {
-    try {
-      this.$axios.$post("/api/books/index").then((d) => {
-        console.log(d)
-        this.$store.dispatch('syncBooks', d)
-        this.promo = d.filter((el) => el.id === ~~(Math.random() * d.length))[0]
-      })
-      
-    } catch (e) {
-      throw e;
-    }
-   
+    this.getBooksQuery()
   }
 }
 </script>

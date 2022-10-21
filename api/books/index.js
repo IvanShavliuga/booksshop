@@ -29,31 +29,17 @@ let books = []
     { id: 20, img: 'book_0.jpg', author: 'Александр Пушкин', title: 'Капитанская дочка', price: 7, sale: 0, likes: 23, desc: 'Роман о Пугачевском бунте' },
     { id: 21, img: 'telepat.jpg', author: 'Иван Шавлюга', title: 'Телепатия. Проклятие языка', price: 10, sale: 45, likes: 23, desc: 'Графомания в чистом виде' }
   ] */
-  async function index() {
-   /*  await writeFile('./api/books/index.json', JSON.stringify(books.map((el) => {
-      return {
-        test: `${~~(Math.random() * 100)}-${~~(Math.random() * 100)}-${~~(Math.random() * 100)}`,
-        id: el.id,
-        img: el.img,
-        author: el.author,
-        title: el.title,
-        desc: el.desc,
-        price: ~~(Math.random() * 100 + 20) / 5,
-        sale: ~~(Math.random() * 100),
-        likes: ~~(Math.random() * 100),
-      }
-    }))) 
-    return [] */
-    
+  async function index({ category }) {
     const fileData =  await readFile('./api/books/index.json', {encoding: 'utf-8'}, function(err,data){
         if (!err) {
-           books = data
-            return data
+          books = data
+          return data
         } else {
-            console.log(err);
+          console.log(err);
         }
-    }) 
-    return  JSON.parse(fileData);
+    })
+    const res = JSON.parse(fileData)
+    return  category ? res.filter((el) => el.category === category) : res
   }
   async function generate() {
     const placeholder = [] 
@@ -134,16 +120,5 @@ let books = []
     await writeFile('./api/books/test-file.txt', JSON.stringify(book))
     return book
   }
-  async function text({ id }) {
-    let text = ''
-    const file =  await readFile('./api/books/test-2.txt').then((d) => {
-      for (const element of d)
-      text +=  String.fromCharCode(element)
-      return d
-    })
-   
-   /*  file.data
-    text */
-    return { text: text }
-  }
-export  { index, show, text, generate }
+  
+export  { index, show, generate }

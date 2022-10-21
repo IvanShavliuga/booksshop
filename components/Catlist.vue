@@ -13,20 +13,20 @@
           <li class="aside__nav-item"
             v-for="(c,k) in catlist" :key="k">
             <div class="aside__nav-hcat">
-              <a class="aside__nav-link"
-              :href="'/categories?cat='+c"
+              <p class="aside__nav-link"
+              @click="$emit('select-category',c)"
               >
                 {{c.name}}
-              </a>
+              </p>
             </div>
           <ul class="aside__nav-list">
             <li class="aside__nav-cat"
               v-for="(c2,k2) in c.sublist"
               :key="k2"
             >
-              <a class="aside__nav-link" :href="'/categories?cat='+c2">
+              <p class="aside__nav-link" @click="$emit('select-category',c2)">
                 {{c2}}
-              </a>
+              </p>
             </li>
           </ul>
           </li>
