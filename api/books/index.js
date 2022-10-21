@@ -29,8 +29,7 @@ let books = []
     { id: 20, img: 'book_0.jpg', author: 'Александр Пушкин', title: 'Капитанская дочка', price: 7, sale: 0, likes: 23, desc: 'Роман о Пугачевском бунте' },
     { id: 21, img: 'telepat.jpg', author: 'Иван Шавлюга', title: 'Телепатия. Проклятие языка', price: 10, sale: 45, likes: 23, desc: 'Графомания в чистом виде' }
   ] */
-  async function index() {
-    
+  async function index({ category }) {
     const fileData =  await readFile('./api/books/index.json', {encoding: 'utf-8'}, function(err,data){
         if (!err) {
           books = data
@@ -38,8 +37,9 @@ let books = []
         } else {
           console.log(err);
         }
-    }) 
-    return  JSON.parse(fileData);
+    })
+    const res = JSON.parse(fileData)
+    return  category ? res.filter((el) => el.category === category) : res
   }
   async function generate() {
     const placeholder = [] 

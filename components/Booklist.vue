@@ -50,18 +50,10 @@ export default {
   components: {
     Book
   },
-  data () {
-    return {
-      books: []
+  computed: {
+    books () {
+      return this.$store.getters.books
     }
-  },
-  async fetch() {
-    try {
-      this.books = await this.$axios.$get("/api/books/index");
-    } catch (e) {
-      console.error(e);
-      throw e;
-    }
-  },
+  }
 }
 </script>
