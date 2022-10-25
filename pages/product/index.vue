@@ -59,14 +59,7 @@ export default {
   },
   data () {
     return {
-      book: {
-        img: 'https://ivanshavliuga.github.io/simples/photos/booksshop/book_6.jpg',
-        title: 'Star Wars Episode I',
-        author: 'Terry Brooks',
-        price: 150,
-        sale: 25,
-        desc: 'The Star Wars Episode I: The Phantom Menace novelization was written by Terry Brooks and published on April 21, 1999 by Del Rey. It is based on the script of the movie of the same name. Narration for the abridged audio version was performed by Michael Cumpsty. The unabridged version was performed by Alexander Adams. On January 31, 2012, a new paperback edition '
-      },
+      book: null,
       text: null
     }
   },
@@ -85,7 +78,7 @@ export default {
       
     } 
   },*/
-   async fetch() {
+   /* async fetch() {
     try {
       await this.$axios.$post("/api/books/show", { id: +this.$route.query.id }).then((d) => {
         this.book = d[0]
@@ -98,7 +91,17 @@ export default {
       console.error(e);
       throw e;
     }
-  },
+  }, */
+  mounted () {
+    console.log('mounted')
+    setTimeout(() => {
+      this.$axios.$post("/api/books/show", { id: +this.$route.query.id }).then((d) => {
+        this.book = d[0]
+        console.log(d)
+        this.book.img = 'https://ivanshavliuga.github.io/simples/photos/booksshop/' + d[0].img
+      })
+    }, 1000)
+  }
 }
 </script>
 <style scoped lang="less">
