@@ -1,1 +1,0 @@
-[{"id":1,"img":"book_0.jpg","author":"Den Abramov","title":"графоманская дичь номер 1","desc":"Просто какая-то бумажная хрень.","price":14.8,"sale":71,"likes":66,"category":"Children"}]

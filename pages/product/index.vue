@@ -94,13 +94,13 @@ export default {
   }, */
   mounted () {
     console.log('mounted')
-    setTimeout(() => {
+    // setTimeout(() => {
       this.$axios.$post("/api/books/show", { id: +this.$route.query.id }).then((d) => {
         this.book = d[0]
         console.log(d)
         this.book.img = 'https://ivanshavliuga.github.io/simples/photos/booksshop/' + d[0].img
       })
-    }, 1000)
+    // }, 1000)
   }
 }
 </script>

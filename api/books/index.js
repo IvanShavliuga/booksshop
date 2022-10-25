@@ -32,7 +32,6 @@ let books = []
   async function index({ category }) {
     const fileData =  await readFile('./api/books/index.json', {encoding: 'utf-8'}, function(err,data){
         if (!err) {
-          books = data
           return data
         } else {
           console.log(err);
@@ -118,16 +117,13 @@ let books = []
   async function show({ id }) {
     const fileData =  await readFile('./api/books/index.json', {encoding: 'utf-8'}, function(err,data){
         if (!err) {
-          books = data
           return data
         } else {
           console.log(err);
         }
     })
     const res = JSON.parse(fileData)
-    books.forEach((el) => console.log(el.id))
     const book = res.filter((el) => el.id === +id)
-    await writeFile('./api/books/test-file.txt', JSON.stringify(book))
     return book
   }
   
