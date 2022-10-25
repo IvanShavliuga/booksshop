@@ -9,7 +9,7 @@
       </div>
       <div class="about__info">
         <h1 class="about__title">Ivan Shavliuga (Ivanov)</h1>
-        <h2 class="about__prof">junior vue.js developer</h2>
+        <h2 class="about__prof">middle vue.js developer</h2>
         <div class="about__desc">Created this page. Used by:
           <ul class="about__skills">
             <li class="about__skills-item">HTML5</li>
@@ -39,35 +39,6 @@
               <a class="about__links-href"
                 href="https://samlib.ru/i/iwan_sergeewich_shawljuga/">
                 SamLib.ru
-              </a>
-            </li>
-            <li class="about__links-item">
-              <a class="about__links-href"
-                href="https://isschavliuga.ucoz.net">
-                Personal web-site
-              </a>
-            </li>
-          </ul>
-        </article>
-        <article class="about__links">
-          <h3 class="about__links-title">Science</h3>
-          <ul class="about__links-list">
-            <li class="about__links-item">
-              <a class="about__links-href"
-                href="https://mendel-info.usite.pro">
-                Table of Mendeleev
-              </a>
-            </li>
-            <li class="about__links-item">
-              <a class="about__links-href"
-                href="https://t.me/mendelinfo">
-                Telegram channel of science
-              </a>
-            </li>
-            <li class="about__links-item">
-              <a class="about__links-href"
-                href="https://www.t.me/vuejscodesru">
-                Telegram channel of framework vue.js
               </a>
             </li>
           </ul>
