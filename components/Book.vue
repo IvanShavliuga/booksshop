@@ -49,7 +49,7 @@ export default {
   margin: 10px 15px;
   padding: 10px;
   @media (max-width: 520px) {
-    width: @wbook - 10px;
+    width: 320px;
     padding: 10px 15px;
     margin: 10px 5px;
   }
@@ -59,8 +59,8 @@ export default {
     border: 4px solid white;
     box-shadow: 1px 1px 3px 5px #aaa;
     @media (max-width: 520px) {
-      width: @wbook - 20px;
-      height: @hbook - 20px;
+      width: 320px;
+      height: 420px;
       margin: 10px 0;
     }
     /*@media (max-width: 395px) {
@@ -73,9 +73,11 @@ export default {
     font-size: 15px;
     color: @colform;
     font-weight: 300;
-
     text-align: center;
     margin-bottom: 0;
+    @media (max-width: 520px) {
+      font-size: 20px;
+    }
   }
   &__price {
     margin-top: 0;
@@ -85,6 +87,7 @@ export default {
     text-align: center;
     @media (max-width: 520px) {
       margin-bottom: 5px;
+      font-size: 32px;
     }
   }
   &__sale {
@@ -102,11 +105,12 @@ export default {
     text-align: center;
     border-radius: 50%;
     @media (max-width: 520px) {
-      width: 40px;
-      height: 40px;
-      font-size: @fontsmallsize;
-      line-height: 39px;
-      top: -10px;
+      width: 80px;
+      height: 80px;
+      font-size: @fontsmallsize + 15px;
+      line-height: 70px;
+      top: -20px;
+      right: -15px;
     }
   }
 }

@@ -93,9 +93,15 @@ export default {
   padding: 0;
   border: 1px solid @bordercolor;
   @media (max-width: 1060px) {
-    position: relative;
-    width: 1vw;
-    border: none;
+    position: fixed;
+    left: 0;
+    top: 30vh;
+    z-index: 50;
+    width: 40px;
+    height: 40vh;
+    background-color: white;
+    border: 1px solid silver;
+    border-radius: 15px;
     margin: 0;
     margin-right: 30px;
     margin-top: 30px;
@@ -113,6 +119,7 @@ export default {
   }
   &__collapse {
     .burger();
+    height: 320px;
     /*@media (max-width: 925px) {
       left: -25px;
     }
@@ -120,6 +127,7 @@ export default {
       left: -5px;
     }*/
     &-btn {
+      transform: scale(0.7, 0.6);
       @media (max-width:  670px) {
         left: 20px;
       }

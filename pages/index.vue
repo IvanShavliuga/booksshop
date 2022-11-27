@@ -60,7 +60,6 @@ export default {
     },
     getBooksQuery(cat = 'all') {
       this.$axios.$get(`/api/books/index${cat !== 'all' ? '?category=' + cat : ''}`).then((d) => {
-        console.log(d)
         this.$store.dispatch('syncBooks', d)
         this.promo = d.filter((el) => el.id === ~~(Math.random() * d.length - 1))[0] ?? d[0]
       })
