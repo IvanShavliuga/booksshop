@@ -227,8 +227,8 @@ export default {
     }
   },
   created: function () {
-    this.list = this.$store.getters.slider;
-    this.baseurl = this.$store.getters.baseimgurl;
+    // this.list = this.$store.getters.slider;
+    // this.baseurl = this.$store.getters.baseimgurl;
     this.selid = 0
     this.selbg = this.baseurl + 'banner_1.jpg'
     this.selbook = this.baseurl + 'book_1.jpg'

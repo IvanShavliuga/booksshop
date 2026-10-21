@@ -1,6 +1,6 @@
 <template>
   <div class="userstatus__topline">
-    <div class="userstatus__wrapper">
+    <div v-if="user" class="userstatus__wrapper">
       <div class="userstatus__userpanel">
         <div class="userstatus__collapse">
           <input id="userstatus__collapse-toggle" type="checkbox" />
@@ -60,7 +60,7 @@ export default {
     }
   },
   created () {
-    this.user = this.$store.getters.user
+    this.user = null/// this.$store.getters.user
   }
 }
 </script>

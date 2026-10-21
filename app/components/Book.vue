@@ -1,5 +1,5 @@
 <template>
-<article class="book" @click="toproduct">
+<article v-if="book" class="book" @click="toproduct">
   <img class="book__image"
   :src="img"
   :alt="book.title"

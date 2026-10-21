@@ -154,7 +154,7 @@ export default {
     }
   },
   created () {
-    this.baseurl = this.$store.getters.baseimgurl;
+    // this.baseurl = this.$store.getters.baseimgurl;
   }
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="cart">
+  <div v-if="user" class="cart">
     <i class="cart__icon">&nbsp;</i>
     <span class="cart__title">
       <span class="cart__title-text">Your cart</span>
@@ -23,7 +23,7 @@ export default {
     }
   },
   created () {
-    this.user = this.$store.getters.user
+    this.user = null// this.$store.getters.user
   }
 }
 </script>

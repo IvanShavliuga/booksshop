@@ -1,5 +1,5 @@
 <template>
-  <div class="wishlist">
+  <div v-if="user" class="wishlist">
   <i class="wishlist__icon"></i>
   <span class="wishlist__counter">{{user.like.length}}</span>
   <span class="wishlist__title">Wish list</span>
@@ -13,7 +13,7 @@ export default {
     }
   },
   created () {
-    this.user = this.$store.getters.user
+    this.user = null //this.$store.getters.user
   }
 }
 </script>

@@ -52,7 +52,7 @@ export default {
   },
   computed: {
     books () {
-      return this.$store.getters.books
+      return [] //this.$store.getters.books
     }
   }
 }
