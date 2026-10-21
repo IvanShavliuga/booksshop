@@ -3,32 +3,26 @@
     <i class="cart__icon">&nbsp;</i>
     <span class="cart__title">
       <span class="cart__title-text">Your cart</span>
-      <button class="cart__counter">
-        ({{user.purchase.length}} items)
-      </button>
+      <button class="cart__counter">({{ user.purchase.length }} items)</button>
     </span>
-    <span class="cart__total">
-      ${{user.total}}
-    </span>
-    <button class="cart__check">
-      Checkout
-    </button>
+    <span class="cart__total"> ${{ user.total }} </span>
+    <button class="cart__check">Checkout</button>
   </div>
 </template>
 <script>
 export default {
-  data () {
+  data() {
     return {
-      user: {}
-    }
+      user: {},
+    };
   },
-  created () {
-    this.user = null// this.$store.getters.user
-  }
-}
+  created() {
+    this.user = null; // this.$store.getters.user
+  },
+};
 </script>
 <style scoped lang="less">
-@import '../assets/css/style.less';
+@import "../assets/css/style.less";
 .cart {
   //margin: 20px 1px;
   width: 195px;
@@ -55,7 +49,7 @@ export default {
     margin-left: -15px;
   }
   &__icon {
-    background-image: url('../assets/images/cart.svg');
+    background-image: url("../assets/images/cart.svg");
     background-size: 100%;
     width: 29px;
     height: 31px;
@@ -68,7 +62,7 @@ export default {
       display: none;
     }
     @media (max-width: 350px) {
-      display:none;
+      display: none;
     }
   }
   &__title {
@@ -78,11 +72,11 @@ export default {
     display: inline-block;
     margin-left: 27px;
     word-spacing: -1px;
-    @media (min-width: 601px)  and (max-width: 740px) {
+    @media (min-width: 601px) and (max-width: 740px) {
       display: none;
     }
     @media (max-width: 350px) {
-      display:none;
+      display: none;
     }
     &-text {
       @media (max-width: 1320px) {
@@ -106,7 +100,7 @@ export default {
     display: inline-block;
     color: @colform;
     font-weight: bold;
-    @media (min-width: 601px)  and (max-width: 740px) {
+    @media (min-width: 601px) and (max-width: 740px) {
       .posabsolute(25px, 35px);
     }
     @media (max-width: 655px) {
@@ -126,10 +120,10 @@ export default {
     margin-left: 15px;
     padding: 12px 15px;
     color: #ffffff;
-    @media (min-width: 601px)  and (max-width: 740px) {
+    @media (min-width: 601px) and (max-width: 740px) {
       .posabsolute(45px, 15px);
     }
-    @media (min-width: 601px)  and (max-width: 655px) {
+    @media (min-width: 601px) and (max-width: 655px) {
       left: -20px;
     }
     @media (max-width: 350px) {

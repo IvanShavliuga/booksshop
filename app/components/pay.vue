@@ -4,13 +4,15 @@
       <div class="pay__headblock">
         <h4 class="pay__header">
           <span class="pay__header-title">Our price:</span>
-          <span class="pay__header-price">${{book.price}}</span>
+          <span class="pay__header-price">${{ book.price }}</span>
         </h4>
-        <h5 class="pay__headblock-sale">Was ${{total}} Save {{book.sale}}% </h5>
+        <h5 class="pay__headblock-sale">
+          Was ${{ total }} Save {{ book.sale }}%
+        </h5>
       </div>
       <button class="pay__topblock-button">Add to cart</button>
     </div>
-    <hr/>
+    <hr />
     <div class="pay__bottomblock">
       <p class="pay__bottomblock-status">
         <i class="pay__bottomblock-icon">&nbsp;</i>
@@ -26,7 +28,7 @@
   </div>
 </template>
 <style scoped lang="less">
-@import '../assets/css/style.less';
+@import "../assets/css/style.less";
 .pay {
   width: 670px;
   margin-top: 30px;
@@ -148,35 +150,34 @@
       font-weight: bold;
       margin-left: 15px;
     }
-
   }
+}
+&__icon {
+  background-image: url("../assets/images/lock.svg");
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  width: 15px;
+  height: 15px;
+}
+&__bottomblock {
+  &-status {
+    font-size: 13px;
+    line-height: 27px;
+    color: #939292;
+    font-family: "Helvetica Neue CE";
+    text-align: left;
+    margin: 0;
   }
-  &__icon {
-    background-image: url('../assets/images/lock.svg');
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    width: 15px;
-    height: 15px;
-  }
-  &__bottomblock {
-    &-status {
-      font-size: 13px;
-      line-height: 27px;
-      color: #939292;
-      font-family: "Helvetica Neue CE";
-      text-align: left;
-      margin: 0;
+  &-cards {
+    display: flex;
+    margin: 0;
+    @media (max-width: 270px) {
+      width: 100px;
+      flex-wrap: wrap;
+      margin: 0 auto;
     }
-    &-cards {
-      display: flex;
-      margin: 0;
-      @media (max-width: 270px) {
-        width: 100px;
-        flex-wrap: wrap;
-        margin: 0 auto;
-      }
-    }
+  }
 }
 
 .pay__card {
@@ -185,21 +186,21 @@
   border: 1px solid @bordercolor;
   margin: 3px;
   &:hover {
-    border: 1px solid rgba(181,176,176,0.57);
+    border: 1px solid rgba(181, 176, 176, 0.57);
     filter: sepia(0.5);
     opacity: 0.6;
   }
   &:first-child {
-    background-image: url('../assets/images/card1.png');
+    background-image: url("../assets/images/card1.png");
   }
   &:nth-child(2) {
-    background-image: url('../assets/images/card2.png');
+    background-image: url("../assets/images/card2.png");
   }
   &:nth-child(3) {
-    background-image: url('../assets/images/card3.png');
+    background-image: url("../assets/images/card3.png");
   }
   &:last-child {
-    background-image: url('../assets/images/card4.png');
+    background-image: url("../assets/images/card4.png");
   }
 }
 </style>
@@ -208,15 +209,14 @@ export default {
   props: {
     book: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   computed: {
-    total () {
-      const drb = this.book.sale / 100
-      return this.book.price / (1 - drb)
-    }
-  }
-
-}
+    total() {
+      const drb = this.book.sale / 100;
+      return this.book.price / (1 - drb);
+    },
+  },
+};
 </script>

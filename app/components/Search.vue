@@ -1,6 +1,6 @@
 <template>
   <form class="search">
-    <input class="search__input" type="text">
+    <input class="search__input" type="text" />
     <button class="search__button">
       <i class="search__icon">&nbsp;</i>
       <span class="search__btntext">Search</span>
@@ -8,7 +8,7 @@
   </form>
 </template>
 <style scoped lang="less">
-@import '../assets/css/style.less';
+@import "../assets/css/style.less";
 .search {
   width: 457px;
   height: 42px;
@@ -75,7 +75,7 @@
     }
   }
   &__icon {
-    background-image: url('../assets/images/search.svg');
+    background-image: url("../assets/images/search.svg");
     background-size: 100%;
     width: 18px;
     height: 18px;
@@ -87,7 +87,7 @@
   }
   &__btntext {
     @media (max-width: 350px) {
-      display:none;
+      display: none;
     }
   }
 }

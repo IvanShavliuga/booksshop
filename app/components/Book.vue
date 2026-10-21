@@ -1,47 +1,48 @@
 <template>
-<article v-if="book" class="book" @click="toproduct">
-  <img class="book__image"
-  :src="img"
-  :alt="book.title"
-  width="84px"
-  height="111px"
-/>
-  <h3 class="book__title">{{book.title}}</h3>
-  <p class="book__price">${{book.price}}</p>
-  <p class="book__sale" v-if="book.sale">{{book.sale}}%</p>
-</article>
+  <article v-if="book" class="book" @click="toproduct">
+    <img
+      class="book__image"
+      :src="img"
+      :alt="book.title"
+      width="84px"
+      height="111px"
+    />
+    <h3 class="book__title">{{ book.title }}</h3>
+    <p class="book__price">${{ book.price }}</p>
+    <p class="book__sale" v-if="book.sale">{{ book.sale }}%</p>
+  </article>
 </template>
 <script>
 // import {getters} from './../store'
 export default {
-  data () {
+  data() {
     return {
-      img: 'https://ivanshavliuga.github.io/test/booksshop/img/telepat.jpg',
-      title: 'Телепатия. Проклятие языка',
-      author: 'Иван Шавлюга',
+      img: "https://ivanshavliuga.github.io/test/booksshop/img/telepat.jpg",
+      title: "Телепатия. Проклятие языка",
+      author: "Иван Шавлюга",
       price: 10,
-      sale: 45
-    }
+      sale: 45,
+    };
   },
   props: {
     book: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
-  created () {
-    this.img = this.$store.getters.baseimgurl + this.book.img
+  created() {
+    this.img = this.$store.getters.baseimgurl + this.book.img;
   },
   methods: {
-    toproduct () {
+    toproduct() {
       // this.$router.push(`/product?title='${this.book.title}'&author='${this.book.author}'`)
-      this.$router.push(`/product?id=${this.book.id}`)
-    }
-  }
-}
+      this.$router.push(`/product?id=${this.book.id}`);
+    },
+  },
+};
 </script>
 <style scoped lang="less">
-@import '../assets/css/style.less';
+@import "../assets/css/style.less";
 
 .book {
   position: relative;

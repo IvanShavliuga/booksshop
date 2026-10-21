@@ -1,24 +1,24 @@
 <template>
   <div v-if="user" class="wishlist">
-  <i class="wishlist__icon"></i>
-  <span class="wishlist__counter">{{user.like.length}}</span>
-  <span class="wishlist__title">Wish list</span>
-</div>
+    <i class="wishlist__icon"></i>
+    <span class="wishlist__counter">{{ user.like.length }}</span>
+    <span class="wishlist__title">Wish list</span>
+  </div>
 </template>
 <script>
 export default {
-  data () {
+  data() {
     return {
-      user: {}
-    }
+      user: {},
+    };
   },
-  created () {
-    this.user = null //this.$store.getters.user
-  }
-}
+  created() {
+    this.user = null; //this.$store.getters.user
+  },
+};
 </script>
 <style scoped lang="less">
-@import '../assets/css/style.less';
+@import "../assets/css/style.less";
 .wishlist {
   margin: 5px 15px 5px -35px;
   padding: 10px;
@@ -43,7 +43,7 @@ export default {
     margin-left: 20px;
     margin-top: 15px;
     margin-bottom: 5px;
-    background-image: url('../assets/images/star.svg');
+    background-image: url("../assets/images/star.svg");
     background-size: 100%;
     display: block;
     @media (min-width: 601px) and (max-width: 800px) {

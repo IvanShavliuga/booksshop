@@ -1,29 +1,31 @@
 <template>
-<div class="path">
-  <div class="path__wrapper">
-    <div class="path__line">
-      <span v-for="(p,k) in arr" :key="k">
-        <a class="path__line-link" :href="'/'+p">{{(p=='')?'home':p}}</a>
-        »
-      </span>
+  <div class="path">
+    <div class="path__wrapper">
+      <div class="path__line">
+        <span v-for="(p, k) in arr" :key="k">
+          <a class="path__line-link" :href="'/' + p">{{
+            p == "" ? "home" : p
+          }}</a>
+          »
+        </span>
+      </div>
     </div>
   </div>
-</div>
 </template>
 <script>
 export default {
-  data () {
+  data() {
     return {
-      arr: []
-    }
+      arr: [],
+    };
   },
-  mounted () {
-    this.arr = this.$route.fullPath.split('/')
-  }
-}
+  mounted() {
+    this.arr = this.$route.fullPath.split("/");
+  },
+};
 </script>
 <style scoped lang="less">
-@import '../assets/css/style.less';
+@import "../assets/css/style.less";
 .path {
   width: 90vw;
   margin: 0 auto;

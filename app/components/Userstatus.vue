@@ -4,39 +4,59 @@
       <div class="userstatus__userpanel">
         <div class="userstatus__collapse">
           <input id="userstatus__collapse-toggle" type="checkbox" />
-          <label class="userstatus__collapse-btn" for="userstatus__collapse-toggle">
-            <ib class="userstatus__collapse-icon"
+          <label
+            class="userstatus__collapse-btn"
+            for="userstatus__collapse-toggle"
+          >
+            <ib
+              class="userstatus__collapse-icon"
               icon-name="user"
               width="18"
               height="18"
-              icon-color="#fff">
-              <user/>
+              icon-color="#fff"
+            >
+              <user />
             </ib>
           </label>
           <ul class="userstatus__userpanel-list">
             <li class="userstatus__userpanel-item">
-              <a class="userstatus__userpanel-link" href="#">Sign {{(user.auth)?'in':'out'}}</a></li>
+              <a class="userstatus__userpanel-link" href="#"
+                >Sign {{ user.auth ? "in" : "out" }}</a
+              >
+            </li>
             <li class="userstatus__userpanel-item">
-              <a class="userstatus__userpanel-link" href="#">{{user.name}}</a></li>
+              <a class="userstatus__userpanel-link" href="#">{{ user.name }}</a>
+            </li>
             <li class="userstatus__userpanel-item">
-              <a class="userstatus__userpanel-link" href="#">Order status
-                <span class="userstatus__userpanel-counter">({{user.purchase.length}})
+              <a class="userstatus__userpanel-link" href="#"
+                >Order status
+                <span class="userstatus__userpanel-counter"
+                  >({{ user.purchase.length }})
                 </span>
               </a>
             </li>
             <li class="userstatus__userpanel-item">
-              <a class="userstatus__userpanel-link" href="#">Help</a></li>
-              <li class="userstatus__userpanel-item userstatus__userpanel-devlogo">
-                <router-link to="/about" class="userstatus__userpanel-link" href="#">
-                  <ib class="userstatus__collapse-icon"
-                    icon-name="developer"
-                    width="32"
-                    height="20"
-                    icon-color="#fff">
-                    <devlogo/>
-                  </ib>
-                </router-link>
-              </li>
+              <a class="userstatus__userpanel-link" href="#">Help</a>
+            </li>
+            <li
+              class="userstatus__userpanel-item userstatus__userpanel-devlogo"
+            >
+              <router-link
+                to="/about"
+                class="userstatus__userpanel-link"
+                href="#"
+              >
+                <ib
+                  class="userstatus__collapse-icon"
+                  icon-name="developer"
+                  width="32"
+                  height="20"
+                  icon-color="#fff"
+                >
+                  <devlogo />
+                </ib>
+              </router-link>
+            </li>
           </ul>
         </div>
       </div>
@@ -44,28 +64,28 @@
   </div>
 </template>
 <script>
-import ib from './icons/IconBase.vue'
-import user from './icons/IconUser.vue'
-import devlogo from './icons/iv2.vue'
+import ib from "./icons/IconBase.vue";
+import user from "./icons/IconUser.vue";
+import devlogo from "./icons/iv2.vue";
 
 export default {
   components: {
     ib,
     user,
-    devlogo
+    devlogo,
   },
-  data () {
+  data() {
     return {
-      user: {}
-    }
+      user: {},
+    };
   },
-  created () {
-    this.user = null/// this.$store.getters.user
-  }
-}
+  created() {
+    this.user = null; /// this.$store.getters.user
+  },
+};
 </script>
 <style scoped lang="less">
-@import '../assets/css/style.less';
+@import "../assets/css/style.less";
 .userstatus {
   &__wrapper {
     .wrapper();
@@ -89,7 +109,7 @@ export default {
     }
   }
   &__topline {
-    background-color: rgb(65,65,65);
+    background-color: rgb(65, 65, 65);
     padding: 0;
     margin: 0;
     height: 40px;
@@ -156,9 +176,7 @@ export default {
     flex-direction: column;
     margin-top: 40px;
     height: auto;
-    box-shadow: 1px 1px 7px 7px rgba(10,10,10,0.5);
+    box-shadow: 1px 1px 7px 7px rgba(10, 10, 10, 0.5);
   }
-
 }
-
 </style>

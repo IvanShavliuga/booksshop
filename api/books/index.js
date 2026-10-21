@@ -1,9 +1,9 @@
-import { generateKey } from 'crypto'
+import { generateKey } from "crypto";
 
-const fs = require('fs')
-const { writeFile, readFile } = fs.promises
+const fs = require("fs");
+const { writeFile, readFile } = fs.promises;
 
-let books = []
+let books = [];
 
 /* const books = [
     { id: 22, img: 'book_7.jpg', author: 'Js-guru', title: 'Nuxt.js инструкция по применению', price: 25, likes: 32, sale: 0, desc: 'Документация' },
@@ -29,102 +29,110 @@ let books = []
     { id: 20, img: 'book_0.jpg', author: 'Александр Пушкин', title: 'Капитанская дочка', price: 7, sale: 0, likes: 23, desc: 'Роман о Пугачевском бунте' },
     { id: 21, img: 'telepat.jpg', author: 'Иван Шавлюга', title: 'Телепатия. Проклятие языка', price: 10, sale: 45, likes: 23, desc: 'Графомания в чистом виде' }
   ] */
-  async function index({ category }) {
-    const fileData =  await readFile('./api/books/index.json', {encoding: 'utf-8'}, function(err,data){
-        if (!err) {
-          return data
-        } else {
-          console.log(err);
-        }
-    })
-    const res = JSON.parse(fileData)
-    return  category ? res.filter((el) => el.category === category) : res
-  }
-  async function generate() {
-    const placeholder = [] 
-    const catList = [
-      "Children",
-          "Science",
-          "Fantasy",
-          "Mystery",
-          "Romance",
-          "Horror",
-          "Poetry",
-          "Literature",
-          "Crime",
-          "Comic",
-          "Cook",
-          "Psychology",
-          "Medical",
-          "Art",
-          "Photography",
-          "Law",
-          "History",
-          "Business",
-          "Computers",
-          "Baby",
-          "Sex",
-          "Travel",
-          "Science",
-          "Sport`s",
-    ]
-    const authorsList = [
-      'Ivan Forta',
-      'Den Abramov',
-      'Stephen Nikiforov',
-      'Adrew Lukov',
-      'Alex Fanaev',
-      'Sophie Mikkenien',
-      'Richard Hummond',
-      'Jhon Toe',
-      'Nik Pole',
-      'Alex Frolov',
-      'Ivan Shavliuga',
-      'Stephen Tenney',
-      'Ann Makie',
-      'Andrew Lientev',
-      'Ivan Serbo',
-      'Inna Terbo',
-      'Albert Tembo',
-      'Alex Fion'
-    ]
-    let id = 0
-    for (const category of catList) {
-      for (let i=0; i<30; i++) {
-        const author = authorsList[~~(Math.random()*authorsList.length)]
-        const title = `графоманская дичь номер ${id}`
-        const desc= 'Просто какая-то бумажная хрень.'
-        const price= ~~(Math.random() * 100 + 40) / 5
-        const sale= ~~(Math.random() * 100)
-        const likes= ~~(Math.random() * 100)
-        placeholder.push({
-          id,
-          img: 'book_0.jpg',
-          author,
-          title,
-          desc,
-          price,
-          sale,
-          likes,
-          category,
-        })
-        id++
+async function index({ category }) {
+  const fileData = await readFile(
+    "./api/books/index.json",
+    { encoding: "utf-8" },
+    function (err, data) {
+      if (!err) {
+        return data;
+      } else {
+        console.log(err);
       }
+    },
+  );
+  const res = JSON.parse(fileData);
+  return category ? res.filter((el) => el.category === category) : res;
+}
+async function generate() {
+  const placeholder = [];
+  const catList = [
+    "Children",
+    "Science",
+    "Fantasy",
+    "Mystery",
+    "Romance",
+    "Horror",
+    "Poetry",
+    "Literature",
+    "Crime",
+    "Comic",
+    "Cook",
+    "Psychology",
+    "Medical",
+    "Art",
+    "Photography",
+    "Law",
+    "History",
+    "Business",
+    "Computers",
+    "Baby",
+    "Sex",
+    "Travel",
+    "Science",
+    "Sport`s",
+  ];
+  const authorsList = [
+    "Ivan Forta",
+    "Den Abramov",
+    "Stephen Nikiforov",
+    "Adrew Lukov",
+    "Alex Fanaev",
+    "Sophie Mikkenien",
+    "Richard Hummond",
+    "Jhon Toe",
+    "Nik Pole",
+    "Alex Frolov",
+    "Ivan Shavliuga",
+    "Stephen Tenney",
+    "Ann Makie",
+    "Andrew Lientev",
+    "Ivan Serbo",
+    "Inna Terbo",
+    "Albert Tembo",
+    "Alex Fion",
+  ];
+  let id = 0;
+  for (const category of catList) {
+    for (let i = 0; i < 30; i++) {
+      const author = authorsList[~~(Math.random() * authorsList.length)];
+      const title = `графоманская дичь номер ${id}`;
+      const desc = "Просто какая-то бумажная хрень.";
+      const price = ~~(Math.random() * 100 + 40) / 5;
+      const sale = ~~(Math.random() * 100);
+      const likes = ~~(Math.random() * 100);
+      placeholder.push({
+        id,
+        img: "book_0.jpg",
+        author,
+        title,
+        desc,
+        price,
+        sale,
+        likes,
+        category,
+      });
+      id++;
     }
-    await writeFile('./api/books/index.json', JSON.stringify(placeholder)) 
-    return []
   }
-  async function show({ id }) {
-    const fileData =  await readFile('./api/books/index.json', {encoding: 'utf-8'}, function(err,data){
-        if (!err) {
-          return data
-        } else {
-          console.log(err);
-        }
-    })
-    const res = JSON.parse(fileData)
-    const book = res.filter((el) => el.id === +id)
-    return book
-  }
-  
-export  { index, show, generate }
+  await writeFile("./api/books/index.json", JSON.stringify(placeholder));
+  return [];
+}
+async function show({ id }) {
+  const fileData = await readFile(
+    "./api/books/index.json",
+    { encoding: "utf-8" },
+    function (err, data) {
+      if (!err) {
+        return data;
+      } else {
+        console.log(err);
+      }
+    },
+  );
+  const res = JSON.parse(fileData);
+  const book = res.filter((el) => el.id === +id);
+  return book;
+}
+
+export { index, show, generate };

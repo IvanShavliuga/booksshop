@@ -1,43 +1,47 @@
 <template>
   <div class="bookinfo">
-    <img class="bookinfo__image" :src="fullurlimg" :alt="book.author+'-'+book.title"/>
+    <img
+      class="bookinfo__image"
+      :src="fullurlimg"
+      :alt="book.author + '-' + book.title"
+    />
     <article class="bookinfo__block">
-      <h3 class="bookinfo__block-title">{{book.title}}</h3>
-      <p class="bookinfo__block-text">{{book.desc}}</p>
-      <Pay :book="book"/>
+      <h3 class="bookinfo__block-title">{{ book.title }}</h3>
+      <p class="bookinfo__block-text">{{ book.desc }}</p>
+      <Pay :book="book" />
     </article>
   </div>
 </template>
 <script>
-import Pay from '@/components/pay.vue'
+import Pay from "@/components/pay.vue";
 
 export default {
   components: {
-    Pay
+    Pay,
   },
   props: {
     book: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
-  data () {
+  data() {
     return {
-      baseurl: ''
-    }
+      baseurl: "",
+    };
   },
-  created () {
+  created() {
     // this.baseurl = this.$store.getters.baseimgurl
   },
   computed: {
-    fullurlimg () {
-      return this.baseurl + this.book.img
-    }
-  }
-}
+    fullurlimg() {
+      return this.baseurl + this.book.img;
+    },
+  },
+};
 </script>
 <style scoped lang="less">
-@import '../assets/css/style.less';
+@import "../assets/css/style.less";
 
 .bookinfo {
   &__block {
@@ -85,7 +89,7 @@ export default {
       @media (max-width: 650px) {
         width: 65vw;
         height: auto;
-      }/*
+      } /*
       @media (max-width: 530px) {
         width: 58vw;
         height: auto;
@@ -121,6 +125,5 @@ export default {
       height: 243px;
     }
   }
-
 }
 </style>

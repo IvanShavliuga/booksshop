@@ -1,11 +1,14 @@
 <template>
   <div class="hello">
-    <span class="hello__text">This is portfolio of
-      <a href="https://ivanshavliuga.github.io"
-         rel="noopener"
-          class="hello__text-link"
-         target="__blank">
-         Ivan Shavliuga (Ivanov) junior vue.js developer
+    <span class="hello__text"
+      >This is portfolio of
+      <a
+        href="https://ivanshavliuga.github.io"
+        rel="noopener"
+        class="hello__text-link"
+        target="__blank"
+      >
+        Ivan Shavliuga (Ivanov) junior vue.js developer
       </a>
     </span>
   </div>
@@ -13,13 +16,13 @@
 
 <script>
 export default {
-  name: 'Hello'
-}
+  name: "Hello",
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-@import '../assets/css/style.less';
+@import "../assets/css/style.less";
 
 .hello {
   background-color: #9c329a;

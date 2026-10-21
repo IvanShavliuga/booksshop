@@ -1,35 +1,35 @@
 <template>
   <main class="home">
-    <Hello/>
-    <Header/>
+    <Hello />
+    <Header />
     <div class="home__wrapper home__flex">
-      <Banner/>
-      <Promo v-if="promo" :book="promo" @generate="generate"/>
+      <Banner />
+      <Promo v-if="promo" :book="promo" @generate="generate" />
     </div>
     <div class="home__wrapper home__flex">
-      <Catlist @select-category="selCategory"/>
+      <Catlist @select-category="selCategory" />
       <div class="home__block">
-        <Tabspanel/>
-        <Booklist/>
+        <Tabspanel />
+        <Booklist />
       </div>
     </div>
-    <Footer/>
+    <Footer />
   </main>
 </template>
 
 <script>
 // @ is an alias hto /src
-import Header from '@/components/Header.vue'
-import Hello from '@/components/HelloWorld.vue'
-import Catlist from '@/components/Catlist.vue'
-import Banner from '@/components/Banner.vue'
-import Promo from '@/components/Promo.vue'
-import Tabspanel from '@/components/Tabspanel.vue'
-import Booklist from '@/components/Booklist.vue'
-import Footer from '@/components/Footer.vue'
+import Header from "@/components/Header.vue";
+import Hello from "@/components/HelloWorld.vue";
+import Catlist from "@/components/Catlist.vue";
+import Banner from "@/components/Banner.vue";
+import Promo from "@/components/Promo.vue";
+import Tabspanel from "@/components/Tabspanel.vue";
+import Booklist from "@/components/Booklist.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
     Header,
     Hello,
@@ -38,40 +38,44 @@ export default {
     Promo,
     Tabspanel,
     Booklist,
-    Footer
+    Footer,
   },
-  data () {
+  data() {
     return {
       promo: {
-        author: 'Rick Smolan, Jennifer Erwitt',
-        title: 'The Human Face of Big Data',
+        author: "Rick Smolan, Jennifer Erwitt",
+        title: "The Human Face of Big Data",
         sale: 45,
         price: 27.51,
-        img: 'https://ivanshavliuga.github.io/simples/photos/booksshop/book_4.jpg'
-      }
-    }
+        img: "https://ivanshavliuga.github.io/simples/photos/booksshop/book_4.jpg",
+      },
+    };
   },
   methods: {
     async generate() {
-      await this.$axios.$post("/api/books/generate")
+      await this.$axios.$post("/api/books/generate");
     },
     selCategory(cat) {
-      this.getBooksQuery(cat)
+      this.getBooksQuery(cat);
     },
-    getBooksQuery(cat = 'all') {
-      this.$axios.$get(`/api/books/index${cat !== 'all' ? '?category=' + cat : ''}`).then((d) => {
-        this.$store.dispatch('syncBooks', d)
-        this.promo = d.filter((el) => el.id === ~~(Math.random() * d.length - 1))[0] ?? d[0]
-      })
-    }
+    getBooksQuery(cat = "all") {
+      this.$axios
+        .$get(`/api/books/index${cat !== "all" ? "?category=" + cat : ""}`)
+        .then((d) => {
+          this.$store.dispatch("syncBooks", d);
+          this.promo =
+            d.filter((el) => el.id === ~~(Math.random() * d.length - 1))[0] ??
+            d[0];
+        });
+    },
   },
-  created () {
+  created() {
     // this.getBooksQuery()
-  }
-}
+  },
+};
 </script>
 <style scoped lang="less">
-@import '../assets/css/style.less';
+@import "../assets/css/style.less";
 
 .home {
   margin: 0;

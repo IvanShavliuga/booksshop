@@ -6,16 +6,18 @@
     <ol>
       <li
         v-for="user in users"
-        :class="{'highlight': user.highlight}"
+        :class="{ highlight: user.highlight }"
         :key="user.id"
         @click="getUserInfo(user.id)"
-      >{{ user.full_name }}</li>
+      >
+        {{ user.full_name }}
+      </li>
     </ol>
     <div v-if="userInfo">
-      <hr>
+      <hr />
       <h3>{{ userInfo.first_name }} {{ userInfo.last_name }}</h3>
       <div>Email: {{ userInfo.email }}</div>
-      <img :src="userInfo.avatar" alt="avatar">
+      <img :src="userInfo.avatar" alt="avatar" />
     </div>
   </div>
 </template>
@@ -25,7 +27,7 @@ export default {
   data() {
     return {
       users: [],
-      userInfo: null
+      userInfo: null,
     };
   },
   // async fetch() {
@@ -40,14 +42,14 @@ export default {
     async getUserInfo(id) {
       try {
         this.userInfo = await this.$axios.$post("/api/users/show", {
-          id: id
+          id: id,
         });
       } catch (e) {
         console.error(e);
         throw e;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

@@ -1,26 +1,24 @@
 <template>
-<nav class="tabnav">
-  <ul class="tabnav__list">
-    <li class="tabnav__list-item tabnav__select">
-      <a class="tabnav__list-link">Best Sellers</a>
-    </li>
-    <li class="tabnav__list-item">
-      <a class="tabnav__list-link">New Arrivals</a>
-    </li>
-    <li class="tabnav__list-item">
-      <a class="tabnav__list-link">Used Books</a>
-    </li>
-    <li class="tabnav__list-item">
-      <a class="tabnav__list-link">Special Offers</a>
-    </li>
-    <li class="tabnav__list-empty">
-      text
-    </li>
-  </ul>
-</nav>
+  <nav class="tabnav">
+    <ul class="tabnav__list">
+      <li class="tabnav__list-item tabnav__select">
+        <a class="tabnav__list-link">Best Sellers</a>
+      </li>
+      <li class="tabnav__list-item">
+        <a class="tabnav__list-link">New Arrivals</a>
+      </li>
+      <li class="tabnav__list-item">
+        <a class="tabnav__list-link">Used Books</a>
+      </li>
+      <li class="tabnav__list-item">
+        <a class="tabnav__list-link">Special Offers</a>
+      </li>
+      <li class="tabnav__list-empty">text</li>
+    </ul>
+  </nav>
 </template>
 <style scoped lang="less">
-@import '../assets/css/style.less';
+@import "../assets/css/style.less";
 
 .tabnav {
   display: flex;
@@ -52,10 +50,10 @@
   }
   &__select {
     position: relative;
-    background: #fff!important;
-    border-bottom: 1px solid white!important;
+    background: #fff !important;
+    border-bottom: 1px solid white !important;
     &:hover {
-      .hover()!important;
+      .hover() !important;
     }
   }
   &__list {
@@ -90,7 +88,7 @@
       width: 10vw;
       font-weight: 300;
       font-family: @pricefont;
-      background: linear-gradient(#fff,#f7f7f7);
+      background: linear-gradient(#fff, #f7f7f7);
       filter: drop-shadow(0.5px 0.866px 0px #ffffff);
       border: 1px solid @bordercolor;
       &:hover {

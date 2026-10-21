@@ -1,30 +1,29 @@
 <template>
   <header class="header">
-    <Userstatus/>
+    <Userstatus />
     <div class="header__baseblock">
       <div class="header__wrapper">
         <div class="header__searchpanel">
           <router-link to="/">
-            <div class="header__searchpanel-logo">
-            </div>
+            <div class="header__searchpanel-logo"></div>
           </router-link>
-          <Search id="searchblock"/>
+          <Search id="searchblock" />
           <div class="header__searchpanel-status">
-            <Cart/>
-            <Wishlist/>
+            <Cart />
+            <Wishlist />
           </div>
         </div>
       </div>
     </div>
-    <Menu/>
+    <Menu />
   </header>
 </template>
 <script>
-import Userstatus from './Userstatus.vue'
-import Menu from './Menu.vue'
-import Search from './Search.vue'
-import Cart from './Cart.vue'
-import Wishlist from './Wishlist.vue'
+import Userstatus from "./Userstatus.vue";
+import Menu from "./Menu.vue";
+import Search from "./Search.vue";
+import Cart from "./Cart.vue";
+import Wishlist from "./Wishlist.vue";
 
 export default {
   components: {
@@ -32,12 +31,12 @@ export default {
     Menu,
     Search,
     Cart,
-    Wishlist
-  }
-}
+    Wishlist,
+  },
+};
 </script>
 <style scoped lang="less">
-@import '../assets/css/style.less';
+@import "../assets/css/style.less";
 .header {
   &__wrapper {
     .wrapper();
@@ -46,7 +45,7 @@ export default {
     height: auto;
   }
   &__baseblock {
-    background: linear-gradient(#fff,#f7f7f7);
+    background: linear-gradient(#fff, #f7f7f7);
     height: 140px;
     @media (max-width: 1060px) {
       height: auto;
@@ -54,7 +53,7 @@ export default {
     width: 100%;
     padding: 0;
     margin: 0;
-    border-bottom: 1px solid  @bordercolor;
+    border-bottom: 1px solid @bordercolor;
   }
   &__searchpanel {
     display: flex;
@@ -75,7 +74,7 @@ export default {
       align-items: flex-start;
     }
     &-logo {
-      background-image: url('../assets/images/logo.png');
+      background-image: url("../assets/images/logo.png");
       background-position: center 30px;
       background-repeat: no-repeat;
       .hwblock(140px, 136px);

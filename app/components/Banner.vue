@@ -1,24 +1,35 @@
 <template>
-<section class="banner">
-  <div class="banner__item">
-    <img class="banner__item-background" :src="selbg"/>
-    <img class="banner__item-bookmax" :src="selbook"/>
-    <div class="banner__item-bookmini">
-      <img class="banner__item-photomini" :src="selbook"/>
-      <img class="banner__item-disk" src="https://ivanshavliuga.github.io/simples/photos/booksshop/disk.png"/>
+  <section class="banner">
+    <div class="banner__item">
+      <img class="banner__item-background" :src="selbg" />
+      <img class="banner__item-bookmax" :src="selbook" />
+      <div class="banner__item-bookmini">
+        <img class="banner__item-photomini" :src="selbook" />
+        <img
+          class="banner__item-disk"
+          src="https://ivanshavliuga.github.io/simples/photos/booksshop/disk.png"
+        />
+      </div>
+      <div
+        class="banner__item-text"
+        :style="seltitle.length > 13 ? 'top: 120px' : ''"
+      >
+        <h1
+          class="banner__item-title"
+          :style="seltitle.length > 13 ? 'font-size: 33px' : ''"
+        >
+          {{ seltitle }}
+        </h1>
+        <p class="banner__item-subtitle">{{ selsubtitle }}</p>
+        <p class="banner__item-author">By {{ selauthor }}</p>
+      </div>
+      <button class="banner__item-arrow left" @click="prev">&nbsp;</button>
+      <button class="banner__item-arrow right" @click="next">&nbsp;</button>
     </div>
-    <div class="banner__item-text" :style="(seltitle.length > 13)?'top: 120px':''">
-      <h1 class="banner__item-title" :style="(seltitle.length > 13)?'font-size: 33px':''">{{seltitle}}</h1>
-      <p class="banner__item-subtitle">{{selsubtitle}}</p>
-      <p class="banner__item-author">By {{selauthor}}</p>
-    </div>
-    <button class="banner__item-arrow left" @click="prev">&nbsp;</button>
-    <button class="banner__item-arrow right" @click="next">&nbsp;</button>
-  </div>
-</section>
+  </section>
 </template>
 <style scoped lang="less">
-@import '../assets/css/style.less';
+@import "../assets/css/style.less";
 .banner {
   margin: 15px;
   width: 100%;
@@ -73,7 +84,7 @@
       z-index: 20;
       left: 180px;
       top: 140px;
-      display:flex;
+      display: flex;
       @media (max-width: 420px) {
         display: none;
       }
@@ -86,7 +97,7 @@
       width: 93px;
       height: 108px;
       background-size: cover;
-      background-color: rgba(240,83,86,0.7);
+      background-color: rgba(240, 83, 86, 0.7);
     }
     &-bookmax {
       width: 149px;
@@ -145,7 +156,7 @@
       font-weight: bold;
     }
     &-arrow {
-      background-image: url('../assets/images/arrow.svg');
+      background-image: url("../assets/images/arrow.svg");
       position: absolute;
       z-index: 30;
       width: 38px;
@@ -167,77 +178,83 @@
 </style>
 <script>
 export default {
-  data () {
+  data() {
     return {
-      baseurl: '',
+      baseurl: "",
       selid: 0,
-      selbg: 'https://ivanshavliuga.github.io/test/booksshop/img/banner1.jpg',
-      selbook: 'https://ivanshavliuga.github.io/test/booksshop/img/book_1.jpg',
-      selauthor: 'Lee Child',
-      seltitle: 'A Wanted men',
-      selsubtitle: '(Jack Reacher #17)',
-      list: [{
-        bg: 'https://ivanshavliuga.github.io/test/booksshop/img/banner_1.jpg',
-        book: 'https://ivanshavliuga.github.io/test/booksshop/img/book_1.jpg',
-        author: 'Lee Child',
-        title: 'A Wanted men',
-        subtitle: '(Jack Reacher #17)'
-      }, {
-        bg: 'https://ivanshavliuga.github.io/test/booksshop/img/banner_2.jpg',
-        book: 'https://ivanshavliuga.github.io/test/booksshop/img/book_2.jpg',
-        author: 'Havinder Singh',
-        title: 'Can Love You Happy Twice',
-        subtitle: '(The Hare Amber Eyes)'
-      }, {
-        bg: 'https://ivanshavliuga.github.io/test/booksshop/img/banner_3.jpg',
-        book: 'https://ivanshavliuga.github.io/test/booksshop/img/book_3.jpg',
-        author: 'Girichi Kundli',
-        title: 'Marathon Baba',
-        subtitle: '(The Hare Amber Eyes)'
-      }]
-    }
+      selbg: "https://ivanshavliuga.github.io/test/booksshop/img/banner1.jpg",
+      selbook: "https://ivanshavliuga.github.io/test/booksshop/img/book_1.jpg",
+      selauthor: "Lee Child",
+      seltitle: "A Wanted men",
+      selsubtitle: "(Jack Reacher #17)",
+      list: [
+        {
+          bg: "https://ivanshavliuga.github.io/test/booksshop/img/banner_1.jpg",
+          book: "https://ivanshavliuga.github.io/test/booksshop/img/book_1.jpg",
+          author: "Lee Child",
+          title: "A Wanted men",
+          subtitle: "(Jack Reacher #17)",
+        },
+        {
+          bg: "https://ivanshavliuga.github.io/test/booksshop/img/banner_2.jpg",
+          book: "https://ivanshavliuga.github.io/test/booksshop/img/book_2.jpg",
+          author: "Havinder Singh",
+          title: "Can Love You Happy Twice",
+          subtitle: "(The Hare Amber Eyes)",
+        },
+        {
+          bg: "https://ivanshavliuga.github.io/test/booksshop/img/banner_3.jpg",
+          book: "https://ivanshavliuga.github.io/test/booksshop/img/book_3.jpg",
+          author: "Girichi Kundli",
+          title: "Marathon Baba",
+          subtitle: "(The Hare Amber Eyes)",
+        },
+      ],
+    };
   },
   methods: {
-    next () {
+    next() {
       if (this.selid < 2) {
-        this.selid++
+        this.selid++;
       } else {
-        this.selid = 0
+        this.selid = 0;
       }
-      this.selbg = this.baseurl + this.list[this.selid].bg
-      this.selbook = this.baseurl + this.list[this.selid].book
-      this.selauthor = this.list[this.selid].author
-      this.seltitle = this.list[this.selid].title
-      this.selsubtitle = this.list[this.selid].subtitle
+      this.selbg = this.baseurl + this.list[this.selid].bg;
+      this.selbook = this.baseurl + this.list[this.selid].book;
+      this.selauthor = this.list[this.selid].author;
+      this.seltitle = this.list[this.selid].title;
+      this.selsubtitle = this.list[this.selid].subtitle;
     },
-    prev () {
+    prev() {
       if (this.selid > 0) {
-        this.selid--
+        this.selid--;
       } else {
-        this.selid = 2
+        this.selid = 2;
       }
-      this.selbg = this.list[this.selid].bg
-      this.selbook = this.list[this.selid].book
-      this.selauthor = this.list[this.selid].author
-      this.seltitle = this.list[this.selid].title
-      this.selsubtitle = this.list[this.selid].subtitle
+      this.selbg = this.list[this.selid].bg;
+      this.selbook = this.list[this.selid].book;
+      this.selauthor = this.list[this.selid].author;
+      this.seltitle = this.list[this.selid].title;
+      this.selsubtitle = this.list[this.selid].subtitle;
     },
-    autoplay () {
-      setTimeout(() => { this.next() }, 4000)
-    }
+    autoplay() {
+      setTimeout(() => {
+        this.next();
+      }, 4000);
+    },
   },
   created: function () {
     // this.list = this.$store.getters.slider;
     // this.baseurl = this.$store.getters.baseimgurl;
-    this.selid = 0
-    this.selbg = this.baseurl + 'banner_1.jpg'
-    this.selbook = this.baseurl + 'book_1.jpg'
+    this.selid = 0;
+    this.selbg = this.baseurl + "banner_1.jpg";
+    this.selbook = this.baseurl + "book_1.jpg";
   },
   mounted: function () {
-    this.autoplay()
+    this.autoplay();
   },
   updated: function () {
-    this.autoplay()
-  }
-}
+    this.autoplay();
+  },
+};
 </script>

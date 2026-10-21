@@ -1,15 +1,20 @@
 <template>
   <article class="commbox">
     <h3 class="commbox__title">Product review</h3>
-    <div class="commbox__comment" v-for="(c,k) in comments" :key="k">
+    <div class="commbox__comment" v-for="(c, k) in comments" :key="k">
       <div class="commbox__comment-block">
         <div class="commbox__comment-avatar">
-          <img class="commbox__comment-image" :src="(c.img=='none')?'/img/user.png':'c.img'" :alt="c.name" :id="c.id" />
-          <p class="commbox__comment-name">{{c.name}}</p>
+          <img
+            class="commbox__comment-image"
+            :src="c.img == 'none' ? '/img/user.png' : 'c.img'"
+            :alt="c.name"
+            :id="c.id"
+          />
+          <p class="commbox__comment-name">{{ c.name }}</p>
         </div>
-        <p class="commbox__comment-text">{{c.text}}</p>
+        <p class="commbox__comment-text">{{ c.text }}</p>
       </div>
-      <hr v-show="k<comments.length-1"/>
+      <hr v-show="k < comments.length - 1" />
     </div>
     <h3 class="commbox__title">Write a comment</h3>
     <form class="commbox__form">
@@ -20,41 +25,41 @@
           <label class="commbox__form-label">Message</label>
         </div>
         <div class="commbox__form-enters">
-          <input class="commbox__form-input"/>
-          <input class="commbox__form-input"/>
-          <textarea class="commbox__form-area">
-          </textarea>
+          <input class="commbox__form-input" />
+          <input class="commbox__form-input" />
+          <textarea class="commbox__form-area"> </textarea>
         </div>
       </div>
       <div class="commbox__form-control">
-        <button class="commbox__form-button">
-          Submit
-        </button>
+        <button class="commbox__form-button">Submit</button>
       </div>
     </form>
   </article>
 </template>
 <script>
 export default {
-  data () {
+  data() {
     return {
-      comments: [{
-        id: 0,
-        img: 'none',
-        name: 'Name 1',
-        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially'
-      }, {
-        id: 1,
-        img: 'none',
-        name: 'Name 2',
-        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially'
-      }]
-    }
-  }
-}
+      comments: [
+        {
+          id: 0,
+          img: "none",
+          name: "Name 1",
+          text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially",
+        },
+        {
+          id: 1,
+          img: "none",
+          name: "Name 2",
+          text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially",
+        },
+      ],
+    };
+  },
+};
 </script>
 <style scoped lang="less">
-@import '../assets/css/style.less';
+@import "../assets/css/style.less";
 .commbox {
   border: 1px solid @bordercolor;
   margin-top: 15px;
@@ -112,10 +117,13 @@ export default {
     &-box {
       display: flex;
     }
-    &-label, &-input, &-area {
+    &-label,
+    &-input,
+    &-area {
       display: block;
     }
-    &-input, &-area {
+    &-input,
+    &-area {
       width: 570px;
       @media (max-width: @largetablet) {
         width: 40vw;

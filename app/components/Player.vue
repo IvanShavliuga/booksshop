@@ -1,28 +1,27 @@
 <template>
-<audio controls class="audio"
-  @playing="play">
-  <source :src="filelink" type="audio/mpeg">
-  Тег audio не поддерживается вашим браузером.
-  <a href="../assets/audio/music.mp3">Скачайте музыку</a>.
-</audio>
+  <audio controls class="audio" @playing="play">
+    <source :src="filelink" type="audio/mpeg" />
+    Тег audio не поддерживается вашим браузером.
+    <a href="../assets/audio/music.mp3">Скачайте музыку</a>.
+  </audio>
 </template>
 <script>
 export default {
   props: {
     filelink: {
       type: [String, undefined],
-      required: true
-    }
+      required: true,
+    },
   },
   methods: {
     play() {
-      this.$emit('play')
-    }
-  }
-}
+      this.$emit("play");
+    },
+  },
+};
 </script>
 <style scoped lang="less">
-@import '../assets/css/style.less';
+@import "../assets/css/style.less";
 
 .audio {
   display: block;

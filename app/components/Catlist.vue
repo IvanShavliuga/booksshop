@@ -10,25 +10,26 @@
       <nav class="aside__nav">
         <ul>
           <!--itemactive-->
-          <li class="aside__nav-item"
-            v-for="(c,k) in catlist" :key="k">
+          <li class="aside__nav-item" v-for="(c, k) in catlist" :key="k">
             <div class="aside__nav-hcat">
-              <p class="aside__nav-link"
-              @click="$emit('select-category',c)"
-              >
-                {{c.name}}
+              <p class="aside__nav-link" @click="$emit('select-category', c)">
+                {{ c.name }}
               </p>
             </div>
-          <ul class="aside__nav-list">
-            <li class="aside__nav-cat"
-              v-for="(c2,k2) in c.sublist"
-              :key="k2"
-            >
-              <p class="aside__nav-link" @click="$emit('select-category',c2)">
-                {{c2}}
-              </p>
-            </li>
-          </ul>
+            <ul class="aside__nav-list">
+              <li
+                class="aside__nav-cat"
+                v-for="(c2, k2) in c.sublist"
+                :key="k2"
+              >
+                <p
+                  class="aside__nav-link"
+                  @click="$emit('select-category', c2)"
+                >
+                  {{ c2 }}
+                </p>
+              </li>
+            </ul>
           </li>
         </ul>
       </nav>
@@ -38,53 +39,51 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      catlist: [{
-        name: "Fiction & Literature",
-        sublist: [
-          "Children",
-          "Science",
-          "Fantasy",
-          "Mystery",
-          "Romance",
-          "Horror",
-          "Poetry",
-          "Literature",
-          "Crime",
-        ]
-      }, {
-        name: "Non - Fiction",
-        sublist: [
-          "Comic",
-          "Cook",
-          "Psychology",
-          "Medical",
-          "Art",
-          "Photography",
-          "Law",
-          "History",
-          "Business",
-          "Computers",
-        ]
-      }, {
-        name: "Other",
-        sublist: [
-          "Baby",
-          "Sex",
-          "Travel",
-          "Science",
-          "Sport`s",
-        ]
-      }]
-    }
-  }
-}
+      catlist: [
+        {
+          name: "Fiction & Literature",
+          sublist: [
+            "Children",
+            "Science",
+            "Fantasy",
+            "Mystery",
+            "Romance",
+            "Horror",
+            "Poetry",
+            "Literature",
+            "Crime",
+          ],
+        },
+        {
+          name: "Non - Fiction",
+          sublist: [
+            "Comic",
+            "Cook",
+            "Psychology",
+            "Medical",
+            "Art",
+            "Photography",
+            "Law",
+            "History",
+            "Business",
+            "Computers",
+          ],
+        },
+        {
+          name: "Other",
+          sublist: ["Baby", "Sex", "Travel", "Science", "Sport`s"],
+        },
+      ],
+    };
+  },
+};
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-@import '../assets/css/style.less';
-.cat1  {
+@import "../assets/css/style.less";
+.cat1 {
   font-weight: bold;
 }
 .aside {
@@ -128,7 +127,7 @@ export default {
     }*/
     &-btn {
       transform: scale(0.7, 0.6);
-      @media (max-width:  670px) {
+      @media (max-width: 670px) {
         left: 20px;
       }
       @media (max-width: 350px) {
@@ -136,14 +135,14 @@ export default {
       }
     }
     &-btn > span::before {
-      content: '';
+      content: "";
       top: -4px;
       left: 10px;
       width: 15px;
       transform: rotate(25deg);
     }
     &-btn > span::after {
-      content: '';
+      content: "";
       top: 4px;
       left: 10px;
       width: 15px;
@@ -251,7 +250,7 @@ export default {
   margin-top: 15px;
   width: 25vw;
   margin-left: 5px;
-  box-shadow: 1px 1px 7px 7px rgba(10,10,10,0.5);
+  box-shadow: 1px 1px 7px 7px rgba(10, 10, 10, 0.5);
   /*width: 50%;
   left: 100px;
   top: 150px;*/
@@ -262,13 +261,13 @@ export default {
   .aside__nav-link {
     display: block;
   }
-  @media (max-width:  915px) {
+  @media (max-width: 915px) {
     margin-left: 12px;
   }
-  @media (max-width:  915px) {
+  @media (max-width: 915px) {
     width: 250px;
   }
-  @media (max-width:  670px) {
+  @media (max-width: 670px) {
     margin-left: 22px;
   }
   @media (min-width: 1061px) {

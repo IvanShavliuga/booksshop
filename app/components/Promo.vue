@@ -1,25 +1,30 @@
 <template>
-<section class="promo">
-  <div class="promo__header">
-    <h2 class="promo__header-title">Deal of the Month</h2>
-    <h3 class="promo__header-subtitle">{{book.title}}</h3>
-  </div>
-  <div class="promo__image">
-    <img class="promo__image-book" :src="book.img"/>
-    <img class="promo__image-panel" src="https://ivanshavliuga.github.io/simples/photos/booksshop/panel.png"/>
-  </div>
-  <div class="promo__desc">
-    <p class="promo__desc-sale">Save {{book.sale}} Today</p>
-    <p class="promo__desc-price">${{book.price}}</p>
-    <button class="promo__desc-button" @click="$emit('generate')">Buy now</button>
-  </div>
-</section>
+  <section class="promo">
+    <div class="promo__header">
+      <h2 class="promo__header-title">Deal of the Month</h2>
+      <h3 class="promo__header-subtitle">{{ book.title }}</h3>
+    </div>
+    <div class="promo__image">
+      <img class="promo__image-book" :src="book.img" />
+      <img
+        class="promo__image-panel"
+        src="https://ivanshavliuga.github.io/simples/photos/booksshop/panel.png"
+      />
+    </div>
+    <div class="promo__desc">
+      <p class="promo__desc-sale">Save {{ book.sale }} Today</p>
+      <p class="promo__desc-price">${{ book.price }}</p>
+      <button class="promo__desc-button" @click="$emit('generate')">
+        Buy now
+      </button>
+    </div>
+  </section>
 </template>
 <style lang="less">
-@import '../assets/css/style.less';
+@import "../assets/css/style.less";
 .promo {
   position: relative;
-  background-image: url('../assets/images/promo.png');
+  background-image: url("../assets/images/promo.png");
   width: 230px;
   height: 284px;
   margin: 15px 15px 0 0;
@@ -76,7 +81,6 @@
       line-height: 26px;
       font-weight: bold;
       margin: 5px auto;
-
     }
     &-button {
       font-size: @fontmenusize;
@@ -86,7 +90,7 @@
       background-image: linear-gradient(0deg, #51a451 0%, #61c261 100%);
       border: 1px solid #52a452;
       border-radius: 4px;
-      filter: drop-shadow(0.5px 0.866px 0px rgba(74,151,74,0.75));
+      filter: drop-shadow(0.5px 0.866px 0px rgba(74, 151, 74, 0.75));
     }
   }
 }
@@ -96,8 +100,8 @@ export default {
   props: {
     book: {
       type: Object,
-      required: true
-    }
-  }
-}
+      required: true,
+    },
+  },
+};
 </script>

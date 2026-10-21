@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <Nuxt />
+    <NuxtPage />
   </div>
 </template>
 
@@ -11,8 +11,8 @@
   width: 100%;
 }
 body {
-  margin: 0!important;
-  padding: 0!important;
+  margin: 0 !important;
+  padding: 0 !important;
   width: 100%;
 }
 </style>

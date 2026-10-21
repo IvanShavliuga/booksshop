@@ -1,10 +1,10 @@
 <template>
-<div v-if="books.length" class="list">
-  <Book v-for="(b,k) in books" :key="b.id+k" :book="b"/>
-</div>
+  <div v-if="books.length" class="list">
+    <Book v-for="(b, k) in books" :key="b.id + k" :book="b" />
+  </div>
 </template>
 <style lang="less">
-@import '../assets/css/style.less';
+@import "../assets/css/style.less";
 
 .list {
   border-left: 1px solid @bordercolor;
@@ -45,15 +45,15 @@
 }
 </style>
 <script>
-import Book from '@/components/Book.vue'
+import Book from "@/components/Book.vue";
 export default {
   components: {
-    Book
+    Book,
   },
   computed: {
-    books () {
-      return [] //this.$store.getters.books
-    }
-  }
-}
+    books() {
+      return []; //this.$store.getters.books
+    },
+  },
+};
 </script>

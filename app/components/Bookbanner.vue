@@ -1,18 +1,28 @@
 <template>
-<aside class="bookbanner">
-  <h3 class="bookbanner__header">You may also like</h3>
-  <div class="bookbanner__block" v-for="(b,k) in books" :key="k" :title="b.title">
-    <img class="bookbanner__block-image" :src="baseurl+b.img"  :title="b.title" :alt="b.title +' - '+b.author"/>
-    <div class="bookbanner__block-text">
-      <h4 class="bookbanner__block-title">{{b.title}}</h4>
-      <p class="bookbanner__block-price">${{b.price}}</p>
-      <button class="bookbanner__block-button">Read more</button>
+  <aside class="bookbanner">
+    <h3 class="bookbanner__header">You may also like</h3>
+    <div
+      class="bookbanner__block"
+      v-for="(b, k) in books"
+      :key="k"
+      :title="b.title"
+    >
+      <img
+        class="bookbanner__block-image"
+        :src="baseurl + b.img"
+        :title="b.title"
+        :alt="b.title + ' - ' + b.author"
+      />
+      <div class="bookbanner__block-text">
+        <h4 class="bookbanner__block-title">{{ b.title }}</h4>
+        <p class="bookbanner__block-price">${{ b.price }}</p>
+        <button class="bookbanner__block-button">Read more</button>
+      </div>
     </div>
-  </div>
-</aside>
+  </aside>
 </template>
 <style scoped lang="less">
-@import '../assets/css/style.less';
+@import "../assets/css/style.less";
 
 .bookbanner {
   width: 30vw;
@@ -31,7 +41,6 @@
     font-size: 18px;
     margin: 10px;
     color: #7e7e7e;
-
   }
   &__block {
     display: flex;
@@ -98,63 +107,71 @@
 </style>
 <script>
 export default {
-  data () {
+  data() {
     return {
-      baseurl: '',
-      books: [{
-        id: 0,
-        img: 'book_1.jpg',
-        title: 'The Hare With Amber',
-        author: 'Edmund De Waal',
-        price: 50,
-        sale: 30
-      }, {
-        id: 1,
-        img: 'book_2.jpg',
-        title: 'The Hare With Amber',
-        author: 'Edmund De Waal',
-        price: 50,
-        sale: 30
-      }, {
-        id: 2,
-        img: 'book_3.jpg',
-        title: 'The Hare With Amber',
-        author: 'Edmund De Waal',
-        price: 50,
-        sale: 30
-      }, {
-        id: 3,
-        img: 'book_4.jpg',
-        title: 'The Hare With Amber',
-        author: 'Edmund De Waal',
-        price: 50,
-        sale: 30
-      }, {
-        id: 4,
-        img: 'book_5.jpg',
-        title: 'The Hare With Amber',
-        author: 'Edmund De Waal',
-        price: 50,
-        sale: 30
-      }, {
-        id: 5,
-        img: 'book_6.jpg',
-        title: 'The Hare With Amber',
-        author: 'Edmund De Waal',
-        price: 50,
-        sale: 30
-      }, {
-        id: 6,
-        img: 'book_1.jpg',
-        title: 'The Hare With Amber',
-        author: 'Edmund De Waal',
-        price: 50,
-        sale: 30
-      }]
-    }
+      baseurl: "",
+      books: [
+        {
+          id: 0,
+          img: "book_1.jpg",
+          title: "The Hare With Amber",
+          author: "Edmund De Waal",
+          price: 50,
+          sale: 30,
+        },
+        {
+          id: 1,
+          img: "book_2.jpg",
+          title: "The Hare With Amber",
+          author: "Edmund De Waal",
+          price: 50,
+          sale: 30,
+        },
+        {
+          id: 2,
+          img: "book_3.jpg",
+          title: "The Hare With Amber",
+          author: "Edmund De Waal",
+          price: 50,
+          sale: 30,
+        },
+        {
+          id: 3,
+          img: "book_4.jpg",
+          title: "The Hare With Amber",
+          author: "Edmund De Waal",
+          price: 50,
+          sale: 30,
+        },
+        {
+          id: 4,
+          img: "book_5.jpg",
+          title: "The Hare With Amber",
+          author: "Edmund De Waal",
+          price: 50,
+          sale: 30,
+        },
+        {
+          id: 5,
+          img: "book_6.jpg",
+          title: "The Hare With Amber",
+          author: "Edmund De Waal",
+          price: 50,
+          sale: 30,
+        },
+        {
+          id: 6,
+          img: "book_1.jpg",
+          title: "The Hare With Amber",
+          author: "Edmund De Waal",
+          price: 50,
+          sale: 30,
+        },
+      ],
+    };
   },
-  created () {
+  created() {
     // this.baseurl = this.$store.getters.baseimgurl;
-  }
-}
+  },
+};
 </script>

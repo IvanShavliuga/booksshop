@@ -1,24 +1,28 @@
 <template>
-<nav class="menu">
-  <div class="menu__wrapper">
-    <div class="menu__collapse">
-      <input id="menu__collapse-toggle" type="checkbox" />
-      <label class="menu__collapse-btn" for="menu__collapse-toggle">
-        <span></span>
-      </label>
-      <ul class="menu__list">
-        <li :class="['menu__list-item', (k==select)?'itemactive':'']"
-           v-for="(l, k) in links">
-          <a class="menu__list-link" :href="'/categories?cat='+l">{{l}}</a>
-        </li>
-      </ul>
+  <nav class="menu">
+    <div class="menu__wrapper">
+      <div class="menu__collapse">
+        <input id="menu__collapse-toggle" type="checkbox" />
+        <label class="menu__collapse-btn" for="menu__collapse-toggle">
+          <span></span>
+        </label>
+        <ul class="menu__list">
+          <li
+            :class="['menu__list-item', k == select ? 'itemactive' : '']"
+            v-for="(l, k) in links"
+          >
+            <a class="menu__list-link" :href="'/categories?cat=' + l">{{
+              l
+            }}</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 </template>
 <script>
 export default {
-  data () {
+  data() {
     return {
       links: [
         "Computers",
@@ -29,15 +33,15 @@ export default {
         "Mathematics",
         "Medical",
         "Reference",
-        "Science"
+        "Science",
       ],
-      select: 2
-    }
-  }
-}
+      select: 2,
+    };
+  },
+};
 </script>
 <style scoped lang="less">
-@import '../assets/css/style.less';
+@import "../assets/css/style.less";
 .menu {
   margin: 0;
   padding: 0;

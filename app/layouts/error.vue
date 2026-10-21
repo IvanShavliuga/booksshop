@@ -1,34 +1,36 @@
 <template>
-<div class="empty">
-  <div class="empty__text">
-    <h1 class="empty__title">404</h1>
-    <p class="empty__subtitle">page not found</p>
-    <nuxt-link class="empty__link" to="/">Home</nuxt-link>
-    <div class="empty__text-circle"
-      v-for="ind of 11" :key="ind"
-      :style="circlegen(ind)">
+  <div class="empty">
+    <div class="empty__text">
+      <h1 class="empty__title">404</h1>
+      <p class="empty__subtitle">page not found</p>
+      <nuxt-link class="empty__link" to="/">Home</nuxt-link>
+      <div
+        class="empty__text-circle"
+        v-for="ind of 11"
+        :key="ind"
+        :style="circlegen(ind)"
+      ></div>
     </div>
   </div>
-</div>
 </template>
 <script>
 export default {
   methods: {
-    circlegen (id) {
+    circlegen(id) {
       return {
-        zIndex: 15-id,
-        width: (10+id*20)+'px',
-        height: (10+id*20)+'px',
-        top: (95-id*5)+'px',
-        left: (270-id*5)+'px',
-        backgroundColor: (id%2)?('#a32739'):('white')
-      }
-    }
-  }
-}
+        zIndex: 15 - id,
+        width: 10 + id * 20 + "px",
+        height: 10 + id * 20 + "px",
+        top: 95 - id * 5 + "px",
+        left: 270 - id * 5 + "px",
+        backgroundColor: id % 2 ? "#a32739" : "white",
+      };
+    },
+  },
+};
 </script>
 <style scoped lang="less">
-@import '../assets/css/style.less';
+@import "../assets/css/style.less";
 
 .empty {
   display: flex;

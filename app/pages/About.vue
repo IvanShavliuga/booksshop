@@ -1,16 +1,17 @@
 <template>
   <main class="about">
-    <Hello/>
-    <Header/>
-    <Pathcomp/>
+    <Hello />
+    <Header />
+    <Pathcomp />
     <div class="about__wrapper about__flex">
       <div class="about__promo">
-        <Promo :book="promo"/>
+        <Promo :book="promo" />
       </div>
       <div class="about__info">
         <h1 class="about__title">Ivan Shavliuga (Ivanov)</h1>
         <h2 class="about__prof">middle vue.js developer</h2>
-        <div class="about__desc">Created this page. Used by:
+        <div class="about__desc">
+          Created this page. Used by:
           <ul class="about__skills">
             <li class="about__skills-item">HTML5</li>
             <li class="about__skills-item">CSS3</li>
@@ -21,7 +22,7 @@
             <li class="about__skills-item">Webpack</li>
           </ul>
         </div>
-        <Iconlist/>
+        <Iconlist />
       </div>
     </div>
     <div class="about__wrapper about__flex">
@@ -30,37 +31,41 @@
           <h3 class="about__links-title">Literature</h3>
           <ul class="about__links-list">
             <li class="about__links-item">
-              <a class="about__links-href"
-                href="https://author.today/u/ischavliuga/works">
+              <a
+                class="about__links-href"
+                href="https://author.today/u/ischavliuga/works"
+              >
                 Author Today
               </a>
             </li>
             <li class="about__links-item">
-              <a class="about__links-href"
-                href="https://samlib.ru/i/iwan_sergeewich_shawljuga/">
+              <a
+                class="about__links-href"
+                href="https://samlib.ru/i/iwan_sergeewich_shawljuga/"
+              >
                 SamLib.ru
               </a>
             </li>
           </ul>
         </article>
       </div>
-      <Bookbanner/>
+      <Bookbanner />
     </div>
-    <Footer/>
+    <Footer />
   </main>
 </template>
 <script>
 // @ is an alias hto /src
-import Header from '@/components/Header.vue'
-import Hello from '@/components/HelloWorld.vue'
-import Iconlist from '@/components/icons/Iconlist.vue'
-import Promo from '@/components/Promo.vue'
-import Footer from '@/components/Footer.vue'
-import Bookbanner from '@/components/Bookbanner.vue'
-import Pathcomp from '@/components/Pathcomp.vue'
+import Header from "@/components/Header.vue";
+import Hello from "@/components/HelloWorld.vue";
+import Iconlist from "@/components/icons/Iconlist.vue";
+import Promo from "@/components/Promo.vue";
+import Footer from "@/components/Footer.vue";
+import Bookbanner from "@/components/Bookbanner.vue";
+import Pathcomp from "@/components/Pathcomp.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
     Header,
     Hello,
@@ -68,23 +73,23 @@ export default {
     Promo,
     Bookbanner,
     Footer,
-    Pathcomp
+    Pathcomp,
   },
-  data () {
+  data() {
     return {
       promo: {
-        img: '/img/telepat.jpg',
-        title: 'Телепатия. Проклятие языка',
-        author: 'Иван Шавлюга',
+        img: "/img/telepat.jpg",
+        title: "Телепатия. Проклятие языка",
+        author: "Иван Шавлюга",
         price: 10,
-        sale: 45
-      }
-    }
-  }
-}
+        sale: 45,
+      },
+    };
+  },
+};
 </script>
 <style scoped lang="less">
-@import '../assets/css/style.less';
+@import "../assets/css/style.less";
 
 .about {
   margin: 0;
@@ -131,7 +136,9 @@ export default {
       font-size: 27px;
     }
   }
-  &__title, &__prof, &__desc {
+  &__title,
+  &__prof,
+  &__desc {
     color: @colform;
   }
   &__desc {

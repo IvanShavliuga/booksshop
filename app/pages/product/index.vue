@@ -1,53 +1,71 @@
 <template>
   <main class="product">
-    <Hello/>
-    <Header/>
-    <Pathcomp/>
+    <Hello />
+    <Header />
+    <Pathcomp />
     <template v-if="book">
-    <div class="product__wrapper">
-      <section class="product__section product__border product__flex">
-        <img class="product__image" :src="book.img" :alt="book.author+'-'+book.title"/>
-        <article class="product__block">
-          <h3 class="product__block-title">{{book.title}}</h3>
-          <p class="product__block-text">{{book.desc}}</p>
-          <Pay :book="book"/>
-        </article>
-      </section>
-      <section  class="product__section product__flex">
-        <div class="product__section-box">
-          <article class="product__pannels">
-            <div class="product__pannels-tabs">
-              <button class="product__pannels-button product__pannels-buttonactive">Product information</button>
-              <button class="product__pannels-button product__pannels-buttonnoactive">Other details</button>
-            </div>
-            <div class="product__pannels-block">
-              <p class="product__pannels-text">
-                The Star Wars Episode I: The Phantom Menace novelization was written by Terry Brooks and published on April 21, 1999 by Del Rey. It is based on the script of the movie of the same name. Narration for the abridged audio version was performed by Michael Cumpsty. The unabridged version was performed by Alexander Adams. On January 31, 2012, a new paperback edition was
-              </p>
-            </div>
+      <div class="product__wrapper">
+        <section class="product__section product__border product__flex">
+          <img
+            class="product__image"
+            :src="book.img"
+            :alt="book.author + '-' + book.title"
+          />
+          <article class="product__block">
+            <h3 class="product__block-title">{{ book.title }}</h3>
+            <p class="product__block-text">{{ book.desc }}</p>
+            <Pay :book="book" />
           </article>
-          <Commentbox/>
-        </div>
-        <Bookbanner/>
-        <pre>{{ text }}</pre>
-      </section>
-    </div>
+        </section>
+        <section class="product__section product__flex">
+          <div class="product__section-box">
+            <article class="product__pannels">
+              <div class="product__pannels-tabs">
+                <button
+                  class="product__pannels-button product__pannels-buttonactive"
+                >
+                  Product information
+                </button>
+                <button
+                  class="product__pannels-button product__pannels-buttonnoactive"
+                >
+                  Other details
+                </button>
+              </div>
+              <div class="product__pannels-block">
+                <p class="product__pannels-text">
+                  The Star Wars Episode I: The Phantom Menace novelization was
+                  written by Terry Brooks and published on April 21, 1999 by Del
+                  Rey. It is based on the script of the movie of the same name.
+                  Narration for the abridged audio version was performed by
+                  Michael Cumpsty. The unabridged version was performed by
+                  Alexander Adams. On January 31, 2012, a new paperback edition
+                  was
+                </p>
+              </div>
+            </article>
+            <Commentbox />
+          </div>
+          <Bookbanner />
+          <pre>{{ text }}</pre>
+        </section>
+      </div>
     </template>
-    <Footer/>
+    <Footer />
   </main>
 </template>
 
 <script>
 // @ is an alias hto /src
-import Header from '@/components/Header.vue'
-import Hello from '@/components/HelloWorld.vue'
-import Footer from '@/components/Footer.vue'
-import Pathcomp from '@/components/Pathcomp.vue'
-import Bookbanner from '@/components/Bookbanner.vue'
-import Commentbox from '@/components/Commentbox.vue'
-import Pay from '@/components/pay.vue'
+import Header from "@/components/Header.vue";
+import Hello from "@/components/HelloWorld.vue";
+import Footer from "@/components/Footer.vue";
+import Pathcomp from "@/components/Pathcomp.vue";
+import Bookbanner from "@/components/Bookbanner.vue";
+import Commentbox from "@/components/Commentbox.vue";
+import Pay from "@/components/pay.vue";
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
     Header,
     Hello,
@@ -55,13 +73,13 @@ export default {
     Pathcomp,
     Bookbanner,
     Commentbox,
-    Pay
+    Pay,
   },
-  data () {
+  data() {
     return {
       book: null,
-      text: null
-    }
+      text: null,
+    };
   },
   /* created () {
     const path = decodeURI(this.$route.fullPath)
@@ -78,7 +96,7 @@ export default {
       
     } 
   },*/
-   /* async fetch() {
+  /* async fetch() {
     try {
       await this.$axios.$post("/api/books/show", { id: +this.$route.query.id }).then((d) => {
         this.book = d[0]
@@ -92,20 +110,20 @@ export default {
       throw e;
     }
   }, */
-  mounted () {
-    console.log('mounted')
+  mounted() {
+    console.log("mounted");
     // setTimeout(() => {
-      // this.$axios.$post("/api/books/show", { id: +this.$route.query.id }).then((d) => {
-      //   this.book = d[0]
-      //   console.log(d)
-      //   this.book.img = 'https://ivanshavliuga.github.io/simples/photos/booksshop/' + d[0].img
-      // })
+    // this.$axios.$post("/api/books/show", { id: +this.$route.query.id }).then((d) => {
+    //   this.book = d[0]
+    //   console.log(d)
+    //   this.book.img = 'https://ivanshavliuga.github.io/simples/photos/booksshop/' + d[0].img
+    // })
     // }, 1000)
-  }
-}
+  },
+};
 </script>
 <style scoped lang="less">
-@import '../../assets/css/style.less';
+@import "../../assets/css/style.less";
 
 .product {
   margin: 0;
@@ -171,7 +189,7 @@ export default {
       @media (max-width: 650px) {
         width: 65vw;
         height: auto;
-      }/*
+      } /*
       @media (max-width: 530px) {
         width: 58vw;
         height: auto;
