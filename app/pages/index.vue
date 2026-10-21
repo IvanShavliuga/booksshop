@@ -66,7 +66,7 @@ export default {
     }
   },
   created () {
-    this.getBooksQuery()
+    // this.getBooksQuery()
   }
 }
 </script>

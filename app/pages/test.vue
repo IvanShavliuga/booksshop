@@ -28,14 +28,14 @@ export default {
       userInfo: null
     };
   },
-  async fetch() {
-    try {
-      this.users = await this.$axios.$get("/api/users/index");
-    } catch (e) {
-      console.error(e);
-      throw e;
-    }
-  },
+  // async fetch() {
+  //   try {
+  //     this.users = await this.$axios.$get("/api/users/index");
+  //   } catch (e) {
+  //     console.error(e);
+  //     throw e;
+  //   }
+  // },
   methods: {
     async getUserInfo(id) {
       try {

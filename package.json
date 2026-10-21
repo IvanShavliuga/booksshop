@@ -1,21 +1,31 @@
 {
   "name": "booksshop",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "build": "nuxi build ",
+    "predev": "nuxi prepare",
+    "dev": "nuxi dev",
+    "generate": "nuxi generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "yarn lint:eslint && yarn lint:prettier",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier . --check --write",
+    "lintfix": "eslint . --fix && prettier --write --list-different ."
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.0.0",
     "core-js": "^3.6.5",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "nuxt": "^2.14.6"
+    "nuxt": "^4.6.2"
   },
   "devDependencies": {
+    "defu": "^6.1.7",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-node": "^11.1.0",

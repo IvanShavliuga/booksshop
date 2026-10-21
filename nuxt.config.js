@@ -18,7 +18,7 @@ export default {
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: ["~/plugins/api-context.js"],
+  // plugins: ["~/plugins/api-context.js"],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -28,23 +28,23 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: ["@nuxtjs/axios"],
+  // modules: ["@nuxtjs/axios"],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   },
 
-  serverMiddleware: [
-    { path: "/api", handler: require("body-parser").json() },
-    {
-      path: "/api",
-      handler: (req, res, next) => {
-        const url = require("url");
-        req.query = url.parse(req.url, true).query;
-        req.params = { ...req.query, ...req.body };
-        next();
-      }
-    },
-    { path: "/api", handler: "~/serverMiddleware/api-server.js" }
-  ],
+  // serverMiddleware: [
+  //   { path: "/api", handler: require("body-parser").json() },
+  //   {
+  //     path: "/api",
+  //     handler: (req, res, next) => {
+  //       const url = require("url");
+  //       req.query = url.parse(req.url, true).query;
+  //       req.params = { ...req.query, ...req.body };
+  //       next();
+  //     }
+  //   },
+  //   { path: "/api", handler: "~/serverMiddleware/api-server.js" }
+  // ],
 }

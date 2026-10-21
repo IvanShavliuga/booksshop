@@ -12,7 +12,7 @@
 </article>
 </template>
 <script>
-import {getters} from './../store'
+// import {getters} from './../store'
 export default {
   data () {
     return {
