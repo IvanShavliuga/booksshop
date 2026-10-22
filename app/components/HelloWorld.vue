@@ -8,17 +8,13 @@
         class="hello__text-link"
         target="__blank"
       >
-        Ivan Shavliuga (Ivanov) junior vue.js developer
+        Ivan Shavliuga (Ivanov) senior vue.js developer
       </a>
     </span>
   </div>
 </template>
 
-<script>
-export default {
-  name: "Hello",
-};
-</script>
+<script></script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">

@@ -17,62 +17,44 @@
   </main>
 </template>
 
-<script>
+<script setup>
 // @ is an alias hto /src
-import Header from "@/components/Header.vue";
-import Hello from "@/components/HelloWorld.vue";
-import Catlist from "@/components/Catlist.vue";
-import Banner from "@/components/Banner.vue";
-import Promo from "@/components/Promo.vue";
-import Tabspanel from "@/components/Tabspanel.vue";
-import Booklist from "@/components/Booklist.vue";
-import Footer from "@/components/Footer.vue";
-
-export default {
-  name: "Home",
-  components: {
-    Header,
-    Hello,
-    Catlist,
-    Banner,
-    Promo,
-    Tabspanel,
-    Booklist,
-    Footer,
-  },
-  data() {
-    return {
-      promo: {
+ import {onMounted, ref} from 'vue'  
+ 
+//  import { useNuxtApp } from 'nuxt/app'
+//  const app = useNuxtApp()
+//  const { fetch } = app
+//  console.log(app)
+     const promo = ref( {
         author: "Rick Smolan, Jennifer Erwitt",
         title: "The Human Face of Big Data",
         sale: 45,
         price: 27.51,
         img: "https://ivanshavliuga.github.io/simples/photos/booksshop/book_4.jpg",
-      },
-    };
-  },
-  methods: {
-    async generate() {
-      await this.$axios.$post("/api/books/generate");
-    },
-    selCategory(cat) {
-      this.getBooksQuery(cat);
-    },
-    getBooksQuery(cat = "all") {
-      this.$axios
-        .$get(`/api/books/index${cat !== "all" ? "?category=" + cat : ""}`)
+      })
+  
+    // async generate() {
+    //   await this.$fetch('/api/books/generate', {
+    // method: 'POST'})
+    //   // ("/api/books/generate");
+    // },
+     function selCategory(cat) {
+       getBooksQuery(cat);
+    }
+    async function  getBooksQuery(cat = "all") {
+      console.log('enter book', fetch)
+      await $fetch(`/api/books${cat !== "all" ? "?category=" + cat : ""}`)
         .then((d) => {
-          this.$store.dispatch("syncBooks", d);
-          this.promo =
-            d.filter((el) => el.id === ~~(Math.random() * d.length - 1))[0] ??
-            d[0];
-        });
-    },
-  },
-  created() {
-    // this.getBooksQuery()
-  },
-};
+          console.log(d)
+          // this.promo =
+          //   d.filter((el) => el.id === ~~(Math.random() * d.length - 1))[0] ??
+          //   d[0];
+        }).catch((e)=> new Error(e))
+    }
+  onMounted( async() => {
+    console.log('mounted')
+    await getBooksQuery()
+  })
 </script>
 <style scoped lang="less">
 @import "../assets/css/style.less";
